@@ -1,0 +1,27 @@
+{
+  "name": "firstwebapp",
+  "version": "1.0.0",
+  "description": "My First Web App in Node - ex2",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('test')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msisso/NodeWebApp.git"
+  },
+  "keywords": [
+    "Maor's",
+    "Node",
+    "App"
+  ],
+  "author": "Maor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msisso/NodeWebApp/issues"
+  },
+  "homepage": "https://github.com/msisso/NodeWebApp#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
