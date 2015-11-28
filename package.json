@@ -22,6 +22,11 @@
   },
   "homepage": "https://github.com/msisso/NodeWebApp#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "debug": "^2.2.0",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1",
+    "multer": "^1.1.0"
   }
 }
