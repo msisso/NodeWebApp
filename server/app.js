@@ -3,11 +3,13 @@
 var express = require('express');
 var app = express();
 
-
+app.use(express.static('client/assets'));
+console.log(__dirname);
+//app.set('views', path.join(__dirname, 'views'));
 var template1 = require('./routes/template1');
 var template2 = require('./routes/template2');
 var template3 = require('./routes/template3');
-
+var noValids = require('./routes/noValids');
 /*app.get('/', function (req, res) {
     res.send('Hello World');
 })*/
@@ -19,7 +21,6 @@ app.get('/', function (req, res) {
     console.log("Got a GET request for the homepage");
     res.send('Hello GET');
 })
-
 
 // This responds a POST request for the homepage
 app.post('/', function (req, res) {
@@ -40,17 +41,35 @@ app.get('/list_user', function (req, res) {
 })
 
 // This responds a GET request for abcd, abxcd, ab123cd, and so on
-app.get('/screen=:templateId', function(req, res) {
+/*app.get('/screen=:templateId', function(req, res) {
     console.log(req.params.templateId);
 
     console.log("Got a GET request for /ab*cd");
     res.send('Page Pattern Match');
-})
-
+})*/
+app.use('/screen=1', template1);
+app.use('/screen=2', template2);
+app.use('/screen=3', template3);
 ////////////////////////////////////////////////////////////////
 
 
+app.get('/index.html', function (req, res) {
+    res.sendFile( __dirname + "/" + "index.html" );
+})
 
+app.get('/process_get', function (req, res) {
+
+    // Prepare output in JSON format
+    response = {
+        first_name:req.query.first_name,
+        last_name:req.query.last_name
+    };
+    console.log(response);
+   //res.end(JSON.stringify(response));
+    res.render()
+})
+
+//////////////////////////////////////////////////////
 
 
 var server = app.listen(8081, 'localhost' ,function () {

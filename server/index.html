@@ -1,0 +1,409 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script>
+        var Valids = []; //Array that always contains the valid advertises by their time period
+        var index=0; //variable to move on Valids array
+        var dataIndex = 0; //variable to move on msgData array
+        var imgIndex = 0; //variable to move on msgImage array
+        var advNumber=0; //show which advertise is now on the screen
+
+        //Array that contains all the adv objects
+
+        var advertises = [
+            {
+                msgName:"Flights Discount Message",
+                msgData: ["Don't Miss The Chance To Visit Israel",
+                    "Discover the beauty of Tel Aviv",
+                    "Flights to Croatia from 400$",
+                    "Connections Flights is also fun"],
+                msgImage: ['flight1.jpg','telAviv-israel.jpg'],
+                linkTemplate:"templates/TemplateOne.html",
+                advTimer:"40000",
+                startDate:"01/01/2015",
+                endDate:"12/31/2016",
+                daysShow:["monday","wednesday","saturday"],
+                srartTime:"06:00:00",
+                endTime:"23:59:00"
+            },
+
+            {
+                msgName:"Hottles Sales Message",
+                msgData: ["Mercure Paris Centre Tour Eiffel - 109 EUR",
+                    "Novotel Paris Gare de Lyon - 113 EUR",
+                    "Adriana Hvae  Spa Hotel - 324 EUR",
+                    "Inn Resort Phi Phi Island - 599 EUR",
+                    "InterContinental Tel Aviv - 1999 EUR",
+                    "Dan Eilat - 899 EUR",
+                    "Isrotel Agamim Eilat - 799 EUR",
+                    "InterContinental Bangkok - 350 EUR",
+                    "Queen of Sheba Eilat - 450 EUR",
+                    "Tifani Luxury Rooms Split, Croatia - 267 EUR"],
+                msgImage: ['summer-holiday.jpg'],
+                linkTemplate:"templates/TemplateTwo.html",
+                advTimer:"35000",
+                startDate:"03/01/2016",
+                endDate:"04/30/2016",
+                daysShow:["tuesday","wednesday"],
+                srartTime:"10:00:00",
+                endTime:"16:00:00"
+            },
+            {
+                msgName:"Blank Message",
+                msgData: [],
+                msgImage: [],
+                linkTemplate:"templates/TemplateTree.html",
+                advTimer:"8000",
+                startDate:"01/01/2015",
+                endDate:"06/15/2016",
+                daysShow:["sunday","monday","tuesday","wednesday","thursday","friday","saturday"],
+                srartTime:"08:00:00",
+                endTime:"23:59:00"
+            },
+            {
+                msgName:"Festival Package Trips",
+                msgData: ["Ultra Europe Festival 2016", "TomorrowLand Festival 2016"],
+                msgImage: [],
+                linkTemplate:"templates/TemplateOne.html",
+                advTimer:"15000",
+                startDate:"03/29/2016",
+                endDate:"04/15/2016",
+                daysShow:["monday"],
+                srartTime:"15:00:00",
+                endTime:"19:00:00"
+            },
+
+            {
+                msgName:"Beautiful Views to visit",
+                msgData: ["Aogashima Volcano, Japan",
+                    "Glass Beach, California, USA",
+                    "Hiller lake(pink lake), Western Australia",
+                    "Chittorgarh Fort, India",
+                    "Cinque Terre, Rio Maggiore, Italy",
+                    "Fairy Pools, Isle of Skye, Scotland",
+                    "Mamanuca Islands, Fiji"],
+                msgImage: ['Glass-beach-california.jpg','Fiji-Japan.jpg'],
+                linkTemplate:"templates/TemplateTwo.html",
+                advTimer:"30000",
+                startDate:"04/01/2016",
+                endDate:"04/30/2016",
+                daysShow:["monday","thursday","wednesday"],
+                srartTime:"01:00:00",
+                endTime:"23:00:00"
+            }];
+
+        //function that get gay number from 0 to 6 and return the day name
+        function returnDayName(dayNum){
+            var daysNames = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday" ];
+            return(daysNames[dayNum]);
+        }
+
+
+        //update the Valids array with valid advertises by their time period
+        function GetValidViews(dayWeek,date,hours,minutes,seconds)
+        {
+            var x = 0;
+            Valids = []; //empty the array
+
+            //foreach on the Valids array
+            $.each(advertises, function( ind,value ){
+                if(jQuery.inArray(dayWeek,value.daysShow) != (-1))
+                {
+                    //Date.parse calculate the number of milliseconds between the date string and midnight of January 1, 1970.
+                    if((Date.parse(value.startDate) <= Date.parse(date)) && (Date.parse(date) <= Date.parse(value.endDate)))
+                    {
+                        var temp = value.srartTime.split(':');
+                        var StartHour = temp[0];
+                        var StartMinutes = temp[1];
+                        var StartSeconds = temp[2];
+                        var temp = value.endTime.split(':');
+                        var EndHour = temp[0];
+                        var EndMinutes = temp[1];
+                        var EndSeconds = temp[2];
+                        if((StartHour < hours || (StartHour == hours && StartMinutes < minutes ) || (StartHour == hours && StartMinutes == minutes && StartSeconds <= seconds))
+                                && (hours < EndHour  || (hours == EndHour && minutes < EndMinutes) || (hours == EndHour && minutes == EndMinutes && seconds <= EndSeconds)))
+                        {
+                            Valids.push(value);
+                        }
+                    }
+                }
+                x++;
+            });
+            //exit from the function until the foreach is over
+            if(x === advertises.length)
+            {
+                if(Valids.length != 0)
+                {
+                    return 0;
+                }
+                else{
+
+                    return 2;
+                }
+
+            }
+            else{
+                return 1;
+            }
+        }
+
+
+        //check the valid advertises and update the Valids array with the function 'GetValidViews'
+        function checkDateAndTimeValidation(callback)
+        {
+            var dt = new Date();
+            var date = (dt.getMonth()+1) + "/" + dt.getDate() + "/" + dt.getFullYear();
+            var hours = dt.getHours();
+            var minutes = dt.getMinutes();
+            var seconds = dt.getSeconds();
+            var day = returnDayName(dt.getDay());
+            var returnValue = GetValidViews(day,date,hours,minutes,seconds);
+            if(returnValue === 0)
+            {
+                //if call back in define it calls to 'startToAdvertise' function
+                if(typeof callback != 'undefined')
+                {
+                    callback();
+                }
+            }
+            else if(returnValue === 2)
+            {
+                $('.FrameContainer').load('/templates/NoValids.html',runNoValidTemplate);
+                setTimeout(function(){
+                    checkDateAndTimeValidation(function () {
+                        startToAdvertise();
+                    });
+                }, 50000);
+
+            }
+            else{
+                return 1;
+            }
+        }
+
+        //check if there are one ro more valids advertises
+        //get SumTimeout variable, it is the sum of all the advertise showing time on the screen
+        function isOneMessageValid(SumTimeout)
+        {
+            if(Valids.length === 1) //if one just call again the function that print the advertise on the screen
+            {
+                startToAdvertise();
+            }
+            /* 	if there are more than one valids it calls the 'checkDateAndTimeValidation' function,
+             after one round of all the valid advertises is over,
+             to update again the Valids array.	*/
+            else{
+                setTimeout( function(){
+                    checkDateAndTimeValidation();
+                }  , SumTimeout );
+                startToAdvertise();
+            }
+        }
+
+        /*Check which advertise is now playing*/
+        function ToRunNow()
+        {
+            for(var i=0,l=advertises.length;i<l;i++)
+            {
+                if(advertises[i].msgName === Valids[index].msgName)
+                {
+                    advNumber = i;
+                    break;
+                }
+            }
+            return;
+        }
+
+        //load the html template to start showing the advertise
+        function startToAdvertise()
+        {
+            var SumTimeout = 0; //sum of all the advertise showing time on the screen
+            var timeout = 0; //advertise seconds period
+            if(Valids.length > 1)
+            {
+                for(var i=0,l=Valids.length;i<l;i++)
+                {
+                    SumTimeout += parseInt(Valids[i].advTimer);
+                }
+            }
+            timeout = parseInt(Valids[index].advTimer);
+
+            $('.flexslider').attr("data-msgName",Valids[index].msgName);
+
+            ToRunNow(); //update the 'advNumber' variable with the current advertise on the screen
+
+            //load the html template to the screen and run after finish loadinf the 'runTempate' function
+            $('.FrameContainer').load(Valids[index].linkTemplate,runTemplate);
+
+
+            //run all over the Valid array to show all the valids advertises on the screen
+            index++;
+            if (index === Valids.length) {
+                index = 0;
+            }
+
+            setTimeout(function(){
+                isOneMessageValid(SumTimeout);
+            }, timeout);
+        }
+
+        function runNoValidTemplate(value)
+        {
+            var string = "There is no any message that is valid in this time";
+            $("<h1 id=\"msgData\" class=\"headline\" style=\"color:#ffffff\"></h1>").appendTo($(".align_center"));
+            var q = jQuery.map(string.split(''), function (letter) {
+                return $('<span>' + letter + '</span>');
+            });
+            var dest = $('#msgData');
+            var c = 0;
+            var i = setInterval(function () {
+                q[c].appendTo(dest).hide().fadeIn(1000);
+                c += 1;
+                if (c >= q.length) clearInterval(i);
+            }, 100);
+        }
+
+        //function that call the functions that change the image and messages on the screen
+        function runTemplate()
+        {
+            changeImg();
+            setTimeout( function(){
+                changeMsgData();
+            }  , 1500 );
+        }
+
+        //fade in the message on the screen letter by letter
+        function InnerChamgeMsg()
+        {
+            $("<h1 id=\"msgData\" class=\"headline\" style=\"color:#ffffff\"></h1>").appendTo($(".align_center"));
+            var q = jQuery.map(advertises[advNumber].msgData[dataIndex].split(''), function (letter) {
+                return $('<span>' + letter + '</span>');
+            });
+            var dest = $('#msgData');
+            var c = 0;
+            var i = setInterval(function () {
+                q[c].appendTo(dest).hide().fadeIn(1000);
+                c += 1;
+                if (c >= q.length) clearInterval(i);
+            }, 100);
+
+            dataIndex++;
+            if (dataIndex === advertises[advNumber].msgData.length) {
+                dataIndex = 0;
+            }
+        }
+
+        //change the mesage  and load the next message in the message array of the advertise object
+        function changeMsgData()
+        {
+
+            if($("#msgData").length != 0 && $("#msgData").text() != "")
+            {
+                $("#msgData").fadeOut("slow");
+                setTimeout( function(){
+                    $("#msgData").remove();
+                    InnerChamgeMsg();
+                }  , 100 );
+            }
+            else{
+                InnerChamgeMsg();
+            }
+
+            setTimeout(function(){
+                changeImg();
+                setTimeout( function(){
+                    changeMsgData();
+                }  , 1000 );
+            }, 10000);
+        }
+
+
+        //change the image background and load the next image in the img array of the advertise object
+        function changeImg()
+        {
+            var image = $('.flexslider .slide1');
+            image.fadeOut(1000, function () {
+                if(advertises[advNumber].msgImage.length != 0)
+                {
+                    image.css("background-image", "url('img/" + advertises[advNumber].msgImage[imgIndex] +"')");
+                    image.fadeIn(1000);
+                    imgIndex++;
+                    if (imgIndex === advertises[advNumber].msgImage.length) {
+                        imgIndex = 0;
+                    }
+
+                }
+                else{
+                    var colors = ["#58D8FB","#333333","#990099"];
+                    var rand = Math.floor(Math.random()*colors.length);
+
+                    image.css("background",colors[rand]);
+                    image.fadeIn(1000);
+                }
+            });
+        }
+
+        $(document).ready(function(){
+            checkDateAndTimeValidation(function () {
+                startToAdvertise();
+            });
+        });
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+<div id="Main">
+    <div class="wrapper">
+        <header id="new-nav" class="new-nav">
+            <div class="nn-secondary">
+                <div class="nn-secondary-middle">Web Applications - Ex1 - Students Ids: 302822796 , 201210499</div>
+            </div>
+            <div class="nn-mobile-wrapper">
+                <nav class="nn-utilities-wrapper">
+                    <div class="nn-link nn-search">
+                        <form action="#">
+                            <input type="hidden" name="type">
+                            <input type="text" placeholder="SEARCH HERE">
+                            <button type="submit">
+                                <img src="img/search.png" alt="Click to open search">
+                            </button>
+                        </form>
+                    </div>
+                </nav>
+                <nav class="nn-main-wrapper">
+                    <div class="nn-slab-wrapper">
+                        <a href="#" class="nn-link">Trips</a>
+                    </div>
+                    <div class="nn-slab-wrapper">
+                        <a href="#" class="nn-link">Hotels</a>
+                    </div>
+                    <div class="nn-slab-wrapper">
+                        <a href="#" class="nn-link">Flights</a>
+                    </div>
+                    <div class="nn-slab-wrapper">
+                        <a href="#" class="nn-link">Restaurant</a>
+                    </div>
+                    <div class="nn-slab-wrapper">
+                        <a href="#" class="nn-link">Beautiful Views</a>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="flexslider" data-msgImages="" data-msgData="" data-msgName="">
+        <div class="FrameContainer"></div>
+    </div>
+    <h1 id="StudentsIDs" class="headline" style="color:#222">302822796 , 201210499</h1>
+</div>
+
+
+</body>
+</html>

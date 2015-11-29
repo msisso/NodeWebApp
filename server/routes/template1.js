@@ -90,8 +90,9 @@ var advertises = [
 
 
 /* GET home page. */
-router.get('/screen=1', function(req, res, next) {
+router.get('/', function(req, res, next) {
     res.render('template1', advertises);
+   // res.send('template1');
 });
 
 module.exports = router;
