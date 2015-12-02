@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    #Main
+        .wrapper
+            header#new-nav.new-nav
+                .nn-secondary
+                    .nn-secondary-middle Web Applications - Ex1 - Students Ids: 302822796 , 201210499
+                .nn-mobile-wrapper
+                    nav.nn-utilities-wrapper
+                        .nn-link.nn-search
+                            form(action='#')
+                                input(type='hidden', name='type')
+                                input(type='text', placeholder='SEARCH HERE')
+                                button(type='submit')
+                                    img(src='img/search.png', alt='Click to open search')
+                    nav.nn-main-wrapper
+                        .nn-slab-wrapper
+                            a.nn-link(href='#') Trips
+                        .nn-slab-wrapper
+                            a.nn-link(href='#') Hotels
+                        .nn-slab-wrapper
+                            a.nn-link(href='#') Flights
+                        .nn-slab-wrapper
+                            a.nn-link(href='#') Restaurant
+                        .nn-slab-wrapper
+                            a.nn-link(href='#') Beautiful Views
+        .flexslider(data-msgimages='', data-msgdata='', data-msgname='')
+            .FrameContainer
+        h1#StudentsIDs.headline(style='color:#222') 302822796 , 201210499

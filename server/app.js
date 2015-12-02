@@ -1,6 +1,6 @@
-
-
 var express = require('express');
+var path = require('path');
+var fs = require('fs');
 var app = express();
 
 app.use(express.static('client/assets'));
@@ -13,7 +13,10 @@ var noValids = require('./routes/noValids');
 /*app.get('/', function (req, res) {
     res.send('Hello World');
 })*/
-
+// view engine setup
+console.log(path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 ///////////////////////////////////////////////////////////////
 
 // This responds with "Hello World" on the homepage
@@ -41,19 +44,53 @@ app.get('/list_user', function (req, res) {
 })
 
 // This responds a GET request for abcd, abxcd, ab123cd, and so on
-/*app.get('/screen=:templateId', function(req, res) {
-    console.log(req.params.templateId);
+app.get('/screen=:templateId', function(req, res) {
 
-    console.log("Got a GET request for /ab*cd");
-    res.send('Page Pattern Match');
-})*/
-app.use('/screen=1', template1);
+
+    var advertises = JSON.parse(fs.readFileSync('./server/api/advertises.json'));
+    var advertiseToShow = [];
+    if(req.params.templateId == 1)
+    {
+        for(var i=0;i<advertises.length;i++)
+        {
+            if (advertises[i].id.indexOf("1") > -1) {
+                advertiseToShow.push(advertises[i]);
+            }
+        }
+    }
+    else if(req.params.templateId == 2)
+    {
+        for(var i=0;i<advertises.length;i++)
+        {
+            if (advertises[i].id.indexOf("2") > -1) {
+                advertiseToShow.push(advertises[i]);
+            }
+        }
+    }
+    else if(req.params.templateId == 3)
+    {
+        for(var i=0;i<advertises.length;i++)
+        {
+            if (advertises[i].id.indexOf("3") > -1) {
+                advertiseToShow.push(advertises[i]);
+            }
+        }
+    }
+    else
+    {
+        res.send('Unknow request');
+    }
+
+    res.render('index', { advertise: advertiseToShow });
+
+})
+/*app.use('/screen=1', template1);
 app.use('/screen=2', template2);
-app.use('/screen=3', template3);
+app.use('/screen=3', template3);*/
 ////////////////////////////////////////////////////////////////
 
 
-app.get('/index.html', function (req, res) {
+app.get('/index', function (req, res) {
     res.sendFile( __dirname + "/" + "index.html" );
 })
 
