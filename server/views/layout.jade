@@ -113,7 +113,20 @@ html
                 ToRunNow(); //update the 'advNumber' variable with the current advertise on the screen
 
                 //load the html template to the screen and run after finish loadinf the 'runTempate' function
-                $('.FrameContainer').load(Valids[index].linkTemplate, runTemplate(timeout, advertises[advNumber].msgData.length));
+                //runTemplate(timeout, advertises[advNumber].msgData.length)
+                var msgLength = advertises[advNumber].msgData.length;
+                $('.FrameContainer').load(Valids[index].linkTemplate, function () {
+                    changeImg()
+                    setTimeout(function () {
+                        changeMsgData();
+                    }, 1000);
+                    myInterval = setInterval(function(){
+                        changeImg()
+                        setTimeout(function () {
+                            changeMsgData();
+                        }, 1000);
+                    }, (timeout / msgLength));
+                });
                 //run all over the Valid array to show all the valids advertises on the screen
                 index++;
                 if (index === Valids.length) {
@@ -122,6 +135,8 @@ html
                 }
 
                 setTimeout(function () {
+                    //alert("cleared");
+                    clearInterval(myInterval);
                     imgIndex = 0;
                     dataIndex = 0;
                     startToAdvertise();
@@ -145,26 +160,7 @@ html
                 }, 100);
             }
 
-            //function that call the functions that change the image and messages on the screen
-            function runTemplate(time,msgLength) {
-                var x = 0;
 
-                myInterval = setInterval(function () {
-                    changeImg();
-                    setTimeout(function () {
-                        changeMsgData();
-                    }, 1000);
-                    x += time/msgLength;
-                    //alert(x);
-                    //alert(time);
-
-                    if(x === time)
-                    {
-                        alert("cleared");
-                        clearInterval(myInterval);
-                    }
-                }, (time/msgLength));
-            }
 
             //fade in the message on the screen letter by letter
 
@@ -191,6 +187,7 @@ html
 
             //change the mesage  and load the next message in the message array of the advertise object
             function changeMsgData() {
+
                 if ($("#msgData").length != 0 && $("#msgData").text() != "") {
                     $("#msgData").fadeOut("slow");
                     setTimeout(function () {
