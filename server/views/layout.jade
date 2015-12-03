@@ -13,7 +13,8 @@ html
             var myInterval = 0;
 
             //Array that contains all the adv objects
-            var advertises = !{JSON.stringify(advertise)};
+            //var advertises = !{advertise};
+            var advertises = JSON.parse( !{JSON.stringify(advertise)} );
             //function that get gay number from 0 to 6 and return the day name
             function returnDayName(dayNum) {
                 var daysNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
@@ -243,7 +244,8 @@ html
                 alert("CheckOnServer");
                 advertises = [];
                 $.get('/screen=' + location.pathname.split('=')[1], function (req, res) {
-                    advertises = !{JSON.stringify(advertise)}
+                    //advertises = !{advertise};
+                    advertises = JSON.parse( !{JSON.stringify(advertise)} );
                     checkDateAndTimeValidation(function () {
                         startToAdvertise();
                     });
