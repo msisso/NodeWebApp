@@ -10,6 +10,7 @@ var template1 = require('./routes/template1');
 var template2 = require('./routes/template2');
 var template3 = require('./routes/template3');
 var noValids = require('./routes/noValids');
+var ErrorPage = require('./routes/noValids');
 /*app.get('/', function (req, res) {
     res.send('Hello World');
 })*/
@@ -25,23 +26,6 @@ app.get('/', function (req, res) {
     res.send('Hello GET');
 })
 
-// This responds a POST request for the homepage
-app.post('/', function (req, res) {
-    console.log("Got a POST request for the homepage");
-    res.send('Hello POST');
-})
-
-// This responds a DELETE request for the /del_user page.
-app.delete('/del_user', function (req, res) {
-    console.log("Got a DELETE request for /del_user");
-    res.send('Hello DELETE');
-})
-
-// This responds a GET request for the /list_user page.
-app.get('/list_user', function (req, res) {
-    console.log("Got a GET request for /list_user");
-    res.send('Page Listing');
-})
 
 // This responds a GET request for abcd, abxcd, ab123cd, and so on
 app.get('/screen=:templateId', function(req, res) {
@@ -78,35 +62,13 @@ app.get('/screen=:templateId', function(req, res) {
     }
     else
     {
-        res.send('Unknow request');
+        res.sendFile('templates/404.html', {root: __dirname });
     }
 
     res.render('index', { advertise: advertiseToShow });
 
 })
-/*app.use('/screen=1', template1);
-app.use('/screen=2', template2);
-app.use('/screen=3', template3);*/
-////////////////////////////////////////////////////////////////
 
-
-app.get('/index', function (req, res) {
-    res.sendFile( __dirname + "/" + "index.html" );
-})
-
-app.get('/process_get', function (req, res) {
-
-    // Prepare output in JSON format
-    response = {
-        first_name:req.query.first_name,
-        last_name:req.query.last_name
-    };
-    console.log(response);
-   //res.end(JSON.stringify(response));
-    res.render()
-})
-
-//////////////////////////////////////////////////////
 
 
 var server = app.listen(8081, 'localhost' ,function () {
