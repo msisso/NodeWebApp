@@ -6,17 +6,17 @@ var app = express();
 app.use(express.static('client/assets'));
 console.log(__dirname);
 //app.set('views', path.join(__dirname, 'views'));
-var template1 = require('./routes/template1');
-var template2 = require('./routes/template2');
-var template3 = require('./routes/template3');
-var noValids = require('./routes/noValids');
-var ErrorPage = require('./routes/noValids');
+var template1 = require('./server/routes/template1');
+var template2 = require('./server/routes/template2');
+var template3 = require('./server/routes/template3');
+var noValids = require('./server/routes/noValids');
+var ErrorPage = require('./server/routes/noValids');
 /*app.get('/', function (req, res) {
     res.send('Hello World');
 })*/
 // view engine setup
-console.log(path.join(__dirname, 'views'));
-app.set('views', path.join(__dirname, 'views'));
+console.log(path.join(__dirname, '/server/views'));
+app.set('views', path.join(__dirname, '/server/views'));
 app.set('view engine', 'jade');
 ///////////////////////////////////////////////////////////////
 
@@ -41,6 +41,7 @@ app.get('/screen=:templateId', function(req, res) {
                 advertiseToShow.push(advertises[i]);
             }
         }
+        res.render('index', { advertise: advertiseToShow });
     }
     else if(req.params.templateId == 2)
     {
@@ -50,6 +51,7 @@ app.get('/screen=:templateId', function(req, res) {
                 advertiseToShow.push(advertises[i]);
             }
         }
+        res.render('index', { advertise: advertiseToShow });
     }
     else if(req.params.templateId == 3)
     {
@@ -59,13 +61,13 @@ app.get('/screen=:templateId', function(req, res) {
                 advertiseToShow.push(advertises[i]);
             }
         }
+        res.render('index', { advertise: advertiseToShow });
     }
     else
     {
-        res.sendFile('templates/404.html', {root: __dirname });
+        res.sendFile( path.join(__dirname, '/client/assets/templates/404.html'));
     }
 
-    res.render('index', { advertise: advertiseToShow });
 
 })
 
