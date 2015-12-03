@@ -10,7 +10,7 @@ html
             var imgIndex = 0; //variable to move on msgImage array
             var advNumber = 0; //show which advertise is now on the screen
             var SumTimeout = 0; //sum of all the advertise showing time on the screen
-            var myInterval;
+            var myInterval = 0;
 
             //Array that contains all the adv objects
             var advertises = !{JSON.stringify(advertise)};
@@ -69,7 +69,7 @@ html
                 if (returnValue === 0) {
                     //if call back in define it calls to 'startToAdvertise' function
                     SumTimeout = 0;
-                    if (Valids.length > 1) {
+                    if (Valids.length >= 1) {
                         for (var i = 0, l = Valids.length; i < l; i++) {
                             SumTimeout += parseInt(Valids[i].advTimer);
                         }
@@ -80,14 +80,15 @@ html
                     }
                 }
                 else if (returnValue === 2) {
-                    $('.FrameContainer').load('templates/NoValids.html', runNoValidTemplate);
-                    /*setTimeout(function () {
-                        checkDateAndTimeValidation(function () {
-                            startToAdvertise();
-                        });
-                        dataIndex = 0;
-                        imgIndex = 0;
-                    }, 60000);*/
+                    if(myInterval === 0)
+                    {
+                        $('.FrameContainer').load('templates/NoValids.html', runNoValidTemplate);
+                    }
+                    else
+                    {
+                        clearInterval(myInterval);
+                        $('.FrameContainer').load('templates/NoValids.html', runNoValidTemplate);
+                    }
 
                 }
                 else {
@@ -109,40 +110,53 @@ html
 
             //load the html template to start showing the advertise
             function startToAdvertise() {
-                var timeout = parseInt(Valids[index].advTimer);
-                $('.flexslider').attr("data-msgName", Valids[index].msgName);
-                //ToRunNow(); //update the 'advNumber' variable with the current advertise on the screen
+                if(Valids.length != 0)
+                {
+                    var timeout = parseInt(Valids[index].advTimer);
+                    $('.flexslider').attr("data-msgName", Valids[index].msgName);
+                    //ToRunNow(); //update the 'advNumber' variable with the current advertise on the screen
 
-                //load the html template to the screen and run after finish loadinf the 'runTempate' function
-                //runTemplate(timeout, advertises[advNumber].msgData.length)
-                var msgLength = Valids[index].msgData.length;
-                $('.FrameContainer').load(Valids[index].linkTemplate, function () {
-                    changeImg()
-                    setTimeout(function () {
-                        changeMsgData();
-                    }, 1000);
-                    myInterval = setInterval(function(){
+                    //load the html template to the screen and run after finish loadinf the 'runTempate' function
+                    //runTemplate(timeout, advertises[advNumber].msgData.length)
+                    var msgLength = Valids[index].msgData.length;
+                    $('.FrameContainer').load(Valids[index].linkTemplate, function () {
                         changeImg()
                         setTimeout(function () {
                             changeMsgData();
                         }, 1000);
-                    }, (timeout / msgLength));
-                });
-                //run all over the Valid array to show all the valids advertises on the screen
+                        myInterval = setInterval(function () {
+                            changeImg()
+                            setTimeout(function () {
+                                changeMsgData();
+                            }, 1000);
+                        }, (timeout / msgLength));
+                    });
+                    setTimeout(function () {
+                        if (Valids.length === 1) {
+                            clearInterval(myInterval);
+                            CheckAgainFromServer();
+                        }
+                        else{
+                            clearInterval(myInterval);
+                            index++;
+                            if (index >= Valids.length) {
+                                index = 0;
+                                CheckAgainFromServer();
+                            }
+                            imgIndex = 0;
+                            dataIndex = 0;
+                            startToAdvertise();
+                        }
 
-                if (index === Valids.length) {
-                    index = 0;
-                    //checkDateAndTimeValidation();
+                    }, timeout);
+                }
+                else{
+
+                    CheckAgainFromServer();
                 }
 
-                setTimeout(function () {
-                    //alert("cleared");
-                    clearInterval(myInterval);
-                    index++;
-                    imgIndex = 0;
-                    dataIndex = 0;
-                    startToAdvertise();
-                }, timeout);
+
+
 
             }
 
@@ -159,7 +173,7 @@ html
                     c += 1;
                     if (c >= q.length) clearInterval(i);
                 }, 100);
-
+                setTimeout(CheckAgainFromServer,60000);
             }
 
 
@@ -225,30 +239,22 @@ html
                 });
             }
 
+            function CheckAgainFromServer() {
+                alert("CheckOnServer");
+                advertises = [];
+                $.get('/screen=' + location.pathname.split('=')[1], function (req, res) {
+                    advertises = !{JSON.stringify(advertise)}
+                    checkDateAndTimeValidation(function () {
+                        startToAdvertise();
+                    });
+                });
+            }
+
             $(document).ready(function () {
                 checkDateAndTimeValidation(function () {
                     startToAdvertise();
 
                 });
-                var currScreenId = location.pathname.split('=')[1];
-                function CheckAgainFromServer()
-                {
-                    $.get('/screen=' + currScreenId,function(req,res)
-                    {
-                        advertises = !{JSON.stringify(advertise)}
-                        checkDateAndTimeValidation(function () {
-                            startToAdvertise();
-                        });
-                    });
-                }
-                if(SumTimeout != 0)
-                {
-                    setInterval(CheckAgainFromServer,SumTimeout);
-                }
-                else{
-                    setInterval(CheckAgainFromServer,60000);
-                }
-
             });
     body
         block content
