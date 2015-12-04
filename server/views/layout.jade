@@ -15,6 +15,7 @@ html
             //Array that contains all the adv objects
             //var advertises = !{advertise};
             var advertises = !{advertise};
+
             //function that get gay number from 0 to 6 and return the day name
             function returnDayName(dayNum) {
                 var daysNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
@@ -174,7 +175,7 @@ html
                     c += 1;
                     if (c >= q.length) clearInterval(i);
                 }, 100);
-                setTimeout(CheckAgainFromServer,60000);
+                setTimeout(CheckAgainFromServer,5000);
             }
 
 
@@ -241,11 +242,10 @@ html
             }
 
             function CheckAgainFromServer() {
-                alert("CheckOnServer");
                 advertises = [];
-                $.get('/screen=' + location.pathname.split('=')[1], function (req, res) {
-                    alert(new Date());
-                    advertises = !{advertise};
+                $.get('/ServerUpdate=' + location.pathname.split('=')[1], function (data, status) {
+                    advertises = data;
+                    //alert(advertises[2].endTime);
                     //advertises = JSON.parse( !{JSON.stringify(advertise)} );
                     checkDateAndTimeValidation(function () {
                         startToAdvertise();
