@@ -30,8 +30,6 @@ app.get('/', function (req, res) {
 // This responds a GET request for abcd, abxcd, ab123cd, and so on
 app.get('/screen=:templateId', function(req, res) {
 
-
-
     var advertises = JSON.parse(fs.readFileSync('./server/api/advertises.json'));
     var advertiseToShow = [];
     if(req.params.templateId == 1)
@@ -42,7 +40,6 @@ app.get('/screen=:templateId', function(req, res) {
                 advertiseToShow.push(advertises[i]);
             }
         }
-        //res.render('index', { advertise: advertiseToShow });
         res.render('index', { advertise: JSON.stringify(advertiseToShow)});
     }
     else if(req.params.templateId == 2) {
@@ -51,7 +48,6 @@ app.get('/screen=:templateId', function(req, res) {
                 advertiseToShow.push(advertises[i]);
             }
         }
-        //res.render('index', { advertise: advertiseToShow });
         res.render('index', {advertise: JSON.stringify(advertiseToShow)});
     }
     else if(req.params.templateId == 3)
@@ -62,16 +58,12 @@ app.get('/screen=:templateId', function(req, res) {
                 advertiseToShow.push(advertises[i]);
             }
         }
-        //res.render('index', { advertise: advertiseToShow });
-
         res.render('index', { advertise: JSON.stringify(advertiseToShow)});
     }
     else
     {
         res.sendFile( path.join(__dirname, '/client/assets/templates/404.html'));
     }
-
-
 })
 
 
