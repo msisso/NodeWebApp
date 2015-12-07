@@ -72,3 +72,8 @@ exports.updateJson = function(req, res){
         res.json(advertiseToShow);
     }
 }
+
+exports.PageNotFound = function(req,res)
+{
+    res.render('Errors/404');
+}

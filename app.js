@@ -1,12 +1,11 @@
 var express = require('express');
 var path = require('path');
 var fs = require('fs');
-//var index = require('./server/api/ad/index');
+
 
 var app = express();
-require('./routes')(app);
 app.use(express.static('client/assets'));
-
+require('./routes')(app);
 
 app.set('views', path.join(__dirname, '/server/views'));
 app.set('view engine', 'jade');
