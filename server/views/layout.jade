@@ -10,7 +10,7 @@ html
             var imgIndex = 0; //variable to move on msgImage array
             var advNumber = 0; //show which advertise is now on the screen
             var SumTimeout = 0; //sum of all the advertise showing time on the screen
-            var myInterval = 0;
+            var myInterval = 0; //the return interval of setInterval function
 
             //Array that contains all the adv objects
             //var advertises = !{advertise};
@@ -99,27 +99,14 @@ html
             }
 
 
-            /*Check which advertise is now playing*/
-            function ToRunNow() {
-                for (var i = 0, l = advertises.length; i < l; i++) {
-                    if (advertises[i].msgName === Valids[index].msgName) {
-                        advNumber = i;
-                        break;
-                    }
-                }
-
-            }
-
             //load the html template to start showing the advertise
             function startToAdvertise() {
                 if(Valids.length != 0)
                 {
                     var timeout = parseInt(Valids[index].advTimer);
                     $('.flexslider').attr("data-msgName", Valids[index].msgName);
-                    //ToRunNow(); //update the 'advNumber' variable with the current advertise on the screen
 
-                    //load the html template to the screen and run after finish loadinf the 'runTempate' function
-                    //runTemplate(timeout, advertises[advNumber].msgData.length)
+
                     var msgLength = Valids[index].msgData.length;
                     $('.FrameContainer').load(Valids[index].linkTemplate, function () {
                         changeImg()
@@ -175,7 +162,7 @@ html
                     c += 1;
                     if (c >= q.length) clearInterval(i);
                 }, 100);
-                setTimeout(CheckAgainFromServer,5000);
+                setTimeout(CheckAgainFromServer,60000);
             }
 
 
@@ -185,9 +172,6 @@ html
             function InnerChamgeMsg() {
                 $("<h1 id=\"msgData\" class=\"headline\" style=\"color:#ffffff\"></h1>").appendTo($(".align_center"));
 
-                /*var q = jQuery.map(advertises[advNumber].msgData[dataIndex].split(''), function (letter) {
-                    return $('<span>' + letter + '</span>');
-                });*/
                 var q = jQuery.map(Valids[index].msgData[dataIndex].split(''), function (letter) {
                     return $('<span>' + letter + '</span>');
                 });
@@ -224,7 +208,6 @@ html
                 var image = $('.flexslider .slide1');
                 image.fadeOut(1000, function () {
                     if (Valids[index].msgImage.length != 0) {
-                        //image.css("background-image", "url('img/" + advertises[advNumber].msgImage[imgIndex] + "')");
                         image.css("background-image", "url('img/" + Valids[index].msgImage[imgIndex] + "')");
                         image.fadeIn(1000);
                         imgIndex++;
@@ -243,10 +226,8 @@ html
 
             function CheckAgainFromServer() {
                 advertises = [];
-                $.get('/ServerUpdate=' + location.pathname.split('=')[1], function (data, status) {
+                $.get('/ServerUpdate' + '/' + location.pathname.split('=')[1], function (data, status) {
                     advertises = data;
-                    //alert(advertises[2].endTime);
-                    //advertises = JSON.parse( !{JSON.stringify(advertise)} );
                     checkDateAndTimeValidation(function () {
                         startToAdvertise();
                     });
