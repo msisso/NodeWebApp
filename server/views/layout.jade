@@ -9,7 +9,7 @@ html
             var dataIndex = 0; //variable to move on msgData array
             var imgIndex = 0; //variable to move on msgImage array
             var advNumber = 0; //show which advertise is now on the screen
-            var SumTimeout = 0; //sum of all the advertise showing time on the screen
+            //var SumTimeout = 0; //sum of all the advertise showing time on the screen
             var myInterval = 0; //the return interval of setInterval function
 
             //Array that contains all the adv objects
@@ -70,12 +70,12 @@ html
                 var returnValue = GetValidViews(day, date, hours, minutes, seconds);
                 if (returnValue === 0) {
                     //if call back in define it calls to 'startToAdvertise' function
-                    SumTimeout = 0;
+                    /*SumTimeout = 0;
                     if (Valids.length >= 1) {
                         for (var i = 0, l = Valids.length; i < l; i++) {
                             SumTimeout += parseInt(Valids[i].advTimer);
                         }
-                    }
+                    }*/
 
                     if (typeof callback != 'undefined') {
                         callback();

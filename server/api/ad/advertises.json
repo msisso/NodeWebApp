@@ -1,5 +1,22 @@
 [
   {
+    "msgName": "Flights Discount Message",
+    "msgData": ["Don't Miss The Chance To Visit Israel",
+      "Discover the beauty of Tel Aviv",
+      "Flights to Croatia from 400$",
+      "Connections Flights is also fun"
+    ],
+    "msgImage": ["flight1.jpg", "telAviv-israel.jpg"],
+    "linkTemplate": "templates/TemplateOne.html",
+    "advTimer": "40000",
+    "startDate": "01/01/2016",
+    "endDate": "12/31/2016",
+    "daysShow": ["monday"],
+    "srartTime": "06:00:00",
+    "endTime": "12:00:00",
+    "id":["1","2"]
+  },
+  {
   "msgName": "Flights Discount Message",
   "msgData": ["Don't Miss The Chance To Visit Israel",
     "Discover the beauty of Tel Aviv",
@@ -9,11 +26,11 @@
   "msgImage": ["flight1.jpg", "telAviv-israel.jpg"],
   "linkTemplate": "templates/TemplateOne.html",
   "advTimer": "40000",
-  "startDate": "01/01/2015",
+  "startDate": "01/01/2016",
   "endDate": "12/31/2016",
-  "daysShow": ["sunday","monday", "wednesday"],
-  "srartTime": "06:00:00",
-  "endTime": "23:59:00",
+  "daysShow": ["wednesday"],
+  "srartTime": "13:00:00",
+  "endTime": "20:00:00",
   "id":["1","2"]
 },
 
@@ -33,11 +50,11 @@
     "msgImage": ["summer_holiday.jpg"],
     "linkTemplate": "templates/TemplateTwo.html",
     "advTimer": "100000",
-    "startDate": "03/01/2015",
+    "startDate": "03/01/2016",
     "endDate": "04/30/2016",
     "daysShow": ["tuesday", "wednesday"],
-    "srartTime": "06:00:00",
-    "endTime": "23:59:00",
+    "srartTime": "10:00:00",
+    "endTime": "16:00:00",
     "id":["1","3"]
   },
 
@@ -82,11 +99,11 @@
     "msgImage": ["Glass-beach-california.jpg", "Fiji-Japan.jpg"],
     "linkTemplate": "templates/TemplateTwo.html",
     "advTimer": "70000",
-    "startDate": "04/01/2015",
+    "startDate": "04/01/2016",
     "endDate": "04/30/2016",
-    "daysShow": ["monday", "thursday", "wednesday","friday"],
+    "daysShow": ["monday", "thursday", "wednesday"],
     "srartTime": "01:00:00",
-    "endTime": "10:00:00",
+    "endTime": "23:00:00",
     "id":["3"]
   }
 ]
