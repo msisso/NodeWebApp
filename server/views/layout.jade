@@ -132,9 +132,12 @@ html
                                 index = 0;
                                 CheckAgainFromServer();
                             }
-                            imgIndex = 0;
-                            dataIndex = 0;
-                            startToAdvertise();
+                            else{
+                                imgIndex = 0;
+                                dataIndex = 0;
+                                startToAdvertise();
+                            }
+
                         }
 
                     }, timeout);
@@ -226,7 +229,7 @@ html
 
             function CheckAgainFromServer() {
                 advertises = [];
-                $.get('/ServerUpdate' + '/' + location.pathname.split('=')[1], function (data, status) {
+                $.get('/ad/updatesFromServer' + '/' + location.pathname.split('=')[1], function (data, status) {
                     advertises = data;
                     checkDateAndTimeValidation(function () {
                         startToAdvertise();
