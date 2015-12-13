@@ -1,0 +1,19 @@
+{
+  "name": "AdvertiseEngine",
+  "description": "Mean Stack - My First WebApp for College",
+  "main": "app.js",
+  "authors": [
+    "Maor"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Maor's",
+    "Node",
+    "App"
+  ],
+  "moduleType": [],
+  "homepage": "http://localhost:8080",
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
