@@ -14,7 +14,7 @@ Adv.find({}).remove(function() {
                 "Connections Flights is also fun"
             ],
             msgImage: ["flight1.jpg", "telAviv-israel.jpg"],
-            linkTemplate: "templates/TemplateOne.html",
+            linkTemplate: "assets/templates/TemplateOne.html",
             advTimer: "40000",
             when: { startDate: "01/01/2016",
                 endDate: "12/31/2016",
@@ -31,7 +31,7 @@ Adv.find({}).remove(function() {
                 "Connections Flights is also fun"
             ],
             msgImage: ["flight1.jpg", "telAviv-israel.jpg"],
-            linkTemplate: "templates/TemplateOne.html",
+            linkTemplate: "assets/templates/TemplateOne.html",
             advTimer: "40000",
             when: { startDate: "01/01/2016",
                 endDate: "12/31/2016",
@@ -54,7 +54,7 @@ Adv.find({}).remove(function() {
                 "Tifani Luxury Rooms Split, Croatia - 267 EUR"
             ],
             msgImage: ["summer_holiday.jpg"],
-            linkTemplate: "templates/TemplateTwo.html",
+            linkTemplate: "assets/templates/TemplateTwo.html",
             advTimer: "100000",
             when: { startDate: "03/01/2016",
                 endDate: "04/30/2016",
@@ -67,7 +67,7 @@ Adv.find({}).remove(function() {
             msgName: "Blank Message",
             msgData: [],
             msgImage: [],
-            linkTemplate: "templates/TemplateTree.html",
+            linkTemplate: "assets/templates/TemplateTree.html",
             advTimer: "8000",
             when: { startDate: "05/01/2016",
                 endDate: "06/15/2016",
@@ -80,7 +80,7 @@ Adv.find({}).remove(function() {
             msgName: "Festival Package Trips",
             msgData: ["Ultra Europe Festival 2016", "TomorrowLand Festival 2016"],
             msgImage: [],
-            linkTemplate: "templates/TemplateOne.html",
+            linkTemplate: "assets/templates/TemplateOne.html",
             advTimer: "20000",
             when: { startDate: "03/29/2016",
                 endDate: "04/15/2016",
@@ -100,7 +100,7 @@ Adv.find({}).remove(function() {
                 "Mamanuca Islands, Fiji"
             ],
             msgImage: ["Glass-beach-california.jpg", "Fiji-Japan.jpg"],
-            linkTemplate: "templates/TemplateTwo.html",
+            linkTemplate: "assets/templates/TemplateTwo.html",
             advTimer: "70000",
             when: { startDate: "04/01/2016",
                 endDate: "04/30/2016",

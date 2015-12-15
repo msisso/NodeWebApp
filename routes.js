@@ -12,8 +12,12 @@ module.exports = function(app) {
     app.use('/screen=:id', require('./server/api/ad'));
     app.use('/ad/updatesFromServer', require('./server/api/ad'));
 
+    app.route('/socket').get(function(req,res){
+        res.sendFile(app.get('clientPath') + '/socketTest.html');
+    });
+
     app.route('/*').get(function(req, res) {
-        res.render('Errors/404');
+        res.sendFile(app.get('serverPath') + '/views/Errors/404.html');
     });
 
 };
