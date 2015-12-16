@@ -1,37 +1,34 @@
 
 
-var Ad = require('./ad.model.js');
+var db = require('./ad.db.js');
 
 
-exports.register = function(screen) {
-    var ads = Ad.find({
-        screensId: {$in: [screen]}}).select({
-        "msgName":1,
-        "linkTemplate":1,
-        "advTimer":1,
-        "_id":0,
-        "id": 1,
-        "when":1,
-        "msgImage":1,
-        "msgData":1});
 
-    ads.exec(function (err, ads) {
-        if(err) { return handleError(res, err); }
-        screen.emit('broad', ads);
-        screen.broadcast.emit('broad',ads);
-    });
-    /*Ad.schema.post('save', function(doc) {
-        onSave(screen, doc);
-    });
-    Ad.schema.post('remove', function(doc) {
-        onRemove(screen, doc);
-    });*/
+exports.register = function(screen,data) {
+    var callback = function(ads){
+        screen.emit('register', ads);
+    }
+
+    db.getAdvertisesById(data,callback);
+
+
+
 }
 
-function onSave(screen, doc, cb) {
-    screen.emit('ad:save', doc);
+exports.update = function(screen,data) {
+
+    var callback = function(ads)
+    {
+        screen.emit('updateMe', ads);
+        //screen.broadcast.emit('update',ads);
+    }
+    var ads = db.getAdvertisesById(data,callback);
+
 }
 
-function onRemove(screen, doc, cb) {
-    screen.emit('ad:remove', doc);
+exports.SendDbChanges = function(screen)
+{
+    screen.socket()
 }
+
+

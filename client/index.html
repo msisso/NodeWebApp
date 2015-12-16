@@ -5,31 +5,52 @@
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-
-
         var Valids = []; //Array that always contains the valid advertises by their time period
-      var index = 0; //variable to move on Valids array
-      var dataIndex = 0; //variable to move on msgData array
-      var imgIndex = 0; //variable to move on msgImage array
-      var advNumber = 0; //show which advertise is now on the screen
-      //var SumTimeout = 0; //sum of all the advertise showing time on the screen
-      var myInterval = 0; //the return interval of setInterval function
-      //Array that contains all the adv objects
-      var advertises = [];
+        var index = 0; //variable to move on Valids array
+        var dataIndex = 0; //variable to move on msgData array
+        var imgIndex = 0; //variable to move on msgImage array
+        var advNumber = 0; //show which advertise is now on the screen
+        //var SumTimeout = 0; //sum of all the advertise showing time on the screen
+        var myInterval = 0; //the return interval of setInterval function
+        //Array that contains all the adv objects
+        var advertises = [];
 
         var socket = io.connect('http://localhost:8080');
-        socket.on('connection', function(data) {
-            socket.emit('connection', location.pathname.split('=')[1]);
+        socket.on('connect', function(data) {
+            //alert("test");
+            socket.emit('register', location.pathname.split('=')[1]);
+        });
+
+        socket.on('updateMe', function(data) {
+            //alert("update: " + data[0].msgName);
+            advertises = data;
+
+            checkDateAndTimeValidation(function () {
+                startToAdvertise();
+            });
+        });
+        socket.on('register', function(data) {
+            //alert("register: " + data[0].msgName);
+            advertises = data;
+
+            //start the advertising on the screen
+            checkDateAndTimeValidation(function () {
+                startToAdvertise();
+            });
+
+        });
+
+
+        socket.on('serverUpdateInjection', function(data)
+        {
             advertises = data;
         });
 
-        socket.on('broad', function(data) {
-            advertises = data;
+        socket.on('disconnect', function(data)
+        {
+            alert("disconnected");
         });
-
-
-
-      //function that get gay number from 0 to 6 and return the day name
+        //function that get gay number from 0 to 6 and return the day name
       function returnDayName(dayNum) {
           var daysNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
           return (daysNames[dayNum]);
@@ -40,14 +61,14 @@
           Valids = []; //empty the array
           //foreach on the Valids array
           $.each(advertises, function (ind, value) {
-              if (jQuery.inArray(dayWeek, value.daysShow) != (-1)) {
+              if (jQuery.inArray(dayWeek, value.when.daysShow) != (-1)) {
                   //Date.parse calculate the number of milliseconds between the date string and midnight of January 1, 1970.
-                  if ((Date.parse(value.startDate) <= Date.parse(date)) && (Date.parse(date) <= Date.parse(value.endDate))) {
-                      var temp = value.srartTime.split(':');
+                  if ((Date.parse(value.when.startDate) <= Date.parse(date)) && (Date.parse(date) <= Date.parse(value.when.endDate))) {
+                      var temp = value.when.srartTime.split(':');
                       var StartHour = temp[0];
                       var StartMinutes = temp[1];
                       var StartSeconds = temp[2];
-                      temp = value.endTime.split(':');
+                      temp = value.when.endTime.split(':');
                       var EndHour = temp[0];
                       var EndMinutes = temp[1];
                       var EndSeconds = temp[2];
@@ -157,7 +178,7 @@
               c += 1;
               if (c >= q.length) clearInterval(i);
           }, 100);
-          setTimeout(CheckAgainFromServer,60000);
+          setTimeout(CheckAgainFromServer,7000);
       }
       //fade in the message on the screen letter by letter
       function InnerChamgeMsg() {
@@ -211,17 +232,18 @@
           });
       }
       function CheckAgainFromServer() {
-          advertises = [];
+          /*advertises = [];
           $.get('/ad/updatesFromServer' + '/' + location.pathname.split('=')[1], function (data, status) {
               advertises = data;
               checkDateAndTimeValidation(function () {
                   startToAdvertise();
               });
-          });
+          });*/
+          socket.emit('updateMe', location.pathname.split('=')[1]);
       }
 
-      $(document).ready(function () {
 
+      /*$(document).ready(function () {
 
 			var d = $.get('/ad/updatesFromServer' + '/' + location.pathname.split('=')[1], function (data, status) {
               advertises = data;
@@ -233,8 +255,8 @@
 				});			
 			});
 
-				
-      });
+
+      });*/
     </script>
   </head>
   <body>

@@ -16,9 +16,7 @@
     socket.on('connect', function(data) {
         socket.emit('join', 'Hello World from client');
     });
-    socket.on('connection', function(data) {
-        socket.emit('connection', 'Hello World from client');
-    });
+
     socket.on('broad', function(data) {
         $('#future').html(data);
     });
