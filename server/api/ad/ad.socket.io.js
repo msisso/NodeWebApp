@@ -28,7 +28,7 @@ exports.update = function(screen,data) {
 
 exports.SendDbChanges = function(screen)
 {
-    screen.socket()
+    screen.socket(id).emit()
 }
 
 
