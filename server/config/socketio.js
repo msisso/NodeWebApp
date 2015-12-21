@@ -1,7 +1,4 @@
 
-var redis = require("redis");
-var SetScreen = redis.createClient();
-
 // When the user disconnects.. perform this
 function onDisconnect(screen) { console.log("user disconnected")}
 
@@ -36,12 +33,10 @@ module.exports = function (socketio) {
                 ScreenId: data
             }
             clients.push(client);
-            SetScreen.sadd(data,screen.id);
             onConnect(screen,data);
         });
         // Call onDisconnect.
-        screen.on('disconnect', function () {
-            SetScreen.srem(data,screen.id);
+        screen.on('disconnect', function (data) {
             onDisconnect(screen);
         });
 

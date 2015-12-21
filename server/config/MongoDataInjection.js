@@ -69,7 +69,7 @@ Adv.find({}).remove(function() {
             msgImage: [],
             linkTemplate: "assets/templates/TemplateTree.html",
             advTimer: "8000",
-            when: { startDate: "05/01/2016",
+            when: { startDate: "05/01/2015",
                 endDate: "06/15/2016",
                 daysShow: ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"],
                 srartTime: "08:00:00",

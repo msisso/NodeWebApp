@@ -129,6 +129,10 @@
               var timeout = parseInt(Valids[index].advTimer);
               $('.flexslider').attr("data-msgName", Valids[index].msgName);
               var msgLength = Valids[index].msgData.length;
+              if(msgLength === 0)
+              {
+                  msgLength = 3;
+              }
               $('.FrameContainer').load(Valids[index].linkTemplate, function () {
                   changeImg()
                   setTimeout(function () {
@@ -199,18 +203,21 @@
           }
       }
       //change the mesage  and load the next message in the message array of the advertise object
-      function changeMsgData() {
-          if ($("#msgData").length != 0 && $("#msgData").text() != "") {
-              $("#msgData").fadeOut("slow");
-              setTimeout(function () {
-                  $("#msgData").remove();
-                  InnerChamgeMsg();
-              }, 100);
-          }
-          else {
-              InnerChamgeMsg();
-          }
-      }
+        function changeMsgData() {
+            if(Valids[index].msgData.length != 0)
+            {
+                if ($("#msgData").length != 0 && $("#msgData").text() != "") {
+                    $("#msgData").fadeOut("slow");
+                    setTimeout(function () {
+                        $("#msgData").remove();
+                        InnerChamgeMsg();
+                    }, 100);
+                }
+                else{
+                    InnerChamgeMsg();
+                }
+            }
+        }
       //change the image background and load the next image in the img array of the advertise object
       function changeImg() {
           var image = $('.flexslider .slide1');
