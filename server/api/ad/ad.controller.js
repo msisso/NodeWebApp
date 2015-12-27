@@ -48,3 +48,12 @@ exports.update = function(req, res) {
     console.log("User name = "+user_name+", password is "+password);
     res.end("done");
 };
+
+// Creates a new ad in the DB.
+exports.create = function(req, res) {
+    console.log("create " + req.body);
+    Ad.create(req.body, function(err, ad) {
+        if(err) { return err; }
+        res.json(ad);
+    });
+};
