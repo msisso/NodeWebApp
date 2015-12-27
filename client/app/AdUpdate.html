@@ -47,9 +47,6 @@
                                 <label for="imageInput">Image input</label>
                                 <input type="file" id="imageInput">
                             </div>
-
-
-
                         </div><!-- /.box-body -->
 
                         <div class="box-footer">
@@ -76,21 +73,35 @@
 <!--<script src="../../dist/js/app.min.js"></script>-->
 <!-- AdminLTE for demo purposes -->
 <!--<script src="../../dist/js/demo.js"></script>-->
+<script src="/socket.io/socket.io.js"></script>
 <script>
+
+
+
     $(document).ready(function(){
-        var user,pass,img;
-        $("#submit").click(function() {
-            user = $("#msgName").val();
-            pass = $("#msgData").val();
-            img = $("#imageInput").val();
-            alert(user + " " + pass + " " + img);
-            $.post("/TestUpdate", {user: user, password: pass}, function (data) {
-                alert(data);
+        var socket = io.connect('http://localhost:8080');
+
+        socket.on('connect', function(data) {
+            alert("connected");
+
+        });
+
+        $("#submit").click(function(e) {
+            e.preventDefault();
+
+            var x1 = $("#msgName").val();
+            var x2 = $("#msgData").val();
+            alert(x1 + " " + x2);
+            $.post("/TestUpdate", {msgName: x1, msgData: x2},function(ad,err)
+            {
+                if(err == 'success')
+                {
+                    var id = window.location.search.substring(1).split('=')[1];
+                    socket.emit('newAdCreated', id);
+                }
             });
         });
     });
-
-
 </script>
 </body>
 </html>

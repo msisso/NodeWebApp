@@ -13,7 +13,7 @@ function onUpdate(screen,data) {
 
 }
 
-function onDbChanges(screen)
+function onDbChanges(screen,data)
 {
     require('../api/ad/ad.socket.io').SendDbChanges(screen,data);
 }
@@ -28,6 +28,7 @@ module.exports = function (socketio) {
 
         screen.on('register', function (data) {
             console.log("on connect the id is: " + data );
+            screen.join(data);
             var client = {
                 SocketId: screen.id,
                 ScreenId: data
@@ -43,6 +44,10 @@ module.exports = function (socketio) {
         screen.on('updateMe',function(data){
             console.log("on update the id is: " + data);
             onUpdate(screen,data);
+        });
+        screen.on('newAdCreated',function(data){
+            console.log("on create new ad: " + data);
+            onDbChanges(screen,data);
         });
     });
 

@@ -2,6 +2,11 @@ var fs = require('fs');
 var Ad = require('./ad.model.js');
 var app = require('../../../app');
 
+function onNewCreate(screen,data) {
+    require('../api/ad/ad.socket.io').update(screen,data);
+
+}
+
 exports.showAdvertise = function(req, res) {
     console.log("showAdvertises");
     console.log(req.params.id);
@@ -49,11 +54,20 @@ exports.update = function(req, res) {
     res.end("done");
 };
 
+exports.sendHtmlUpdate = function(req,res)
+{
+    console.log("this is the screen id: " + req.query.id);
+    res.sendFile(app.get('clientPath') + '/app/AdUpdate.html');
+}
+
 // Creates a new ad in the DB.
 exports.create = function(req, res) {
     console.log("create " + req.body);
-    Ad.create(req.body, function(err, ad) {
+    Ad.create(req.body, function(err,ad) {
+
         if(err) { return err; }
-        res.json(ad);
+
+        res.status(201).json(ad);
     });
 };
+

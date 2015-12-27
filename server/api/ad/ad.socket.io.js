@@ -26,9 +26,12 @@ exports.update = function(screen,data) {
 
 }
 
-exports.SendDbChanges = function(screen)
+exports.SendDbChanges = function(screen,data)
 {
-    screen.socket(id).emit()
+    var callback = function(ads)
+    {
+        screen.broadcast.to(data).emit('serverUpdateInjection', ads);
+    }
+    var ads = db.getAdvertisesById(data,callback);
 }
-
 
