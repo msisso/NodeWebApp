@@ -2,7 +2,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 var app = module.exports = express();
 
-mongoose.connect('mongodb://localhost/MaorMongo');
+mongoose.connect('mongodb://localhost/Flights');
 require('./server/config/MongoDataInjection');
 
 var server = require('http').createServer(app);

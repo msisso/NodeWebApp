@@ -7,7 +7,7 @@ var router = express.Router();
 router.get('/screen=:id', controller.showAdvertise);
 router.get('/ad/updatesFromServer/:id', controller.updateJson);
 router.get('/TestUpdate', controller.sendHtmlUpdate);
-router.post('/TestUpdate', controller.create);
+//router.post('/TestUpdate', controller.create);
 //router.put('/TestUpdate', controller.update);
 
 module.exports = router;

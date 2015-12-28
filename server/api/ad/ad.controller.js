@@ -10,7 +10,7 @@ function onNewCreate(screen,data) {
 exports.showAdvertise = function(req, res) {
     console.log("showAdvertises");
     console.log(req.params.id);
-    if(req.params.id >= 1 && req.params.id <= 3)
+    if(req.params.id >= 1 && req.params.id <= 4)
     {
         res.sendFile(app.get('clientPath') + '/app/index.html');
     }
@@ -34,7 +34,7 @@ exports.updateJson = function(req, res){
         "msgData":1});
 
     ads.exec(function (err, ads) {
-        if(err) { return handleError(res, err); }
+        if(err) { return err;}
         res.json(ads);
     });
 
@@ -42,23 +42,37 @@ exports.updateJson = function(req, res){
 
 exports.sendHtmlUpdate = function(req,res)
 {
-    console.log("this is the screen id: " + req.query.id);
-    res.sendFile(app.get('clientPath') + '/app/AdUpdate.html');
+    console.log("screen id: " + req.query.id);
+    /*console.log("this is the screen id: " + req.query.id);*/
+    var callback = function(){
+        res.sendFile(app.get('clientPath') + '/app/TestUpdate.html');
+    }
+    Ad.create({
+        msgName: "Flights Discount Message",
+        msgData: ["Don't Miss The Chance To Visit Israel",
+            "Discover the beauty of Tel Aviv",
+            "Flights to Croatia from 400$",
+            "Connections Flights is also fun"
+        ],
+        msgImage: ["flight1.jpg", "telAviv-israel.jpg"],
+        linkTemplate: "assets/templates/TemplateOne.html",
+        advTimer: "40000",
+        when: { startDate: "01/01/2015",
+            endDate: "12/31/2016",
+            daysShow: ["monday"],
+            srartTime: "13:00:00",
+            endTime: "23:00:00"},
+        screensId: [4]
+    },callback);
 
 }
-// Updates an existing ad in the DB.
-exports.update = function(req, res) {
-    var user_name=req.body.user;
-    var password=req.body.password;
-    console.log("User name = "+user_name+", password is "+password);
-    res.end("done");
-};
 
-exports.sendHtmlUpdate = function(req,res)
+
+/*exports.sendHtmlUpdate = function(req,res)
 {
     console.log("this is the screen id: " + req.query.id);
     res.sendFile(app.get('clientPath') + '/app/AdUpdate.html');
-}
+}*/
 
 // Creates a new ad in the DB.
 exports.create = function(req, res) {

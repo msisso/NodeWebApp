@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Update</title>
+</head>
+<body>
+
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+
+
+
+    $(document).ready(function(){
+        var socket = io.connect('http://localhost:8080');
+
+        socket.on('connect', function(data) {
+            socket.emit('newAdCreated', id);
+        });
+    });
+</script>
+
+</body>
+</html>
