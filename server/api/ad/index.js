@@ -6,7 +6,8 @@ var router = express.Router();
 
 router.get('/screen=:id', controller.showAdvertise);
 router.get('/ad/updatesFromServer/:id', controller.updateJson);
-router.get('/TestUpdate', controller.sendHtmlUpdate);
+router.get('/TestUpdate', controller.TestUpdateScreen4);
+router.get('/manage', controller.sendHtmlUpdate);
 //router.post('/TestUpdate', controller.create);
 //router.put('/TestUpdate', controller.update);
 

@@ -40,7 +40,7 @@ exports.updateJson = function(req, res){
 
 }
 
-exports.sendHtmlUpdate = function(req,res)
+exports.TestUpdateScreen4 = function(req,res)
 {
     console.log("screen id: " + req.query.id);
     /*console.log("this is the screen id: " + req.query.id);*/
@@ -68,11 +68,11 @@ exports.sendHtmlUpdate = function(req,res)
 }
 
 
-/*exports.sendHtmlUpdate = function(req,res)
+exports.sendHtmlUpdate = function(req,res)
 {
     console.log("this is the screen id: " + req.query.id);
     res.sendFile(app.get('clientPath') + '/app/AdUpdate.html');
-}*/
+}
 
 // Creates a new ad in the DB.
 exports.create = function(req, res) {

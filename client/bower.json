@@ -15,6 +15,7 @@
   "homepage": "http://localhost:8080",
   "dependencies": {
     "jquery": "~2.1.4",
-    "bootstrap": "~3.3.6"
+    "bootstrap": "~3.3.6",
+    "blueimp-file-upload": "~9.11.2"
   }
 }
