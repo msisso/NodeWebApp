@@ -3,6 +3,7 @@
  */
 var path = require('path');
 var express = require('express');
+var upload = require('jquery-file-upload-middleware');
 var bodyParser = require('body-parser');
 
 
@@ -27,5 +28,29 @@ module.exports = function(app){
     app.set('serverPath', path.join(__dirname, '../../server'));
 
 
+    /// Redirect all to home except post
+    app.get('/upload', function( req, res ){
+        res.redirect('/');
+    });
+
+    app.put('/upload', function( req, res ){
+        res.redirect('/');
+    });
+
+    app.delete('/upload', function( req, res ){
+        res.redirect('/');
+    });
+
+    app.use('/upload', function(req, res, next){
+        console.log("upload");
+        upload.fileHandler({
+            uploadDir: function () {
+                return app.get('clientPath') + '/assets/public/imgUploaded'
+            },
+            uploadUrl: function () {
+                return '/upload'
+            }
+        })(req, res, next);
+    });
 
 }
