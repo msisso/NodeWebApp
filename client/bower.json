@@ -29,6 +29,9 @@
     "d3": "~3.5.12",
     "angular-google-maps": "~2.2.1",
     "angular-bootstrap-datetimepicker": "~0.4.0",
-    "angular-scroll": "~1.0.0"
+    "angular-scroll": "~1.0.0",
+    "angular-sanitize": "~1.4.8",
+    "angular-cookies": "~1.4.8",
+    "angular-animate": "~1.4.8"
   }
 }

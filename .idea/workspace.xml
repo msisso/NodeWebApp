@@ -2,98 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a28e06dd-1836-44d0-9897-320ce7ccf46f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/img/about/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/img/about/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/img/about/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/img/about/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/img/header-bg-old.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/img/logos/aetuts.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/img/logos/creative-market.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/img/logos/designmodo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/img/logos/envato.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/img/logos/microlancer.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/img/logos/themeforest.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/adminDashboard.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/controllers/adminDashboard.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/demo/controllers/demo.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/demo/controllers/demo.screen.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/demo/demo.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/demo/directives/demo.directives.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/demo/views/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/demo/views/demo.screen.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/directives/manage.directives.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/manage.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/config/stats.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/controllers/stats.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/directives/stats.directives.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/services/stats.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/stats.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/views/stats.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/services/ad.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/services/socket.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html.old" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/app.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/app.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/landpage/directives/landpage.directives.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/landpage/landpage.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/landpage/services/landpage.socket.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/landpage/views/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/landpage/views/landpage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/landpage/views/navbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/css/agency.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/css/dashboard.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/img/Fiji-Japan.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/img/Glass-beach-california.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/img/MainPicture.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/img/beach-sunset-scenes-1024x640.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/img/flight1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/img/mostbeauty.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/img/search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/img/summer_holiday.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/img/telAviv-israel.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/img/vication.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/public/imgUploaded/aldo (1).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/public/imgUploaded/aldo (2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/public/imgUploaded/aldo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/public/imgUploaded/bonf.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/public/imgUploaded/smile.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/CONTRIBUTORS.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/Gruntfile.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/coffee/angular-daterangepicker.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/coffeelint.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/js/angular-daterangepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/js/angular-daterangepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/js/angular-daterangepicker.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/js/angular-daterangepicker.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/angular-daterangepicker/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/daterangepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/daterangepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/drp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/package.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/website/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/website/website.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-daterangepicker/website/website.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/img/beautiful-view-at-sea-maldives-wallpaper-beautiful-sea-wallpaper-.jpg" afterPath="$PROJECT_DIR$/client/assets/img/header-bg.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/bower_components/ui-select/.bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/.bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/bower_components/ui-select/CHANGELOG.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/CHANGELOG.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/bower_components/ui-select/LICENSE" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/bower_components/ui-select/README.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/bower_components/ui-select/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/bower_components/ui-select/dist/select.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/dist/select.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/bower_components/ui-select/dist/select.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/dist/select.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/bower_components/ui-select/dist/select.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/dist/select.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/bower_components/ui-select/dist/select.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/dist/select.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/bower_components/ui-select/package.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js.gzip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdUpdate.html" afterPath="$PROJECT_DIR$/client/app/AdUpdate.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/css/style.css" afterPath="$PROJECT_DIR$/client/assets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" afterPath="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/landpage/views/landpage.html" afterPath="$PROJECT_DIR$/client/app/landpage/views/landpage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/landpage/views/navbar.html" afterPath="$PROJECT_DIR$/client/app/landpage/views/navbar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower.json" afterPath="$PROJECT_DIR$/client/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular/.bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/angular-csp.css" afterPath="$PROJECT_DIR$/client/bower_components/angular/angular-csp.css" />
@@ -102,11 +25,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/package.json" afterPath="$PROJECT_DIR$/client/bower_components/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/blueimp-file-upload/js/app.js" afterPath="$PROJECT_DIR$/client/bower_components/blueimp-file-upload/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes.js" afterPath="$PROJECT_DIR$/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config/socketio.js" afterPath="$PROJECT_DIR$/server/config/socketio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/Errors/404.html" afterPath="$PROJECT_DIR$/server/views/Errors/404.html" />
     </list>
     <ignored path="NodeWebApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -127,11 +47,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.785714">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.94185024">
+              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -140,18 +60,8 @@
       <file leaf-file-name="landpage.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.0">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/landpage/views/navbar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.142857">
-              <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+            <state vertical-scroll-proportion="-12.474576">
+              <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -160,15 +70,34 @@
       <file leaf-file-name="landpage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/landpage/views/landpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0280375">
-              <caret line="366" column="11" selection-start-line="366" selection-start-column="11" selection-end-line="366" selection-end-column="11" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="n#section#0;n#!!top" expanded="false" />
                 <element signature="n#section#2;n#!!top" expanded="false" />
-                <element signature="n#section#3;n#!!top" expanded="false" />
                 <element signature="n#aside#0;n#!!top" expanded="false" />
                 <element signature="n#section#4;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/landpage/views/navbar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.9142857">
+              <caret line="22" column="39" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landpage.directives.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/landpage/directives/landpage.directives.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,8 +106,20 @@
         <entry file="file://$PROJECT_DIR$/client/app/app.config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="32" />
+              <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landpage.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/landpage/landpage.module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#41#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,51 +128,18 @@
         <entry file="file://$PROJECT_DIR$/routes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.dashboard.html.old" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html.old">
+      <file leaf-file-name="ad.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/api/ad/ad.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.126985">
-              <caret line="240" column="58" selection-start-line="240" selection-start-column="30" selection-end-line="240" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="71" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="71" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/assets/css/dashboard.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.dashboard.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11018364">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/assets/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.111111">
-              <caret line="232" column="10" selection-start-line="232" selection-start-column="10" selection-end-line="232" selection-end-column="10" />
-              <folding>
-                <marker date="1451995419256" expanded="true" signature="5021:5034" placeholder="..." />
-                <marker date="1451995419256" expanded="true" signature="5608:5621" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -294,17 +202,17 @@
         <option value="$PROJECT_DIR$/client/app/app.config.js" />
         <option value="$PROJECT_DIR$/client/assets/css/style.css" />
         <option value="$PROJECT_DIR$/client/app/landpage/directives/landpage.directives.js" />
-        <option value="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" />
-        <option value="$PROJECT_DIR$/client/app/landpage/views/landpage.html" />
         <option value="$PROJECT_DIR$/client/assets/css/agency.css" />
         <option value="$PROJECT_DIR$/client/assets/js/script.js" />
-        <option value="$PROJECT_DIR$/client/app/landpage/views/navbar.html" />
-        <option value="$PROJECT_DIR$/routes.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html" />
         <option value="$PROJECT_DIR$/server/views/Errors/404.html" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html.old" />
         <option value="$PROJECT_DIR$/client/assets/css/dashboard.css" />
         <option value="$PROJECT_DIR$/client/assets/css/responsive.css" />
+        <option value="$PROJECT_DIR$/routes.js" />
+        <option value="$PROJECT_DIR$/client/app/landpage/views/landpage.html" />
+        <option value="$PROJECT_DIR$/client/app/landpage/views/navbar.html" />
+        <option value="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" />
         <option value="$PROJECT_DIR$/client/index.html" />
       </list>
     </option>
@@ -374,42 +282,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Errors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -446,95 +318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminDashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NodeWebApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminDashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -643,9 +427,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="-14" width="3868" height="2096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1984375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1984375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -989,28 +773,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/landpage/landpage.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.273483">
-          <caret line="283" column="75" selection-start-line="283" selection-start-column="75" selection-end-line="283" selection-end-column="75" />
-          <folding>
-            <marker date="1451765260675" expanded="true" signature="7024:7037" placeholder="..." />
-            <marker date="1451765260675" expanded="true" signature="7671:7684" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1065,32 +831,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/ad/ad.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21204819">
-          <caret line="17" column="71" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/landpage/services/landpage.socket.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13815261">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/demo/views/demo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/app.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15903614">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1138,8 +882,8 @@
         <state vertical-scroll-proportion="9.162095">
           <caret line="334" column="79" selection-start-line="0" selection-start-column="0" selection-end-line="358" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1148,22 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.795918">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/landpage/directives/landpage.directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1182,55 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7239777">
           <caret line="0" column="12429" selection-start-line="0" selection-start-column="12429" selection-end-line="0" selection-end-column="12429" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/landpage/views/landpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0280375">
-          <caret line="366" column="11" selection-start-line="366" selection-start-column="11" selection-end-line="366" selection-end-column="11" />
-          <folding>
-            <element signature="n#section#0;n#!!top" expanded="false" />
-            <element signature="n#section#2;n#!!top" expanded="false" />
-            <element signature="n#section#3;n#!!top" expanded="false" />
-            <element signature="n#aside#0;n#!!top" expanded="false" />
-            <element signature="n#section#4;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.111111">
-          <caret line="232" column="10" selection-start-line="232" selection-start-column="10" selection-end-line="232" selection-end-column="10" />
-          <folding>
-            <marker date="1451995419256" expanded="true" signature="5021:5034" placeholder="..." />
-            <marker date="1451995419256" expanded="true" signature="5608:5621" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/landpage/views/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.142857">
-          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/app.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1259,18 +938,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.785714">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.142857">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html">
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11018364">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        <state vertical-scroll-proportion="1.6410685">
+          <caret line="283" column="75" selection-start-line="283" selection-start-column="75" selection-end-line="283" selection-end-column="75" />
+          <folding>
+            <marker date="1451765260675" expanded="true" signature="7024:7037" placeholder="..." />
+            <marker date="1451765260675" expanded="true" signature="7671:7684" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/app.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/landpage/services/landpage.socket.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/ad/ad.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="71" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/landpage/directives/landpage.directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/landpage/views/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.9142857">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62741935">
+          <caret line="232" column="10" selection-start-line="232" selection-start-column="10" selection-end-line="232" selection-end-column="10" />
+          <folding>
+            <marker date="1451995419256" expanded="true" signature="5021:5034" placeholder="..." />
+            <marker date="1451995419256" expanded="true" signature="5608:5621" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.474576">
+          <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/app.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/landpage/landpage.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/landpage/views/landpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#section#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#!!top" expanded="false" />
+            <element signature="n#aside#0;n#!!top" expanded="false" />
+            <element signature="n#section#4;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94185024">
+          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding />
         </state>
       </provider>

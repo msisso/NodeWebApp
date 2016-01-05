@@ -19,7 +19,7 @@
                 <li class="hidden">
                     <a ng-click="toTheTop()"  href="#page-top"></a>
                 </li>
-                <li active-link ng-repeat="section in sections" du-scrollspy="{{section.name}}">
+                <li ng-repeat="section in sections" du-scrollspy="{{section.name}}">
                     <a du-smooth-scroll href="#{{section.name}}" >{{section.name}}</a>
                 </li>
 
