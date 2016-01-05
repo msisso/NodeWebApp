@@ -8,15 +8,15 @@ module.exports = function(app) {
         next();
     });*/
 
-    app.use('/', require('./server/api/ad'));
+    app.use('/api/ad', require('./server/api/ad'));
     //app.use('/screen=:id', require('./server/api/ad'));
     //app.use('/ad/updatesFromServer', require('./server/api/ad'));
     //app.use('TestUpdate', require('./server/api/ad'));
 
 
 
-   /* app.route('/*').get(function(req, res) {
-        res.sendFile(app.get('serverPath') + '/views/Errors/404.html');
-    });*/
+   app.route('/*').get(function(req, res) {
+        res.sendFile(app.get('clientPath') + '/index.html');
+    });
 
 };

@@ -20,7 +20,7 @@ function onDbChanges(screen,data)
 
 module.exports = function (socketio) {
 
-    var clients = [];
+    //var clients = [];
     socketio.sockets.on('connection', function (screen) {
         console.log('Client connected...');
 
@@ -29,11 +29,11 @@ module.exports = function (socketio) {
         screen.on('register', function (data) {
             console.log("on connect the id is: " + data );
             screen.join(data);
-            var client = {
+            /*var client = {
                 SocketId: screen.id,
                 ScreenId: data
             }
-            clients.push(client);
+            clients.push(client);*/
             onConnect(screen,data);
         });
         // Call onDisconnect.

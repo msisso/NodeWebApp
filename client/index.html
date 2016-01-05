@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-    <script>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <base href="/" >
+        <title>Flights Manager</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 
 
-        function runHomePage() {
-            var string = "This is the homepage - go to http://localhost:8080/screen=1 or 2 or 3 to watch advertises";
-            $("<h1 id=\"msgData\" class=\"headline\" style=\"color:#ffffff\"></h1>").appendTo($(".align_center"));
-            var q = jQuery.map(string.split(''), function (letter) {
-                return $('<span>' + letter + '</span>');
-            });
-            var dest = $('#msgData');
-            var c = 0;
-            var i = setInterval(function () {
-                q[c].appendTo(dest).hide().fadeIn(1000);
-                c += 1;
-                if (c >= q.length) clearInterval(i);
-            }, 100);
+        <!-- Custom Fonts -->
+        <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+        <!-- Custom CSS -->
+
+        <link rel="stylesheet" href="assets/css/agency.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body ng-app="FlightsApp" id="page-top" class="index" >
+
+        <ui-view></ui-view>
+
+        <!-- jQuery -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <!--<script src="bower_components/jquery.easing/js/jquery.easing.min.js"></script>-->
+        <!-- Angular -->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <!-- Angular-UI-->
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-socket-io/socket.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="/socket.io/socket.io.js'"></script>
+        <!--<script src="socket.io-client/socket.io.js"></script>-->
+        <!--<script src="bower_components/classie/classie.js"></script>
+        <script src="bower_components/AnimatedHeader/js/cbpAnimatedHeader.js"></script>-->
+
+        <!-- Contact Form JavaScript -->
+        <!--<script src="bower_components/jqBootstrapValidation/src/jqBootstrapValidation.js"></script>-->
+
+        <!-- Custom Theme JavaScript -->
+        <script src="assets/js/agency.js"></script>
+        <script src="assets/js/script.js"></script>
+
+        <!--<script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>-->
 
 
-        }
+
+        <!--<script src="bower_components/jquery-icheck/icheck.min.js"></script>-->
+        <!--<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>-->
+        <!--<script src="bower_components/angular-scroll/angular-scroll.js"></script>-->
+        <!--<script src="bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>-->
 
 
+        <!---------------------->
+
+        <!--
+        <script src="bower_components/lodash/lodash.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="bower_components/ui-select/dist/select.js"></script>
+
+        <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-notify/dist/angular-notify.js"></script>
+        <script src="bower_components/restangular/dist/restangular.js"></script>
+        <script src="bower_components/d3/d3.js"></script>
+
+        <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 
 
-        $(document).ready(function () {
-            runHomePage();
+        <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.tpls.js"></script>
+        <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>-->
 
-        });
-    </script>
-</head>
-<body>
-<div id="Main">
-    <div class="wrapper">
-        <header id="new-nav" class="new-nav">
-            <div class="nn-secondary">
-                <div class="nn-secondary-middle">Web Applications - Ex3 - Students Ids: 302822796 , 201210499</div>
-            </div>
-            <div class="nn-mobile-wrapper">
-                <nav class="nn-utilities-wrapper">
-                    <div class="nn-link nn-search">
-                        <form action="#">
-                            <input type="hidden" name="type">
-                            <input type="text" placeholder="SEARCH HERE">
-                            <button type="submit"><img src="assets/img/search.png" alt="Click to open search"></button>
-                        </form>
-                    </div>
-                </nav>
-                <nav class="nn-main-wrapper">
-                    <div class="nn-slab-wrapper"><a href="#" class="nn-link">Trips</a></div>
-                    <div class="nn-slab-wrapper"><a href="#" class="nn-link">Hotels</a></div>
-                    <div class="nn-slab-wrapper"><a href="#" class="nn-link">Flights</a></div>
-                    <div class="nn-slab-wrapper"><a href="#" class="nn-link">Restaurant</a></div>
-                    <div class="nn-slab-wrapper"><a href="#" class="nn-link">Beautiful Views</a></div>
-                </nav>
-            </div>
-        </header>
-    </div>
-    <div data-msgimages="" data-msgdata="" data-msgname="" class="flexslider">
-        <div class="FrameContainer">
-            <div id="homepage_slider" class="flexslider">
-                <ul class="slides">
-                    <li>
-                        <a class="slide slide1" href="#" style="background: #5383D1">
-                            <div class="flex-caption">
-                                <div class="container">
-                                    <div class="align_center">
 
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <script src="app/landpage/landpage.module.js"></script>
+        <script src="app/landpage/controllers/landpage.controller.js"></script>
+        <script src="app/landpage/directives/landpage.directives.js"></script>
 
-        </div>
-    </div>
-    <h1 id="StudentsIDs" style="color:#222" class="headline">302822796 , 201210499</h1>
-</div>
-</body>
+
+        <script src="app/app.module.js"></script>
+        <script src="app/app.config.js"></script>
+
+    </body>
 </html>

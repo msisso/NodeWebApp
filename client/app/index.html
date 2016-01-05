@@ -225,7 +225,7 @@
           var image = $('.flexslider .slide1');
           image.fadeOut(1000, function () {
               if (Valids[index].msgImage.length != 0) {
-                  image.css("background-image", "url('assets/img/" + Valids[index].msgImage[imgIndex] + "')");
+                  image.css("background-image", "url('assets/public/imgUploaded/" + Valids[index].msgImage[imgIndex] + "')");
                   image.fadeIn(1000);
                   imgIndex++;
                   if (imgIndex === Valids[index].msgImage.length) {
@@ -281,7 +281,7 @@
                 <form action="#">
                   <input type="hidden" name="type">
                   <input type="text" placeholder="SEARCH HERE">
-                  <button type="submit"><img src="assets/img/search.png" alt="Click to open search"></button>
+                  <button type="submit"><img src="assets/public/imgUploaded/search.png" alt="Click to open search"></button>
                 </form>
               </div>
             </nav>

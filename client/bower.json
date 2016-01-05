@@ -16,6 +16,19 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.6",
-    "blueimp-file-upload": "~9.11.2"
+    "blueimp-file-upload": "~9.11.2",
+    "angular-ui-router": "~0.2.15",
+    "angular-socket-io": "~0.7.0",
+    "ui-select": "angular-ui-select#~0.13.2",
+    "ng-file-upload": "~11.0.0",
+    "angular-notify": "~2.5.0",
+    "angular-ui-bootstrap": "~0.14.3",
+    "bootstrap-ui-datetime-picker": "~2.0.5",
+    "lodash": "~3.10.1",
+    "restangular": "~1.5.1",
+    "d3": "~3.5.12",
+    "angular-google-maps": "~2.2.1",
+    "angular-bootstrap-datetimepicker": "~0.4.0",
+    "angular-scroll": "~1.0.0"
   }
 }

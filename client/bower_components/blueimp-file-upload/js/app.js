@@ -15,9 +15,9 @@
 (function () {
     'use strict';
 
-    var isOnGitHub = window.location.hostname === 'blueimp.github.io',
-        url = isOnGitHub ? '//jquery-file-upload.appspot.com/' : '/upload';
-
+    var isOnGitHub = window.location.hostname === 'localhost',
+        url ='/upload';
+    //alert(window.location.hostname);
     angular.module('demo', [
         'blueimp.fileupload'
     ])
@@ -37,7 +37,7 @@
                         // send Blob objects via XHR requests:
                         disableImageResize: /Android(?!.*Chrome)|Opera/
                             .test(window.navigator.userAgent),
-                        maxFileSize: 999000,
+                        maxFileSize: 4096000,
                         acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i
                     });
                 }
@@ -71,6 +71,7 @@
             function ($scope, $http) {
                 var file = $scope.file,
                     state;
+
                 if (file.url) {
                     file.$state = function () {
                         return state;

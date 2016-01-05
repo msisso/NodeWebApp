@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="content-box-header" ng-click="collapse.demo = !collapse.demo">
+      <div class="panel-title">
+        Demo
+      </div>
+      <div class="panel-options">
+        <i class="fa" ng-class="{ 'fa-chevron-right' : collapse.demo, 'fa-chevron-down' : !collapse.demo }"></i>
+      </div>
+    </div>
+    <div class="content-box-large box-with-header" ng-hide="collapse.demo">
+      <p>Please select a screen to display...</p>
+
+      <div class="row">
+        <div class="col-md-4" ng-repeat="screen in screens">
+          <button class="btn btn-line-aero" ng-click="showScreen(screen.id)">{{screen.name}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="content-box-large" ng-hide="collapse.demo || !screenSelected">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="screens" ui-view>
+              <div class="spinner-wrapper">
+                <i class="select-screen-spinner fa fa-spinner fa-pulse fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
