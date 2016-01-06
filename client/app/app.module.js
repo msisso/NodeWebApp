@@ -4,6 +4,9 @@
 'use strict';
 
 angular.module('FlightsApp', [
+        'ngCookies',
+        'ngResource',
+        'ngSanitize',
         'ui.router',
         'ui.bootstrap',
         'btford.socket-io',

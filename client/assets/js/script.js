@@ -189,7 +189,7 @@ function changeImg() {
     var image = $('.flexslider .slide1');
     image.fadeOut(1000, function () {
         if (Valids[index].msgImage.length != 0) {
-            image.css("background-image", "url('assets/img/" + Valids[index].msgImage[imgIndex] + "')");
+            image.css("background-image", "url('assets/public/imgUploaded/" + Valids[index].msgImage[imgIndex] + "')");
             image.fadeIn(1000);
             imgIndex++;
             if (imgIndex === Valids[index].msgImage.length) {
