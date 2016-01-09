@@ -55,7 +55,7 @@ exports.TestUpdateScreen4 = function(req,res)
             "Connections Flights is also fun"
         ],
         msgImage: ["flight1.jpg", "telAviv-israel.jpg"],
-        linkTemplate: "assets/templates/TemplateOne.html",
+        linkTemplate: "assets/templates/A.html",
         advTimer: "40000",
         when: { startDate: "01/01/2015",
             endDate: "12/31/2016",

@@ -11,6 +11,7 @@ var AdSchema = new Schema({
     msgData: [String],
     msgImage: [String],
     linkTemplate: String,
+    templateName: String,
     advTimer: Number,
     when: Schema.Types.Mixed,
     screensId: { type: [String], index: true }

@@ -44,14 +44,14 @@
 
                             <div class="form-group">
                                 <label>Template</label>
-                                <ui-select multiple ng-model="searchCreteria.linkTemplate" theme="bootstrap" ng-disabled="disabled "
+                                <ui-select multiple ng-model="searchCreteria.templateName" theme="bootstrap" ng-disabled="disabled "
                                            close-on-select="false">
                                     <ui-select-match placeholder="Select Template...">{{$item}}</ui-select-match>
-                                    <ui-select-choices repeat="template in ['1','2','3'] | filter:$select.search">
+                                    <ui-select-choices repeat="template in ['A','B','C'] | filter:$select.search">
                                         Template {{template}}
                                     </ui-select-choices>
                                 </ui-select>
-                                <p>Selected: {{searchCreteria.linkTemplate}}</p>
+                                <p>Selected: {{searchCreteria.templateName}}</p>
                             </div>
 
                             <div style="height:30px"></div>

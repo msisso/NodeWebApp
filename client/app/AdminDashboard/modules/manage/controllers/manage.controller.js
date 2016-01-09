@@ -11,14 +11,14 @@ angular.module('dashboard.manage')
 
         $scope.searchCreteria = {};
         $scope.searchCreteria.screensId = [];
-        $scope.searchCreteria.linkTemplate = [];
+        $scope.searchCreteria.templateName = '';
         $scope.searchCreteria.msgName = '';
 
         $scope.search = function() {
             var criteria = {};
             if (!_.isEmpty($scope.searchCreteria.msgName)) criteria.msgName = $scope.searchCreteria.msgName;
             if (!_.isEmpty($scope.searchCreteria.screensId)) criteria.screensId = $scope.searchCreteria.screensId;
-            if (!_.isEmpty($scope.searchCreteria.linkTemplate)) criteria.linkTemplate = $scope.searchCreteria.linkTemplate;
+            if (!_.isEmpty($scope.searchCreteria.templateName)) criteria.templateName = $scope.searchCreteria.templateName;
             console.log(criteria);
             if (!_.isEmpty(criteria)) {
                 $scope.changeSearchButton = true;
@@ -29,12 +29,11 @@ angular.module('dashboard.manage')
                         if (!_.isEmpty(res)) {
                             $scope.searchResults = res.map(function(o) {
                                 console.log(o);
-                                var tpl = o.linkTemplate.split("/");
-                                var template = tpl[2].split(".");
+
                                 return {
                                     msgName: o.msgName,
                                     screensId: o.screensId.join(', '),
-                                    linkTemplate: template[0],
+                                    linkTemplate: o.templateName,
                                     duration: (o.advTimer/1000) + ' seconds',
                                     startDateTime: moment(o.when.startDate + ' ' + o.when.startTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL'),
                                     endDateTime: moment(o.when.endDate + ' ' + o.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')
