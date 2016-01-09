@@ -103,14 +103,17 @@ angular.module('dashboard.manage')
         }
     };
 }])
-    .directive('testMouseout', function ($compile) {
-        return {
-            link: function (scope, iElement) {
-                iElement.bind('mouseover', function () {
-                    iElement.html('<div data-test-mouseout-here="" class="testHere"></div>');
-                    $compile(iElement.contents())(scope);
-                    iElement.unbind('mouseover');
-                });
-            }
-        };
-    });
+    .directive('scrollIf', ['$document', '$timeout', function($document, $timeout) {
+    return {
+        restrict: 'A',
+        link: function($scope, $element, $attrs) {
+            $scope.$watch($attrs.scrollIf, function(value) {
+                if (value) {
+                    $timeout(function() {
+                        $document.scrollToElementAnimated($element, 55, 1000);
+                    }, 0);
+                }
+            });
+        }
+    }
+}]);

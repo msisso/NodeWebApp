@@ -75,7 +75,7 @@ exports.sendHtmlUpdate = function(req,res)
 }
 
 // Creates a new ad in the DB.
-exports.create = function(req, res) {
+/*exports.create = function(req, res) {
     console.log("create " + req.body);
     Ad.create(req.body, function(err,ad) {
 
@@ -83,5 +83,60 @@ exports.create = function(req, res) {
 
         res.status(201).json(ad);
     });
+};*/
+
+
+// Get list of ads
+exports.index = function(req, res) {
+    Ad.find(function (err, ads) {
+        if(err) { return handleError(res, err); }
+        res.status(201).json(ads);
+    });
 };
 
+// Get a single ad
+exports.show = function(req, res) {
+    Ad.findById(req.params.id, function (err, ad) {
+        if(err) { return handleError(res, err); }
+        if(!ad) { return res.status(404); }
+        res.json(ad);
+    });
+};
+
+// Creates a new ad in the DB.
+exports.create = function(req, res) {
+    Ad.create(req.body, function(err, ad) {
+        if(err) { return handleError(res, err); }
+        res.status(201).json(ad);
+    });
+};
+
+// Updates an existing ad in the DB.
+exports.update = function(req, res) {
+    if(req.body._id) { delete req.body._id; }
+    Ad.findById(req.params.id, function (err, ad) {
+        if (err) { return handleError(res, err); }
+        if(!ad) { return res.status(404); }
+        var updated = _.merge(ad, req.body);
+        updated.save(function (err) {
+            if (err) { return handleError(res, err); }
+            return res.status(200).json(ad);
+        });
+    });
+};
+
+// Deletes a ad from the DB.
+exports.destroy = function(req, res) {
+    Ad.findById(req.params.id, function (err, ad) {
+        if(err) { return handleError(res, err); }
+        if(!ad) { return res.status(404); }
+        ad.remove(function(err) {
+            if(err) { return handleError(res, err); }
+            return res.status(204);
+        });
+    });
+};
+
+function handleError(res, err) {
+    return res.status(500).send(err);
+}

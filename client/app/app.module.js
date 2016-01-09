@@ -11,6 +11,7 @@ angular.module('FlightsApp', [
         'ui.select',
         'ngUpload',
         'ngAnimate',
+        'restangular',
         'ui.bootstrap',
         'btford.socket-io',
         'duScroll',

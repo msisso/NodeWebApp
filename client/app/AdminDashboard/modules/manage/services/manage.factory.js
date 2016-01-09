@@ -16,25 +16,33 @@ angular.module('dashboard.manage')
                         console.log(err);
                         deferred.reject(err);
                     });
-                /*var req = {
-                    method: 'POST',
-                    url: 'http://localhost:8080/search',
-                    data: criteria
-                };
-                console.log("enter search factory");
-                $http(req).then(function(){console.log(res);});*/
-                /*$http.get('/search', {params: criteria})
+                return deferred.promise;
+            };
+
+            return factory;
+        }])
+    .factory('getAllAdverts',['$q', '$http',
+        function($q, $http)
+        {
+            var factory = {};
+            factory.getAllAdverts = function(){
+                var deferred = $q.defer();
+                $http.get('/api/ad')
                     .success(function(res) {
                         console.log("success" + res);
                         deferred.resolve(res);
                     })
                     .error(function(err) {
-                        console.lof("err");
+                        console.log(err);
                         deferred.reject(err);
-                    });*/
-
+                    });
                 return deferred.promise;
-            };
+                //var ads = Adverts.getList().$object;
+                //deferred.resolve(ads);
 
+
+            };
             return factory;
-        }]);
+
+        }
+    ]);

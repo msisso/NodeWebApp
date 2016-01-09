@@ -1,4 +1,4 @@
-<div class="content-wrapper">
+<div class="content-wrapper" >
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1 style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 500;">
@@ -14,10 +14,10 @@
     <!-- Main content -->
     <section class="content">
         <div class="box box-warning" id="SearchBox">
-            <div class="box-header with-border">
+            <div class="box-header with-border" ng-click="Search = !Search" style="cursor: pointer;">
                 <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Search</h3>
                 <div class="box-tools pull-right">
-                    <button  ng-click="Search=!Search" class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': Search, 'fa fa-plus': !Search}"></i></button>
+                    <button  class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': Search, 'fa fa-plus': !Search}"></i></button>
                 </div>
             </div><!-- /.box-header -->
             <div ng-show="Search" class="box-body slide-toggle" >
@@ -65,9 +65,9 @@
                 <!-- Search Results -->
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="content-box-large" ng-hide="!searchResults || collapse.search">
+                        <div class="content-box-large" ng-show="findresult === 'foundresults' && Search">
                             <div class="panel-body">
-                                <div id="search-results" scroll-if="searchResults">
+                                <div id="search-results" scroll-if="findresult === 'foundresults'">
                                     <table class="table table-hover table-condensed">
                                         <thead>
                                         <tr>
@@ -93,68 +93,62 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="content-box-large" ng-show="findresult === 'notfoundresults'">
+                            <div id="search-no-results">
+                                <div id="">No results found!</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
              </div>
-
         </div>
-        <div class="box box-warning" id="EditBox">
+
+
+
+        <div class="box box-warning" id="EditBox" ng-click="Edit = !Edit" style="cursor: pointer;" >
             <div class="box-header with-border">
-                <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Edit</h3>
+                <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Manage</h3>
                 <div class="box-tools pull-right">
-                    <button  ng-click="Edit=!Edit" class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': Edit, 'fa fa-plus': !Edit}"></i></button>
+                    <button  class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': Edit, 'fa fa-plus': !Edit}"></i></button>
                 </div>
             </div><!-- /.box-header -->
-            <form role="form">
-                <div ng-show="Edit" class="box-body slide-toggle" >
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Minimal</label>
-                                <select class="form-control select2" style="width: 100%;">
-                                    <option selected="selected">Alabama</option>
-                                    <option>screen 1</option>
-                                    <option>screen 2</option>
-                                    <option>screen 3</option>
-                                </select>
-                            </div><!-- /.form-group -->
-                            <div class="form-group">
-                                <label>Disabled</label>
-                                <select class="form-control select2" disabled="disabled" style="width: 100%;">
-                                    <option selected="selected">Alabama</option>
-                                    <option>Alaska</option>
-                                    <option>California</option>
-                                    <option>Delaware</option>
-                                    <option>Tennessee</option>
-                                    <option>Texas</option>
-                                    <option>Washington</option>
-                                </select>
-                            </div><!-- /.form-group -->
 
-                            <div class="form-group">
-                                <label for="msgData">Advertise Data</label>
-                                <input type="text" class="form-control" id="msgData" placeholder="Enter the content of your advertise">
-                            </div>
-                            <div class="form-group">
-                                <label for="imageInput">Image input</label>
-                                <input id="imageInput" type="file" name="files[]" data-url="/upload" multiple>
+            <div ng-show="Edit" class="box-body slide-toggle"  ng-init="test()">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-hover table-condensed">
+                            <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Screens</th>
+                                <th>Template</th>
+                                <th>Duration</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="ad in adsToIterate">
+                                <td>{{ad.msgName}}</td>
+                                <td>{{ad.screensId}}</td>
+                                <td>{{ad.templateName}}</td>
+                                <td>{{ad.duration}}</td>
+                                <td>{{ad.startDateTime}}</td>
+                                <td>{{ad.endDateTime}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
-                            </div>
-                            <div class="box-footer">
-                                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </div><!-- /.col -->
-
-                    </div><!-- /.row -->
-                </div><!-- /.box-body -->
-            </form>
         </div>
         <!-- SELECT2 EXAMPLE -->
         <div class="box box-warning" >
-            <div class="box-header with-border">
+            <div class="box-header with-border" ng-click="Create = !Create" style="cursor: pointer;">
                 <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Create</h3>
                 <div class="box-tools pull-right">
-                    <button  ng-click="Create=!Create" class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': Create, 'fa fa-plus': !Create}"></i></button>
+                    <button class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': Create, 'fa fa-plus': !Create}"></i></button>
                 </div>
             </div><!-- /.box-header -->
             <form role="form">
@@ -204,6 +198,6 @@
         </div><!-- /.box -->
 
 
-
+        <button ng-click="test()">maor</button>
     </section><!-- /.content -->
 </div><!-- /.content-wrapper -->

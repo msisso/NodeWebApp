@@ -3,8 +3,6 @@
  */
 
 
-
-var _ = require('lodash');
 var Ads = require('../api/ad/ad.model.js');
 
 // Get list of ads
