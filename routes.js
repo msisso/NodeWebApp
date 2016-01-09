@@ -12,7 +12,7 @@ module.exports = function(app) {
     //app.use('/screen=:id', require('./server/api/ad'));
     //app.use('/ad/updatesFromServer', require('./server/api/ad'));
     //app.use('TestUpdate', require('./server/api/ad'));
-
+    app.use('/search', require('./server/search'));
 
 
    app.route('/*').get(function(req, res) {

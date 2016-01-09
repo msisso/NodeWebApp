@@ -8,10 +8,14 @@ angular.module('FlightsApp', [
         'ngResource',
         'ngSanitize',
         'ui.router',
+        'ui.select',
+        'ngUpload',
+        'ngAnimate',
         'ui.bootstrap',
         'btford.socket-io',
         'duScroll',
-        'landpage'
+        'landpage',
+        'AdminDashboard'
     ])
     .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         $locationProvider.html5Mode(true);

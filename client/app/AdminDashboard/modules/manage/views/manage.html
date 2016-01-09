@@ -1,345 +1,209 @@
-<!-- Search -->
-<div class="row">
-  <div class="col-md-12">
-    <div class="content-box-header" ng-click="collapse.search = !collapse.search">
-      <div class="panel-title">
-        Search
-      </div>
-      <div class="panel-options">
-        <i class="fa" ng-class="{ 'fa-chevron-right' : collapse.search, 'fa-chevron-down' : !collapse.search }"></i>
-      </div>
-    </div>
-    <div class="content-box-large box-with-header" ng-hide="collapse.search">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1 style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 500;">
+           Manage
+        </h1>
+        <ol class="breadcrumb">
+            <li><a ui-sref="main"> <i class="glyphicon glyphicon-home"></i>Home</a></li>
+            <li><a ui-sref="dashboard"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+            <li class="active"><i class="glyphicon glyphicon-cog"></i> Manage</li>
+        </ol>
+    </section>
 
-      <form name="searchForm" ng-submit="search()">
-        <div class="form-group">
-          <label>Category</label>
-          <input type="text" name="category" class="form-control" placeholder="Enter category" ng-model="searchCreteria.category">
-        </div>
-        <div class="form-group">
-          <label>Screens</label>
-          <ui-select multiple ng-model="searchCreteria.screens" theme="bootstrap" ng-disabled="disabled"
-                     close-on-select="false">
-            <ui-select-match>{{$item}}</ui-select-match>
-            <ui-select-choices repeat="screen in ['1','2','3'] | filter:$select.search">
-              Screen {{screen}}
-            </ui-select-choices>
-          </ui-select>
-        </div>
-
-        <div class="form-group">
-          <label>Template</label>
-          <ui-select multiple ng-model="searchCreteria.template" theme="bootstrap" ng-disabled="disabled"
-                     close-on-select="false">
-            <ui-select-match>{{$item}}</ui-select-match>
-            <ui-select-choices repeat="template in ['A','B','C'] | filter:$select.search">
-              Template {{template}}
-            </ui-select-choices>
-          </ui-select>
-        </div>
-
-        <button type="submit" class="btn btn-default" ng-disabled="searchForm.$pristine">
-          <i class="fa fa-spinner fa-pulse" ng-show="changeSearchButton"></i> Search
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- Search Results -->
-<div class="row">
-  <div class="col-md-12">
-    <div class="content-box-large" ng-hide="!searchResults || collapse.search">
-      <div class="panel-body">
-        <div id="search-results" scroll-if="searchResults">
-          <table class="table table-hover table-condensed">
-            <thead>
-            <tr>
-              <th>Category</th>
-              <th>Screens</th>
-              <th>Template</th>
-              <th>Duration</th>
-              <th>Start Date</th>
-              <th>End Date</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="result in searchResults">
-              <td>{{result.category}}</td>
-              <td>{{result.screens}}</td>
-              <td>{{result.template}}</td>
-              <td>{{result.duration}}</td>
-              <td>{{result.startDateTime}}</td>
-              <td>{{result.endDateTime}}</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Manage -->
-<div class="row">
-  <div class="col-md-12">
-    <div class="content-box-header" ng-click="collapse.manage = !collapse.manage">
-      <div class="panel-title">
-        Manage
-      </div>
-      <div class="panel-options">
-        <i class="fa" ng-class="{ 'fa-chevron-right' : collapse.manage, 'fa-chevron-down' : !collapse.manage }"></i>
-      </div>
-    </div>
-    <div class="content-box-large box-with-header" ng-hide="collapse.manage">
-      <ul class="nav nav-tabs nav-stacked" ng-repeat="ad in ads">
-        <li>
-          <span ng-hide="existingAd.edit && existingAd._id === ad._id">{{ad.category}}</span>
-          <button type="button" class="delete close" ng-click="deleteAd(ad)" tooltip="Delete"><i class="glyphicon glyphicon-trash"></i></button>
-          <button type="button" class="edit close" ng-click="editAd(ad)" tooltip="Edit"><i class="glyphicon glyphicon-edit"></i></button>
-          <span class="loader close" ng-show="(!existingAd || existingAd._id !== ad._id) && showLoaderForId === ad._id"><i class="fa fa-spinner fa-spin"></i></span>
-
-          <form name="updateForm" role="form" ng-submit="update(updateForm.$valid)" ng-show="existingAd.edit && existingAd._id === ad._id">
-
-            <div class="alert alert-danger"
-                 ng-show="(updateForm.$invalid && !updateForm.$pristine && updateForm.submitted)">
-              <button class="close" data-close="alert"></button>
-            <span>
-            Please make sure that all the required fields are appropriately filled before form submission.
-            </span>
-            </div>
-
-            <div class="form-group"
-                 ng-class="{ 'has-error' : updateForm.category.$invalid && !updateForm.category.$pristine && updateForm.submitted }">
-              <label>Category</label>
-              <input type="text" name="category" class="form-control" placeholder="Enter category" required=""
-                     ng-model="existingAd.category">
-            </div>
-
-            <div class="form-group">
-              <label>Text</label>
-              <textarea class="form-control" rows="3" placeholder="Enter description" required=""
-                    ng-model="existingAd.text"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label>Duration</label>
-              <input type="text" class="form-control" placeholder="Enter duration in seconds" required=""
-                     ng-model="existingAd.duration">
-            </div>
-
-            <div class="form-group"
-                 ng-class="{ 'has-error' : updateForm.startDateTime.$invalid && !updateForm.startDateTime.$pristine && updateForm.submitted }">
-              <div class="row">
-
-                <div class="col-md-6">
-                  <label>Start Time</label>
-
-                  <div class="dropdown">
-                    <a class="dropdown-toggle" id="start-dropdown-update" role="button" data-toggle="dropdown" data-target="#"
-                       href="#">
-                      <div class="input-group">
-                        <input type="text" class="form-control" data-ng-model="existingAd.startDateTime" name="startDateTime"
-                               placeholder="Enter start date and time" required="">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                      </div>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                      <datetimepicker data-ng-model="existingAd.startDateTime"
-                                      data-datetimepicker-config="{ dropdownSelector: '#start-dropdown-update' }"/>
-                    </ul>
-                  </div>
+    <!-- Main content -->
+    <section class="content">
+        <div class="box box-warning" id="SearchBox">
+            <div class="box-header with-border">
+                <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Search</h3>
+                <div class="box-tools pull-right">
+                    <button  ng-click="Search=!Search" class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': Search, 'fa fa-plus': !Search}"></i></button>
                 </div>
+            </div><!-- /.box-header -->
+            <div ng-show="Search" class="box-body slide-toggle" >
+                <div class="row">
+                    <div class="col-md-12">
+                        <form name="searchForm" ng-submit="search()">
 
-                <div class="col-md-6">
-                  <label>End Time</label>
+                            <div class="form-group">
+                                <label>Category</label>
+                                <input type="text" name="category" class="form-control" placeholder="Enter category" ng-model="searchCreteria.msgName">
+                            </div><!-- /.form-group -->
+                            <p>Selected: {{searchCreteria.msgName}}</p>
+                            <div class="form-group">
+                                <label>Screens</label>
+                                <ui-select multiple ng-model="searchCreteria.screensId" theme="bootstrap" ng-disabled="disabled"
+                                           close-on-select="false">
+                                    <ui-select-match placeholder="Select Screen...">{{$item}}</ui-select-match>
+                                    <ui-select-choices repeat="screen in ['1','2','3'] | filter:$select.search">
+                                        Screen {{screen}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <p>Selected: {{searchCreteria.screensId}}</p>
+                            </div><!-- /.form-group -->
 
-                  <div class="dropdown">
-                    <a class="dropdown-toggle" id="end-dropdown-update" role="button" data-toggle="dropdown" data-target="#"
-                       href="#">
-                      <div class="input-group">
-                        <input type="text" class="form-control" data-ng-model="existingAd.endDateTime" name="endDateTime"
-                               placeholder="Enter end date and time" required=""><span
-                        class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                      </div>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                      <datetimepicker data-ng-model="existingAd.endDateTime"
-                                      data-datetimepicker-config="{ dropdownSelector: '#end-dropdown-update' }"/>
-                    </ul>
-                  </div>
+                            <div class="form-group">
+                                <label>Template</label>
+                                <ui-select multiple ng-model="searchCreteria.linkTemplate" theme="bootstrap" ng-disabled="disabled "
+                                           close-on-select="false">
+                                    <ui-select-match placeholder="Select Template...">{{$item}}</ui-select-match>
+                                    <ui-select-choices repeat="template in ['1','2','3'] | filter:$select.search">
+                                        Template {{template}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <p>Selected: {{searchCreteria.linkTemplate}}</p>
+                            </div>
+
+                            <div style="height:30px"></div>
+                            <button type="submit" class="btn btn-primary" ng-disabled="searchForm.$pristine">
+                                <i class="fa fa-spinner fa-pulse" ng-show="changeSearchButton"></i> Search
+                            </button>
+                        </form>
+
+                    </div>
                 </div>
-              </div>
-            </div>
+                <!-- Search Results -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="content-box-large" ng-hide="!searchResults || collapse.search">
+                            <div class="panel-body">
+                                <div id="search-results" scroll-if="searchResults">
+                                    <table class="table table-hover table-condensed">
+                                        <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Screens</th>
+                                            <th>Template</th>
+                                            <th>Duration</th>
+                                            <th>Start Date</th>
+                                            <th>End Date</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr ng-repeat="result in searchResults">
+                                            <td>{{result.msgName}}</td>
+                                            <td>{{result.screensId}}</td>
+                                            <td>{{result.linkTemplate}}</td>
+                                            <td>{{result.duration}}</td>
+                                            <td>{{result.startDateTime}}</td>
+                                            <td>{{result.endDateTime}}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
 
-            <div class="form-group">
-              <label>Week Days</label>
-              <ui-select multiple ng-model="existingAd.weekDays" theme="bootstrap" ng-disabled="disabled"
-                         close-on-select="false">
-                <ui-select-match>{{$item}}</ui-select-match>
-                <ui-select-choices
-                  repeat="day in ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'] | filter:$select.search">
-                  {{day}}
-                </ui-select-choices>
-              </ui-select>
-            </div>
-
-            <div class="form-group">
-              <label>Screens</label>
-              <ui-select multiple ng-model="existingAd.screens" theme="bootstrap" ng-disabled="disabled"
-                         close-on-select="false">
-                <ui-select-match>{{$item}}</ui-select-match>
-                <ui-select-choices repeat="screen in [1,2,3] | filter:$select.search">
-                  Screen {{screen}}
-                </ui-select-choices>
-              </ui-select>
-            </div>
-
-            <div class="form-group">
-              <label>Template</label>
-              <ui-select multiple ng-model="existingAd.template" theme="bootstrap" ng-disabled="disabled"
-                         close-on-select="false">
-                <ui-select-match>{{$item}}</ui-select-match>
-                <ui-select-choices repeat="template in ['A','B','C'] | filter:$select.search">
-                  Template {{template}}
-                </ui-select-choices>
-              </ui-select>
-            </div>
-
-            <button type="submit" class="btn btn-default" ng-disabled="updateForm.$pristine">
-              <i class="fa fa-spinner fa-pulse" ng-show="changeSubmitButton"></i> Save
-            </button>
-          </form>
-        </li>
-      </ul>
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</div>
-
-<!-- Create -->
-<div class="row">
-  <div class="col-md-12">
-    <div class="content-box-header" ng-click="collapse.create = !collapse.create">
-      <div class="panel-title">
-        Create
-      </div>
-      <div class="panel-options">
-        <i class="fa" ng-class="{ 'fa-chevron-right' : collapse.create, 'fa-chevron-down' : !collapse.create }"></i>
-      </div>
-    </div>
-    <div class="content-box-large box-with-header" ng-hide="collapse.create">
-
-      <form name="createForm" role="form" ng-submit="create(createForm.$valid)">
-
-        <div class="alert alert-danger" ng-show="(createForm.$invalid && !createForm.$pristine && createForm.submitted)">
-          <button class="close" data-close="alert"></button>
-            <span>
-            Please make sure that all the required fields are appropriately filled before form submission.
-            </span>
         </div>
+        <div class="box box-warning" id="EditBox">
+            <div class="box-header with-border">
+                <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Edit</h3>
+                <div class="box-tools pull-right">
+                    <button  ng-click="Edit=!Edit" class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': Edit, 'fa fa-plus': !Edit}"></i></button>
+                </div>
+            </div><!-- /.box-header -->
+            <form role="form">
+                <div ng-show="Edit" class="box-body slide-toggle" >
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Minimal</label>
+                                <select class="form-control select2" style="width: 100%;">
+                                    <option selected="selected">Alabama</option>
+                                    <option>screen 1</option>
+                                    <option>screen 2</option>
+                                    <option>screen 3</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                            <div class="form-group">
+                                <label>Disabled</label>
+                                <select class="form-control select2" disabled="disabled" style="width: 100%;">
+                                    <option selected="selected">Alabama</option>
+                                    <option>Alaska</option>
+                                    <option>California</option>
+                                    <option>Delaware</option>
+                                    <option>Tennessee</option>
+                                    <option>Texas</option>
+                                    <option>Washington</option>
+                                </select>
+                            </div><!-- /.form-group -->
 
-        <div class="form-group"
-             ng-class="{ 'has-error' : createForm.category.$invalid && !createForm.category.$pristine && createForm.submitted }">
-          <label>Category</label>
-          <input type="text" name="category" class="form-control" placeholder="Enter category" required=""
-                 ng-model="newAd.category">
+                            <div class="form-group">
+                                <label for="msgData">Advertise Data</label>
+                                <input type="text" class="form-control" id="msgData" placeholder="Enter the content of your advertise">
+                            </div>
+                            <div class="form-group">
+                                <label for="imageInput">Image input</label>
+                                <input id="imageInput" type="file" name="files[]" data-url="/upload" multiple>
+
+                            </div>
+                            <div class="box-footer">
+                                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div><!-- /.col -->
+
+                    </div><!-- /.row -->
+                </div><!-- /.box-body -->
+            </form>
         </div>
+        <!-- SELECT2 EXAMPLE -->
+        <div class="box box-warning" >
+            <div class="box-header with-border">
+                <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Create</h3>
+                <div class="box-tools pull-right">
+                    <button  ng-click="Create=!Create" class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': Create, 'fa fa-plus': !Create}"></i></button>
+                </div>
+            </div><!-- /.box-header -->
+            <form role="form">
+                <div ng-show="Create" class="box-body slide-toggle" id="CreateBox">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Minimal</label>
+                                <select class="form-control select2" style="width: 100%;">
+                                    <option selected="selected">Alabama</option>
+                                    <option>screen 1</option>
+                                    <option>screen 2</option>
+                                    <option>screen 3</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                            <div class="form-group">
+                                <label>Disabled</label>
+                                <select class="form-control select2" disabled="disabled" style="width: 100%;">
+                                    <option selected="selected">Alabama</option>
+                                    <option>Alaska</option>
+                                    <option>California</option>
+                                    <option>Delaware</option>
+                                    <option>Tennessee</option>
+                                    <option>Texas</option>
+                                    <option>Washington</option>
+                                </select>
+                            </div><!-- /.form-group -->
 
-        <div class="form-group">
-          <label>Text</label>
-          <textarea class="form-control" rows="3" placeholder="Enter description" required=""
-                    ng-model="newAd.text"></textarea>
-        </div>
+                            <div class="form-group">
+                                <label for="msgData">Advertise Data</label>
+                                <input type="text" class="form-control" id="msgData" placeholder="Enter the content of your advertise">
+                            </div>
+                            <div class="form-group">
+                                <label for="imageInput">Image input</label>
+                                <input id="imageInput" type="file" name="files[]" data-url="/upload" multiple>
 
-        <div class="form-group">
-          <label>Duration</label>
-          <input type="text" class="form-control" placeholder="Enter duration in seconds" required="" ng-model="newAd.duration">
-        </div>
+                            </div>
+                            <div class="box-footer">
+                                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div><!-- /.col -->
 
-        <div class="form-group"
-             ng-class="{ 'has-error' : createForm.startDateTime.$invalid && !createForm.startDateTime.$pristine && createForm.submitted }">
-          <div class="row">
+                    </div><!-- /.row -->
+                </div><!-- /.box-body -->
+            </form>
 
-            <div class="col-md-6">
-              <label>Start Time</label>
+        </div><!-- /.box -->
 
-              <div class="dropdown">
-                <a class="dropdown-toggle" id="start-dropdown-create" role="button" data-toggle="dropdown" data-target="#"
-                   href="#">
-                  <div class="input-group">
-                    <input type="text" class="form-control" data-ng-model="newAd.startDateTime" name="startDateTime"
-                           placeholder="Enter start date and time" required="">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                  </div>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                  <datetimepicker data-ng-model="newAd.startDateTime"
-                                  data-datetimepicker-config="{ dropdownSelector: '#start-dropdown-create' }"/>
-                </ul>
-              </div>
-            </div>
 
-            <div class="col-md-6">
-              <label>End Time</label>
 
-              <div class="dropdown">
-                <a class="dropdown-toggle" id="end-dropdown-create" role="button" data-toggle="dropdown" data-target="#"
-                   href="#">
-                  <div class="input-group">
-                    <input type="text" class="form-control" data-ng-model="newAd.endDateTime" name="endDateTime"
-                           placeholder="Enter end date and time" required=""><span
-                    class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                  </div>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                  <datetimepicker data-ng-model="newAd.endDateTime"
-                                  data-datetimepicker-config="{ dropdownSelector: '#end-dropdown-create' }"/>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>Week Days</label>
-          <ui-select multiple ng-model="newAd.weekDays" theme="bootstrap" ng-disabled="disabled" close-on-select="false">
-            <ui-select-match>{{$item}}</ui-select-match>
-            <ui-select-choices repeat="day in ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'] | filter:$select.search">
-              {{day}}
-            </ui-select-choices>
-          </ui-select>
-        </div>
-
-        <div class="form-group">
-          <label>Screens</label>
-          <ui-select multiple ng-model="newAd.screens" theme="bootstrap" ng-disabled="disabled" close-on-select="false">
-            <ui-select-match>{{$item}}</ui-select-match>
-            <ui-select-choices repeat="screen in [1,2,3] | filter:$select.search">
-              Screen {{screen}}
-            </ui-select-choices>
-          </ui-select>
-        </div>
-
-        <div class="form-group">
-          <label>Template</label>
-          <ui-select multiple ng-model="newAd.template" theme="bootstrap" ng-disabled="disabled" close-on-select="false">
-            <ui-select-match>{{$item}}</ui-select-match>
-            <ui-select-choices repeat="template in ['A','B','C'] | filter:$select.search">
-              Template {{template}}
-            </ui-select-choices>
-          </ui-select>
-        </div>
-
-        <!--<div class="form-group">-->
-        <!--<label>Images</label>-->
-        <!--<input type="file">-->
-        <!--</div>-->
-
-        <button type="submit" class="btn btn-default" ng-disabled="createForm.$pristine">
-          <i class="fa fa-spinner fa-pulse" ng-show="changCreateButton"></i> Create
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
+    </section><!-- /.content -->
+</div><!-- /.content-wrapper -->

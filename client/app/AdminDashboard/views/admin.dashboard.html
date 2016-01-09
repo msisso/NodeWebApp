@@ -1,166 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <title>Admin Dashboard - screens manager</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
-    <!-- CSS Libs -->
 
-    <link rel="stylesheet" type="text/css" href="../lib/css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap-switch.min.css">
-    <link rel="stylesheet" type="text/css" href="../lib/css/checkbox3.min.css">
-    <link rel="stylesheet" type="text/css" href="../lib/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="../lib/css/dataTables.bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../lib/css/select2.min.css">
-    <!-- CSS App -->
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/dashboard.css">
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/flat-blue.css">
-</head>
+<ui-view></ui-view>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" ng-show="$state.current.name === 'dashboard'">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1 style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 500;">
+            Welcome to dashboard
+        </h1>
+        <ol class="breadcrumb">
+            <li><a ui-sref="main"> <i class="glyphicon glyphicon-home"></i>Home</a></li>
+            <li class="active"><i class="fa fa-dashboard"></i> Dashboard</a></li>
 
-<body class="flat-blue">
-<div class="app-container">
-    <div class="row content-container">
-        <nav class="navbar navbar-default navbar-fixed-top navbar-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-expand-toggle">
-                        <i class="fa fa-bars icon"></i>
-                    </button>
-                    <ol class="breadcrumb navbar-breadcrumb">
-                        <li class="active">Dashboard</li>
-                    </ol>
-                    <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
-                        <i class="fa fa-th icon"></i>
-                    </button>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content" >
+        <!-- SELECT2 EXAMPLE -->
+        <div class="box box-warning" id="CreateBox">
+                <div class="box-header with-border">
+
+                <div class="box-footer">
+                    Please note that currently our dashboard includes the following sections: manage, statistics, a real-time demo.
                 </div>
-                <ul class="nav navbar-nav navbar-right">
-                    <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
-                        <i class="fa fa-times icon"></i>
-                    </button>
+            </div><!-- /.box -->
+        </div>
 
+    </section><!-- /.content -->
+</div><!-- /.content-wrapper -->
+
+<aside class="main-sidebar ">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" style="padding-top:0;margin-top:-40px">
+
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="treeview">
+                <a ui-sref="dashboard">
+                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                </a>
+
+            </li>
+
+            <li class="treeview" ng-class="{'active': manageSection}">
+                <a href="#" ng-click="navclick('manage')">
+                    <i class="glyphicon glyphicon-cog"></i>
+                    <span>Manage</span>
+                    <i  class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul  class="treeview-menu slide-toggle" ng-class="{'menu-open': manageSection}" ng-show="manageSection">
+                    <li><a ui-sref=".manage"><i class="fa fa-circle-o"></i> Create</a></li>
+                    <li><a ui-sref=".manage"><i class="fa fa-circle-o"></i> Search</a></li>
+                    <li><a ui-sref=".manage"><i class="fa fa-circle-o"></i> Edit/Remove</a></li>
                 </ul>
-            </div>
-        </nav>
-        <div class="side-menu sidebar-inverse">
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="side-menu-container">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#">
-                            <div class="icon fa fa-paper-plane"></div>
-                            <div class="title">Admin Dashboard</div>
-                        </a>
-                        <button type="button" class="navbar-expand-toggle pull-right visible-xs">
-                            <i class="fa fa-times icon"></i>
-                        </button>
-                    </div>
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="index.html">
-                                <span class="icon fa fa-tachometer"></span><span class="title">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="panel panel-default dropdown">
-                            <a data-toggle="collapse" href="#dropdown-element">
-                                <span class="icon glyphicon glyphicon-cog"></span><span class="title">Manage</span>
-                            </a>
-                            <!-- Dropdown level 1 -->
-                            <div id="dropdown-element" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="ui-kits/theming.html">Theming</a>
-                                        </li>
-                                        <li><a href="ui-kits/grid.html">Grid</a>
-                                        </li>
-                                        <li><a href="ui-kits/button.html">Buttons</a>
-                                        </li>
-                                        <li><a href="ui-kits/card.html">Cards</a>
-                                        </li>
-                                        <li><a href="ui-kits/list.html">Lists</a>
-                                        </li>
-                                        <li><a href="ui-kits/modal.html">Modals</a>
-                                        </li>
-                                        <li><a href="ui-kits/alert.html">Alerts & Toasts</a>
-                                        </li>
-                                        <li><a href="ui-kits/panel.html">Panels</a>
-                                        </li>
-                                        <li><a href="ui-kits/loader.html">Loaders</a>
-                                        </li>
-                                        <li><a href="ui-kits/step.html">Tabs & Steps</a>
-                                        </li>
-                                        <li><a href="ui-kits/other.html">Other</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="panel panel-default dropdown">
-                            <a data-toggle="collapse" href="#dropdown-table">
-                                <span class="icon glyphicon glyphicon-stats"></span><span class="title">Statistics</span>
-                            </a>
-                            <!-- Dropdown level 1 -->
-                            <div id="dropdown-table" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="table/table.html">Table</a>
-                                        </li>
-                                        <li><a href="table/datatable.html">Datatable</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="panel panel-default dropdown">
-                            <a data-toggle="collapse" href="#dropdown-form">
-                                <span class="icon glyphicon glyphicon-eye-open"></span><span class="title">Demo</span>
-                            </a>
-                            <!-- Dropdown level 1 -->
-                            <div id="dropdown-form" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="form/ui-kits.html">Form UI Kits</a>
-                                        </li>
-                                    </ul>
-                                </div>
+            </li>
+            <li class="treeview" ng-class="{'active': staticsSection}" >
+                <a href="#" ng-click="navclick('stats')">
+                    <i class="glyphicon glyphicon-stats"></i>
+                    <span>Statics</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul  class="treeview-menu slide-toggle" ng-class="{'menu-open': staticsSection}" ng-show="staticsSection">
+                    <li><a ui-sref="dashboard"><i class="fa fa-circle-o"></i> General</a></li>
+                </ul>
+            </li>
+            <li class="treeview" ng-class="{'active': demoSection}">
+                <a href="#" ng-click="navclick('demo')">
+                    <i class="glyphicon glyphicon-eye-open"></i> <span>Demo</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul  class="treeview-menu slide-toggle" ng-class="{'menu-open': demoSection}" ng-show="demoSection">
+                    <li><a ui-sref=".demo"><i class="fa fa-circle-o"></i>Screen - 1</a></li>
+                    <li><a ui-sref=".demo"><i class="fa fa-circle-o"></i>Screen - 2</a></li>
+                    <li><a ui-sref=".demo"><i class="fa fa-circle-o"></i>Screen - 3</a></li>
+                </ul>
+            </li>
 
-                            </div>
-                        </li>
 
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </nav>
-        </div>
-        <!-- Main Content -->
-        <div class="container-fluid">
-            <div class="side-body">
-                <div class="page-title">
-                    <span class="title">Welcome to Admin Dashboard</span>
-                    <div class="description">The dashboard currently includes only the following sections: Manage, Statistics and Demo of screens</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <!-- Javascript Libs -->
-        <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
-        <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../lib/js/Chart.min.js"></script>
-        <script type="text/javascript" src="../lib/js/bootstrap-switch.min.js"></script>
-        <script type="text/javascript" src="../lib/js/jquery.matchHeight-min.js"></script>
-        <script type="text/javascript" src="../lib/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="../lib/js/dataTables.bootstrap.min.js"></script>
-        <script type="text/javascript" src="../lib/js/select2.full.min.js"></script>
-        <script type="text/javascript" src="../lib/js/ace/ace.js"></script>
-        <script type="text/javascript" src="../lib/js/ace/mode-html.js"></script>
-        <script type="text/javascript" src="../lib/js/ace/theme-github.js"></script>
-        <!-- Javascript -->
-        <script type="text/javascript" src="../js/app.js"></script>
-        <script type="text/javascript" src="../js/index.js"></script>
-</body>
-
-</html>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

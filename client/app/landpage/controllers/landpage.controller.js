@@ -14,7 +14,7 @@ angular.module('landpage')
                 $document.scrollTopAnimated(0, 1000);
         }
         $scope.toTheServices = function() {
-                $document.scrollToElementAnimated(services,122,1000);
+                $document.scrollToElementAnimated(services,68,1000);
         }
     }]
-).value('duScrollOffset', 122).value('duScrollActiveClass', 'active');
+).value('duScrollOffset', 68).value('duScrollActiveClass', 'active');

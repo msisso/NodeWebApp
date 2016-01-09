@@ -14,19 +14,34 @@
 
         <!-- Custom Fonts -->
         <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <!-- AdminLTE dashboard-->
+        <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+        <link rel="stylesheet" href="bower_components/AdminLTE/dist/css/AdminLTE.min.css">
+        <link rel="stylesheet" href="bower_components/AdminLTE/dist/css/skins/_all-skins.min.css">
 
+        <link rel="stylesheet" href="assets/css/animate.css">
         <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css"/>
         <link rel="stylesheet" href="bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css"/>
         <!-- Custom CSS -->
 
+
+        <!-- blueimp Gallery styles -->
+        <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+
+        <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+        <link rel="stylesheet" href="bower_components/blueimp-file-upload/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="bower_components/blueimp-file-upload/css/jquery.fileupload-ui.css">
+
         <link rel="stylesheet" href="assets/css/agency.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css"/>
     </head>
-    <body ng-app="FlightsApp" id="page-top" class="index" >
+    <body ng-app="FlightsApp" id="page-top" class="index sidebar-mini skin-yellow" >
 
         <ui-view></ui-view>
 
@@ -49,6 +64,19 @@
         <script src="bower_components/d3/d3.js"></script>
         <script src="bower_components/angular-scroll/angular-scroll.js"></script>
         <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+        <script src="bower_components/ngUpload/ng-upload.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-ui-select/dist/select.js"></script>
+
+        <!--AdminLTE-->
+
+
+        <script src="bower_components/moment/min/moment.min.js"></script>
+
+
+
+
+
         <!-- Bootstrap Core JavaScript -->
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
@@ -58,6 +86,30 @@
         <script src="assets/js/agency.js"></script>
         <script src="assets/js/script.js"></script>
         <!-- My Angular modules-services-controllers-->
+        <!--<script src="app/AdminDashboard/modules/demo/demo.module.js"></script>
+        <script src="app/AdminDashboard/modules/demo/controllers/demo.controller.js"></script>
+        <script src="app/AdminDashboard/modules/demo/controllers/demo.screen.controller.js"></script>
+        <script src="app/AdminDashboard/modules/demo/directives/demo.directives.js"></script>-->
+        <script src="app/AdminDashboard/modules/manage/manage.module.js"></script>
+        <script src="app/AdminDashboard/modules/manage/controllers/manage.controller.js"></script>
+        <script src="app/AdminDashboard/modules/manage/services/manage.directives.js"></script>
+        <script src="app/AdminDashboard/modules/manage/services/manage.factory.js"></script>
+
+        <!--<script src="app/AdminDashboard/modules/manage/services/manage.service.js"></script>
+        <script src="app/AdminDashboard/modules/manage/directives/manage.directives.js"></script>
+        <script src="app/AdminDashboard/modules/stats/stats.module.js"></script>
+        <script src="app/AdminDashboard/modules/stats/config/stats.config.js"></script>
+        <script src="app/AdminDashboard/modules/stats/controllers/stats.controller.js"></script>
+        <script src="app/AdminDashboard/modules/stats/services/stats.service.js"></script>
+        <script src="app/AdminDashboard/modules/stats/directives/stats.directives.js"></script>
+        <script src="app/AdminDashboard/modules/news/news.module.js"></script>
+        <script src="app/AdminDashboard/modules/news/controllers/news.controller.js"></script>
+        <script src="app/AdminDashboard/modules/news/services/news.service.js"></script>-->
+        <script src="app/AdminDashboard/adminDashboard.module.js"></script>
+        <!--<script src="app/AdminDashboard/services/ad.service.js"></script>
+        <script src="app/AdminDashboard/services/socket.service.js"></script>-->
+        <script src="app/AdminDashboard/controllers/adminDashboard.controller.js"></script>
+        <script src="app/AdminDashboard/services/dashboard.animation.js"></script>
         <script src="app/landpage/landpage.module.js"></script>
         <script src="app/landpage/controllers/landpage.controller.js"></script>
         <script src="app/landpage/directives/landpage.directives.js"></script>
