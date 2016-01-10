@@ -50,24 +50,24 @@ angular.module('dashboard.manage')
             }
         };
         /*  --------------   Manage Section  --------------- */
-        //
-        // $scope.ads = Adverts.getList().$object;
-        $scope.ads = {};
 
+        $scope.ads = Adverts.getList().$object;
+        //all the ads to show in the manage section
         $scope.adsToIterate = [];
-        $scope.test = function()
+        //initilie all the adverts on the manage section
+        $scope.AllAdvertsInit = function()
         {
             getAllAdverts.getAllAdverts().then(function(res){
                 console.log("enter after the search" + res);
                 if (!_.isEmpty(res)) {
-                    console.log("not empty");
-                    angular.forEach(res, function(value, key){
+                        angular.forEach(res, function(value, key){
                         console.log("into test: " + key + ": " + value);
                         $scope.adsToIterate[key] =
                         {
+                            _id: value._id,
                             msgName: value.msgName,
                             screensId: value.screensId.join(', '),
-                            linkTemplate: value.templateName,
+                            templateName: value.templateName,
                             duration: (value.advTimer/1000) + ' seconds',
                             startDateTime: moment(value.when.startDate + ' ' + value.when.startTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL'),
                             endDateTime: moment(value.when.endDate + ' ' + value.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')
@@ -75,11 +75,36 @@ angular.module('dashboard.manage')
                     });
                 }
             });
-            console.log("ads: " + $scope.ads);
-            console.log("sisso");
-
-            console.log($scope.adsToIterate);
         }
+
+        /**
+         *
+         * @param ad
+         */
+        $scope.deleteAd = function(ad) {
+            $scope.ads = Ads.one(ad._id).remove();
+        };
+
+        /**
+         *
+         * @param ad
+         */
+        $scope.existingAd = {};
+        $scope.editAd = function(ad) {
+            $scope.showLoaderForId = ad._id;
+            if (_.isEmpty($scope.existingAd) || $scope.existingAd._id !== ad._id) {
+                Ads.one(ad._id).get().then(function(o) {
+                    $scope.existingAd = o;
+                    $scope.existingAd.edit = !$scope.existingAd.edit;
+                    $scope.existingAd.startDateTime = moment(o.when.fromDate + ' ' + o.when.fromTime, 'DD/MM/YYYY HH:mm:ss').format();
+                    $scope.existingAd.endDateTime = moment(o.when.toDate + ' ' + o.when.toTime, 'DD/MM/YYYY HH:mm:ss').format();
+                    $scope.existingAd.weekDays = o.when.weekDays;
+                });
+            } else {
+                $scope.existingAd.edit = !$scope.existingAd.edit;
+            }
+        };
+
 
 
 

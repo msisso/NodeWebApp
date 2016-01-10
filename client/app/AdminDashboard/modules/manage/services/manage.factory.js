@@ -37,12 +37,7 @@ angular.module('dashboard.manage')
                         deferred.reject(err);
                     });
                 return deferred.promise;
-                //var ads = Adverts.getList().$object;
-                //deferred.resolve(ads);
-
-
-            };
+                         };
             return factory;
-
         }
     ]);

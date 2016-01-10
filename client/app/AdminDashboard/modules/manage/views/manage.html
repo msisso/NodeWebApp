@@ -105,18 +105,18 @@
 
 
 
-        <div class="box box-warning" id="EditBox" ng-click="Edit = !Edit" style="cursor: pointer;" >
-            <div class="box-header with-border">
+        <div class="box box-warning" id="EditBox" >
+            <div class="box-header with-border" ng-click="Edit = !Edit" style="cursor: pointer;" >
                 <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Manage</h3>
                 <div class="box-tools pull-right">
                     <button  class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': Edit, 'fa fa-plus': !Edit}"></i></button>
                 </div>
             </div><!-- /.box-header -->
 
-            <div ng-show="Edit" class="box-body slide-toggle"  ng-init="test()">
+            <div ng-show="Edit" class="box-body slide-toggle"  ng-init="AllAdvertsInit()">
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-hover table-condensed">
+                        <table class="table table-hover table-condensed" ng-hide="existingAd.edit && existingAd._id === ad._id">
                             <thead>
                             <tr>
                                 <th>Category</th>
@@ -135,6 +135,9 @@
                                 <td>{{ad.duration}}</td>
                                 <td>{{ad.startDateTime}}</td>
                                 <td>{{ad.endDateTime}}</td>
+                                <td><button type="button" class="edit close"ng-click="editAd(ad)" uib-tooltip="Edit"><i class="glyphicon glyphicon-edit"></i></button></td>
+                                <td><button type="button" class="delete close" ng-click="deleteAd(ad)" uib-tooltip="Delete"><i class="glyphicon glyphicon-trash"></i></button></td>
+                                <span class="loader close" ng-show="(!existingAd || existingAd._id !== ad._id) && showLoaderForId === ad._id"><i class="fa fa-spinner fa-spin"></i></span>
                             </tr>
                             </tbody>
                         </table>
