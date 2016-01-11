@@ -13,6 +13,8 @@ angular.module('FlightsApp', [
         'ngAnimate',
         'restangular',
         'ui.bootstrap',
+        'ui.bootstrap.datetimepicker',
+        'cgNotify',
         'btford.socket-io',
         'duScroll',
         'landpage',

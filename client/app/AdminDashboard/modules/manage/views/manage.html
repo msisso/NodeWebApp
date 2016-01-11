@@ -116,7 +116,119 @@
             <div ng-show="Edit" class="box-body slide-toggle"  ng-init="AllAdvertsInit()">
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-hover table-condensed" ng-hide="existingAd.edit && existingAd._id === ad._id">
+                        <form ng-hide="!existingAd.edit" name="updateForm" role="form" ng-submit="update(updateForm.$valid)" ng-show="existingAd.edit && existingAd._id === ad._id">
+
+                            <div class="alert alert-danger"
+                                 ng-show="(updateForm.$invalid && !updateForm.$pristine && updateForm.submitted)">
+                                <button class="close" data-close="alert"></button>
+                                <span>
+                                    Please make sure that all the required fields are appropriately filled before form submission.
+                                </span>
+                            </div>
+
+                            <div class="form-group"
+                                 ng-class="{ 'has-error' : updateForm.category.$invalid && !updateForm.category.$pristine && updateForm.submitted }">
+                                <label>Category</label>
+                                <input type="text" name="category" class="form-control" placeholder="Enter category" required=""
+                                       ng-model="existingAd.msgName">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Message Data</label>
+                                 <input type="text" ng-repeat="msg in existingAd.msgData" class="form-control" placeholder="Enter Message Data" required="" ng-model='msg'>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>Duration</label>
+                                <input type="text" class="form-control" placeholder="Enter duration in seconds" required="" ng-model="existingAd.duration">
+                            </div>
+
+                            <div class="form-group"
+                                 ng-class="{ 'has-error' : updateForm.startDateTime.$invalid && !updateForm.startDateTime.$pristine && updateForm.submitted }">
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <label>Start Time</label>
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" id="start-dropdown-update" role="button" data-toggle="dropdown" data-target="#"
+                                               href="#">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" data-ng-model="existingAd.startDateTime" name="startDateTime"
+                                                           placeholder="Enter start date and time" required="">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                            </a>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                                <datetimepicker data-ng-model="existingAd.startDateTime"
+                                                                data-datetimepicker-config="{ dropdownSelector: '#start-dropdown-update' }"/>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label>End Time</label>
+
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" id="end-dropdown-update" role="button" data-toggle="dropdown" data-target="#"
+                                               href="#">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" data-ng-model="existingAd.endDateTime" name="endDateTime"
+                                                           placeholder="Enter end date and time" required=""><span
+                                                        class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                            </a>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                                <datetimepicker data-ng-model="existingAd.endDateTime"
+                                                                data-datetimepicker-config="{ dropdownSelector: '#end-dropdown-update' }"/>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Week Days</label>
+                                <ui-select multiple ng-model="existingAd.weekDays" theme="bootstrap" ng-disabled="disabled"
+                                           close-on-select="false">
+                                    <ui-select-match>{{$item}}</ui-select-match>
+                                    <ui-select-choices
+                                            repeat="day in ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'] | filter:$select.search">
+                                        {{day}}
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Screens</label>
+                                <ui-select multiple ng-model="existingAd.screensId" theme="bootstrap" ng-disabled="disabled"
+                                           close-on-select="false">
+                                    <ui-select-match>{{$item}}</ui-select-match>
+                                    <ui-select-choices repeat="screen in [1,2,3] | filter:$select.search">
+                                        Screen {{screen}}
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Template</label>
+                                <ui-select multiple ng-model="existingAd.templateName" theme="bootstrap" ng-disabled="disabled"
+                                           close-on-select="false">
+                                    <ui-select-match>{{$item}}</ui-select-match>
+                                    <ui-select-choices repeat="template in ['A','B','C'] | filter:$select.search">
+                                        Template {{template}}
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" ng-disabled="updateForm.$pristine">
+                                <i class="fa fa-spinner fa-pulse" ng-show="changeSubmitButton"></i> Save
+                            </button>
+                            <button class="btn btn-primary" ng-click="existingAd.edit = !existingAd.edit">Cancel</button>
+                        </form>
+
+
+                        <table class="table table-hover table-condensed" ng-hide="existingAd.edit">
                             <thead>
                             <tr>
                                 <th>Category</th>
@@ -128,17 +240,20 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr ng-repeat="ad in adsToIterate">
-                                <td>{{ad.msgName}}</td>
-                                <td>{{ad.screensId}}</td>
-                                <td>{{ad.templateName}}</td>
-                                <td>{{ad.duration}}</td>
-                                <td>{{ad.startDateTime}}</td>
-                                <td>{{ad.endDateTime}}</td>
-                                <td><button type="button" class="edit close"ng-click="editAd(ad)" uib-tooltip="Edit"><i class="glyphicon glyphicon-edit"></i></button></td>
-                                <td><button type="button" class="delete close" ng-click="deleteAd(ad)" uib-tooltip="Delete"><i class="glyphicon glyphicon-trash"></i></button></td>
-                                <span class="loader close" ng-show="(!existingAd || existingAd._id !== ad._id) && showLoaderForId === ad._id"><i class="fa fa-spinner fa-spin"></i></span>
-                            </tr>
+                                <tr ng-repeat="ad in adsToIterate">
+                                    <td>{{ad.msgName}}</td>
+                                    <td>{{ad.screensId}}</td>
+                                    <td>{{ad.templateName}}</td>
+                                    <td>{{ad.duration}}</td>
+                                    <td>{{ad.startDateTime}}</td>
+                                    <td>{{ad.endDateTime}}</td>
+                                    <td><button type="button" class="edit close" ng-click="editAd(ad)" uib-tooltip="Edit"><i
+                                            ng-class="{'glyphicon glyphicon-edit': !((!existingAd || existingAd._id !== ad._id) && showLoaderForId === ad._id)
+                                        , 'fa fa-spinner fa-spin': (!existingAd || existingAd._id !== ad._id) && showLoaderForId === ad._id && !existingAd.edit}"></i></button></td>
+                                    <td><button type="button" class="delete close" ng-click="deleteAd(ad)" uib-tooltip="Delete"><i
+                                            ng-class="{'glyphicon glyphicon-trash': !((!existingAd || existingAd._id !== ad._id) && showLoaderForId === ad._id)
+                                        , 'fa fa-spinner fa-spin': (!existingAd || existingAd._id !== ad._id) && showLoaderForId === ad._id && !existingAd.delete}"></i></button></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
