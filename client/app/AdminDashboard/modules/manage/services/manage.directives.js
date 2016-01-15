@@ -116,4 +116,47 @@ angular.module('dashboard.manage')
             });
         }
     }
-}]);
+}])
+/*.directive('uiselectValidation', function(){
+    return {
+        require: 'ngModel',
+        link: function(scope, element, attributes, ngModel) {
+            console.log(attributes);
+            ngModel.$validators.uiselectValidation = function(modelValue) {
+                return modelValue ? true : false;
+            };
+
+            scope.$watch('newAd.weekDays', function(n) {
+                console.log("test validation " + n);
+
+                ngModel.$validate();
+            });
+            scope.$watch('newAd.screensId', function(n) {
+                console.log("test validation " + n);
+
+
+                ngModel.$validate();
+            });
+            scope.$watch('newAd.templateName', function(n) {
+                console.log("test validation " + n);
+
+                ngModel.$validate();
+            });
+        }
+    };*/
+    .directive('uiSelectRequired', function () { return { require: 'ngModel', link: function (scope, elm, attrs, ctrl) { ctrl.$validators.uiSelectRequired = function (modelValue, viewValue) {
+
+        var determineVal;
+        if (angular.isArray(modelValue)) {
+            determineVal = modelValue;
+        } else if (angular.isArray(viewValue)) {
+            determineVal = viewValue;
+        } else {
+            return false;
+        }
+
+        return determineVal.length > 0;
+    };
+    }
+    };
+});

@@ -6,7 +6,7 @@ angular.module('dashboard.manage')
             factory.searchByCriteria = function(criteria) {
 
                 var deferred = $q.defer();
-                console.log(criteria);
+                //console.log(criteria);
                 $http.post('/search/ads', {searchparams: criteria})
                     .success(function(res) {
                         console.log("success" + res);

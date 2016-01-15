@@ -7,7 +7,7 @@ angular.module('AdminDashboard')
         var ioSocket = io('', {
             path: '/socket.io-client'
         });
-
+        console.log(ioSocket);
         var socket = socketFactory({
             ioSocket: ioSocket
         });
@@ -19,10 +19,10 @@ angular.module('AdminDashboard')
              * Register listeners to sync an array with updates on a model
              * @param {String} modelName
              * @param {Array} array
-             * @param {Function} cb
+             * @param {Function} callback
              */
-            syncUpdates: function(modelName, array, cb) {
-                cb = cb || angular.noop;
+            syncUpdates: function(modelName, array, callback) {
+                callback = callback || angular.noop;
 
                 /**
                  * Syncs item creation/updates on 'model:save'
@@ -41,7 +41,7 @@ angular.module('AdminDashboard')
                         array.push(item);
                     }
 
-                    cb(event, item, array);
+                    callback(event, item, array);
                 });
 
                 /**
@@ -50,7 +50,7 @@ angular.module('AdminDashboard')
                 socket.on(modelName + ':remove', function(item) {
                     var event = 'deleted';
                     _.remove(array, {_id: item._id});
-                    cb(event, item, array);
+                    callback(event, item, array);
                 });
             },
 

@@ -7,14 +7,39 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var AdSchema = new Schema({
-    msgName: String,
-    msgData: [String],
+    msgName: {
+        type: String,
+        trim: true,
+        unique: true,
+        required: true
+    },
+    msgData: {
+        type: [String],
+        trim: true
+    },
     msgImage: [String],
     linkTemplate: String,
-    templateName: String,
-    advTimer: Number,
-    when: Schema.Types.Mixed,
-    screensId: { type: [String], index: true }
+    templateName: {
+        type: String,
+        enum: ['A', 'B', 'C'],
+        required: true
+    },
+    advTimer: {
+        type: Number,
+        required: true
+    },
+    when: {
+        type: Schema.Types.Mixed,
+        required: true
+    },
+    screensId: {
+        type: [String],
+        index: true,
+        required:true,
+    }
 });
 
-module.exports = mongoose.model('Ad', AdSchema,'Advertises');
+var Ads = mongoose.model('Ad', AdSchema,'Advertises');
+require('./ad.validators.js')(Ads);
+
+module.exports = Ads;

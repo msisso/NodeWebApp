@@ -1,7 +1,7 @@
 var fs = require('fs');
 var Ad = require('./ad.model.js');
 var app = require('../../../app');
-
+var _ = require('lodash');
 function onNewCreate(screen,data) {
     require('../api/ad/ad.socket.io').update(screen,data);
 
@@ -89,7 +89,9 @@ exports.sendHtmlUpdate = function(req,res)
 // Get list of ads
 exports.index = function(req, res) {
     Ad.find(function (err, ads) {
-        if(err) { return handleError(res, err); }
+        if(err) {
+            return handleError(res, err);
+        }
         res.status(201).json(ads);
     });
 };
@@ -97,26 +99,56 @@ exports.index = function(req, res) {
 // Get a single ad
 exports.show = function(req, res) {
     Ad.findById(req.params.id, function (err, ad) {
-        if(err) { return handleError(res, err); }
-        if(!ad) { return res.status(404); }
+        if(err) {
+            return handleError(res, err);
+        }
+        if(!ad) {
+            return res.status(404);
+        }
         res.json(ad);
     });
 };
 
 // Creates a new ad in the DB.
 exports.create = function(req, res) {
+
     Ad.create(req.body, function(err, ad) {
-        if(err) { return handleError(res, err); }
+
+        if(err) {
+            /*console.log(err.errors.msgName.message);
+            console.log(String(err.errors.msgName));
+            console.log(err.errors.msgName.kind);
+            console.log(err.errors.msgName.path);
+            console.log(err.errors.msgName.value);
+            console.log(err.name);
+            console.log(err.message);*/
+            //var error = err.name ;//+ ': ' + err.errors.(err.name).message;
+            console.log(err);
+            console.log(err.errors);
+            if(typeof err.errors != 'undefined'){
+                return handleError(res, err.errors);
+            }
+            else{
+                return handleError(res, err);
+            }
+
+        }
         res.status(201).json(ad);
     });
 };
 
 // Updates an existing ad in the DB.
 exports.update = function(req, res) {
-    if(req.body._id) { delete req.body._id; }
+    if(req.body._id) {
+        delete req.body._id;
+    }
     Ad.findById(req.params.id, function (err, ad) {
-        if (err) { return handleError(res, err); }
-        if(!ad) { return res.status(404); }
+        if (err) {
+            return handleError(res, err);
+        }
+        if(!ad) {
+            return res.status(404);
+        }
         var updated = _.merge(ad, req.body);
         updated.save(function (err) {
             if (err) { return handleError(res, err); }
@@ -128,10 +160,16 @@ exports.update = function(req, res) {
 // Deletes a ad from the DB.
 exports.destroy = function(req, res) {
     Ad.findById(req.params.id, function (err, ad) {
-        if(err) { return handleError(res, err); }
-        if(!ad) { return res.status(404); }
+        if(err) {
+            return handleError(res, err);
+        }
+        if(!ad) {
+            return res.status(404);
+        }
         ad.remove(function(err) {
-            if(err) { return handleError(res, err); }
+            if(err) {
+                return handleError(res, err);
+            }
             return res.status(204);
         });
     });

@@ -20,7 +20,7 @@ Adv.find({}).remove(function() {
             when: { startDate: "01/01/2016",
                 endDate: "12/31/2016",
                 daysShow: ["wednesday"],
-                srartTime: "13:00:00",
+                startTime: "13:00:00",
                 endTime: "20:00:00"},
             screensId: [1,2]
         },
@@ -38,7 +38,7 @@ Adv.find({}).remove(function() {
             when: { startDate: "01/01/2016",
                 endDate: "12/31/2016",
                 daysShow: ["monday"],
-                srartTime: "06:00:00",
+                startTime: "06:00:00",
                 endTime: "12:00:00"},
             screensId: [1,2]
         },
@@ -62,7 +62,7 @@ Adv.find({}).remove(function() {
             when: { startDate: "03/01/2016",
                 endDate: "04/30/2016",
                 daysShow: ["tuesday", "wednesday"],
-                srartTime: "10:00:00",
+                startTime: "10:00:00",
                 endTime: "16:00:00"},
             screensId: [1,3]
         },
@@ -76,7 +76,7 @@ Adv.find({}).remove(function() {
             when: { startDate: "05/01/2015",
                 endDate: "06/15/2016",
                 daysShow: ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"],
-                srartTime: "08:00:00",
+                startTime: "08:00:00",
                 endTime: "22:00:00"},
             screensId: [2,3]
         },
@@ -90,7 +90,7 @@ Adv.find({}).remove(function() {
             when: { startDate: "03/29/2016",
                 endDate: "04/15/2016",
                 daysShow: ["monday"],
-                srartTime: "15:00:00",
+                startTime: "15:00:00",
                 endTime: "19:00:00"},
             screensId: [1]
         },
@@ -111,7 +111,7 @@ Adv.find({}).remove(function() {
             when: { startDate: "04/01/2016",
                 endDate: "04/30/2016",
                 daysShow: ["monday", "thursday", "wednesday"],
-                srartTime: "01:00:00",
+                startTime: "01:00:00",
                 endTime: "23:00:00"},
             screensId: [3]
         });
