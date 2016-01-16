@@ -1,13 +1,37 @@
-
+;
 var ads = require('./ad.model.js');
 var db = require('./ad.db.js');
 
 
 
-exports.register = function(screen,data) {
+
+exports.dashboardRegister = function(socket){
+    ads.schema.post('save', function(doc) {
+        console.log("post save");
+        onSave(socket, doc);
+    });
+
+    ads.schema.post('remove', function(doc) {
+        console.log("post remove");
+        onRemove(socket, doc);
+    });
+}
+
+function onSave(socket, doc) {
+    socket.emit('ad:save', doc);
+}
+
+function onRemove(socket, doc) {
+    socket.emit('ad:remove', doc);
+}
+
+
+
+
+exports.register = function(socket,data) {
 
     var callback = function(ads){
-        screen.emit('register', ads);
+        socket.emit('register', ads);
     }
 
     db.getAdvertisesById(data,callback);
@@ -15,22 +39,22 @@ exports.register = function(screen,data) {
 
 }
 
-exports.update = function(screen,data) {
+exports.update = function(socket,data) {
 
     var callback = function(ads)
     {
-        screen.emit('updateMe', ads);
+        socket.emit('updateMe', ads);
         //screen.broadcast.emit('update',ads);
     }
     var ads = db.getAdvertisesById(data,callback);
 
 }
 
-exports.SendDbChanges = function(screen,data)
+exports.SendDbChanges = function(socket,data)
 {
     var callback = function(ads)
     {
-        screen.broadcast.to(data).emit('serverUpdateInjection', ads);
+        socket.broadcast.to(data).emit('serverUpdateInjection', ads);
     }
     var ads = db.getAdvertisesById(data,callback);
 }

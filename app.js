@@ -6,7 +6,9 @@ mongoose.connect('mongodb://localhost/Flights');
 require('./server/config/MongoDataInjection');
 
 var server = require('http').createServer(app);
-var socketio = require('socket.io')(server);
+var socketio = require('socket.io')(server, {
+    path: '/mysocket'
+});
 
 require('./server/config/socketio')(socketio);
 require('./server/config/express')(app);

@@ -247,7 +247,8 @@ function onModalOpen(id)
     //alert("connecting");
     screenId = id;
     //var socket = io.connect('http://localhost:8080');
-    socket = io.connect('http://localhost:8080', {'forceNew': true});
+
+    socket = io('http://localhost:8080', {'forceNew': true});
     socket.on('connect', function(data) {
         //alert("test");
 

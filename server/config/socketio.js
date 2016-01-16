@@ -1,53 +1,63 @@
 
 // When the user disconnects.. perform this
-function onDisconnect(screen) { console.log("user disconnected")}
+function onDisconnect(socket) { console.log("user disconnected")}
 
 // When the user connects perform this
-function onConnect(screen,data) {
-    require('../api/ad/ad.socket.io').register(screen,data);
+function onConnect(socket,data) {
+    require('../api/ad/ad.socket.io').register(socket,data);
 
 }
 
-function onUpdate(screen,data) {
-    require('../api/ad/ad.socket.io').update(screen,data);
+function onUpdate(socket,data) {
+    require('../api/ad/ad.socket.io').update(socket,data);
 
 }
 
-function onDbChanges(screen,data)
+function onDbChanges(socket,data)
 {
-    require('../api/ad/ad.socket.io').SendDbChanges(screen,data);
+    require('../api/ad/ad.socket.io').SendDbChanges(v,data);
+}
+
+// When the user connects to admin dashboard perform this
+function onDashboardConnect(socket) {
+    require('../api/ad/ad.socket.io').dashboardRegister(socket);
 }
 
 module.exports = function (socketio) {
 
     //var clients = [];
-    socketio.sockets.on('connection', function (screen) {
+    socketio.sockets.on('connection', function (socket) {
         console.log('Client connected...');
 
         // Call onConnect.
+        socket.on('dashboard',function(){
+            console.log('Client connected... to dashboard');
+            onDashboardConnect(socket);
+        });
 
-        screen.on('register', function (data) {
+
+        socket.on('register', function (data) {
             console.log("on connect the id is: " + data );
-            screen.join(data);
+            socket.join(data);
             /*var client = {
                 SocketId: screen.id,
                 ScreenId: data
             }
             clients.push(client);*/
-            onConnect(screen,data);
+            onConnect(socket,data);
         });
         // Call onDisconnect.
-        screen.on('disconnect', function (data) {
-            onDisconnect(screen);
+        socket.on('disconnect', function (data) {
+            onDisconnect(socket);
         });
 
-        screen.on('updateMe',function(data){
+        socket.on('updateMe',function(data){
             console.log("on update the id is: " + data);
-            onUpdate(screen,data);
+            onUpdate(socket,data);
         });
-        screen.on('newAdCreated',function(data){
+        socket.on('newAdCreated',function(data){
             console.log("on create new ad: " + data);
-            onDbChanges(screen,data);
+            onDbChanges(socket,data);
         });
     });
 

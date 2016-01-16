@@ -139,21 +139,28 @@ exports.create = function(req, res) {
 
 // Updates an existing ad in the DB.
 exports.update = function(req, res) {
-    if(req.body._id) {
-        delete req.body._id;
-    }
-    Ad.findById(req.params.id, function (err, ad) {
-        if (err) {
+    var query = {"_id":req.params.id};
+    var options = {new: true};
+    var updated = new Ad();
+    updated._id = req.params.id;
+    updated.msgName = req.body.msgName;
+    updated.msgData = req.body.msgData;
+    updated.advTimer = req.body.advTimer;
+    updated.screensId = req.body.screensId;
+    updated.templateName = req.body.templateName;
+    updated.linkTemplate = req.body.linkTemplate;
+    updated.when = req.body.when;
+    updated.msgImage = req.body.msgImage;
+    Ad.findOneAndUpdate(query, updated, options, function(err,ad) {
+        if(err){
+            console.log(err);
             return handleError(res, err);
         }
-        if(!ad) {
-            return res.status(404);
-        }
-        var updated = _.merge(ad, req.body);
-        updated.save(function (err) {
-            if (err) { return handleError(res, err); }
+        else{
+            //for trigger the post save function
+            ad.save();
             return res.status(200).json(ad);
-        });
+        }
     });
 };
 

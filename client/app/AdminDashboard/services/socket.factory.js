@@ -4,13 +4,14 @@
 angular.module('AdminDashboard')
     .factory('socket', function(socketFactory) {
 
-        var ioSocket = io('', {
-            path: '/socket.io-client'
+        var myIoSocket  = io('', {
+            path: '/mysocket'
         });
-        console.log(ioSocket);
+        //console.log(ioSocket);
         var socket = socketFactory({
-            ioSocket: ioSocket
+            ioSocket: myIoSocket
         });
+        //console.log(socket);
 
         return {
             socket: socket,
@@ -21,7 +22,11 @@ angular.module('AdminDashboard')
              * @param {Array} array
              * @param {Function} callback
              */
+
             syncUpdates: function(modelName, array, callback) {
+                //console.log(modelName);
+                //console.log(array);
+                //console.log(callback);
                 callback = callback || angular.noop;
 
                 /**
@@ -31,14 +36,36 @@ angular.module('AdminDashboard')
                     var oldItem = _.find(array, {_id: item._id});
                     var index = array.indexOf(oldItem);
                     var event = 'created';
-
+                    console.log(item);
+                    console.log("index: " + index);
+                    console.log("oldItem: " + oldItem);
+                    console.log(array);
                     // replace oldItem if it exists
                     // otherwise just add item to the collection
                     if (oldItem) {
-                        array.splice(index, 1, item);
+
+                        array.splice(index, 1, {
+                            _id: item._id,
+                            msgName: item.msgName,
+                            screensId: item.screensId.join(', '),
+                            templateName: item.templateName,
+                            advTimer: (item.advTimer/1000) + ' seconds',
+                            startDateTime: moment(item.when.startDate + ' ' + item.when.startTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL'),
+                            endDateTime: moment(item.when.endDate + ' ' + item.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')
+                        });
                         event = 'updated';
+                        console.log(event);
                     } else {
-                        array.push(item);
+                        array.push({
+                            _id: item._id,
+                            msgName: item.msgName,
+                            screensId: item.screensId.join(', '),
+                            templateName: item.templateName,
+                            advTimer: (item.advTimer/1000) + ' seconds',
+                            startDateTime: moment(item.when.startDate + ' ' + item.when.startTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL'),
+                            endDateTime: moment(item.when.endDate + ' ' + item.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')
+                        });
+                        console.log("create");
                     }
 
                     callback(event, item, array);

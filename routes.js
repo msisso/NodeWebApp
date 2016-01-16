@@ -15,6 +15,8 @@ module.exports = function(app) {
     app.use('/search', require('./server/search'));
 
 
+
+
    app.route('/*').get(function(req, res) {
         res.sendFile(app.get('clientPath') + '/index.html');
    });

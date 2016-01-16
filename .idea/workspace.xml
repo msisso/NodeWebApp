@@ -2,19 +2,106 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a28e06dd-1836-44d0-9897-320ce7ccf46f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/api/ad/ad.validators.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/debug/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/debug/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/debug/History.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/debug/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/debug/Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/debug/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/debug/browser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/debug/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/debug/debug.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/debug/node.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/debug/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/HISTORY" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/alternate_parsers/bson.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/alternate_parsers/faster_bson.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/browser_build/bson.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/browser_build/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/binary.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/binary_parser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/bson.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/code.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/db_ref.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/double.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/float_parser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/long.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/map.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/max_key.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/min_key.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/objectid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/parser/calculate_size.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/parser/deserializer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/parser/serializer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/regexp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/symbol.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/lib/bson/timestamp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/node_modules/bson/tools/gleak.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb/mongolabs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongodb/test.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.directives.js" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.factory.js" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.factory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/AdminLTE/pages/forms/general.html" afterPath="$PROJECT_DIR$/client/bower_components/AdminLTE/pages/forms/general.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/js/script.js" afterPath="$PROJECT_DIR$/client/assets/js/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bson/HISTORY" afterPath="$PROJECT_DIR$/node_modules/bson/HISTORY" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bson/lib/bson/index.js" afterPath="$PROJECT_DIR$/node_modules/bson/lib/bson/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bson/lib/bson/objectid.js" afterPath="$PROJECT_DIR$/node_modules/bson/lib/bson/objectid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bson/lib/bson/parser/deserializer.js" afterPath="$PROJECT_DIR$/node_modules/bson/lib/bson/parser/deserializer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bson/lib/bson/parser/serializer.js" afterPath="$PROJECT_DIR$/node_modules/bson/lib/bson/parser/serializer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bson/package.json" afterPath="$PROJECT_DIR$/node_modules/bson/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/mongodb-core/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/lib/topologies/replset.js" afterPath="$PROJECT_DIR$/node_modules/mongodb-core/lib/topologies/replset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb-core/package.json" afterPath="$PROJECT_DIR$/node_modules/mongodb-core/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/mongodb/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb/README.md" afterPath="$PROJECT_DIR$/node_modules/mongodb/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb/lib/bulk/ordered.js" afterPath="$PROJECT_DIR$/node_modules/mongodb/lib/bulk/ordered.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb/lib/bulk/unordered.js" afterPath="$PROJECT_DIR$/node_modules/mongodb/lib/bulk/unordered.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb/lib/collection.js" afterPath="$PROJECT_DIR$/node_modules/mongodb/lib/collection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb/lib/command_cursor.js" afterPath="$PROJECT_DIR$/node_modules/mongodb/lib/command_cursor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb/lib/cursor.js" afterPath="$PROJECT_DIR$/node_modules/mongodb/lib/cursor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb/lib/db.js" afterPath="$PROJECT_DIR$/node_modules/mongodb/lib/db.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb/lib/url_parser.js" afterPath="$PROJECT_DIR$/node_modules/mongodb/lib/url_parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongodb/package.json" afterPath="$PROJECT_DIR$/node_modules/mongodb/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/History.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/README.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-across-three-collections.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-across-three-collections.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/aggregate.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/aggregate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/document.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/document.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/model.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/query.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/query.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/querystream.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/querystream.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/array.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/array.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/boolean.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/boolean.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/buffer.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/buffer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/date.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/date.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/documentarray.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/documentarray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/embedded.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/embedded.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/mixed.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/mixed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/number.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/number.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/objectid.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/objectid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/string.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/string.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/services/updateValidators.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/services/updateValidators.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/documentarray.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/documentarray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/embedded.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/embedded.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/subdocument.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/subdocument.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes.js" afterPath="$PROJECT_DIR$/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/ad/ad.controller.js" afterPath="$PROJECT_DIR$/server/api/ad/ad.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/ad/ad.model.js" afterPath="$PROJECT_DIR$/server/api/ad/ad.model.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/ad/ad.socket.io.js" afterPath="$PROJECT_DIR$/server/api/ad/ad.socket.io.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config/MongoDataInjection.js" afterPath="$PROJECT_DIR$/server/config/MongoDataInjection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config/socketio.js" afterPath="$PROJECT_DIR$/server/config/socketio.js" />
     </list>
     <ignored path="NodeWebApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +125,8 @@
       <file leaf-file-name="manage.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5470738">
-              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.23409669">
+              <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,8 +135,8 @@
       <file leaf-file-name="manage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6216216">
-              <caret line="398" column="103" selection-start-line="398" selection-start-column="103" selection-end-line="398" selection-end-column="103" />
+            <state vertical-scroll-proportion="-24.019047">
+              <caret line="439" column="95" selection-start-line="439" selection-start-column="87" selection-end-line="439" selection-end-column="95" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
@@ -75,50 +162,40 @@
                 <element signature="n#style#0;n#span#1;n#div#6;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1452892296119" expanded="true" signature="7376:7567" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="7952:8189" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="8811:9002" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="9437:9674" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="10595:10822" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="11479:11546" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="11479:11752" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="12311:12506" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="12927:13168" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="13745:13889" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="17583:17762" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="18572:18797" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="19210:19401" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="20112:20349" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="20774:20967" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="21703:21944" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="23950:24215" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="24413:24576" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="26095:26286" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="26666:26903" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="27945:28172" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="28829:28896" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="29665:29860" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="30276:30517" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="31094:31238" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="31237:31238" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="34928:35107" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="35912:36137" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="36549:36740" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="36628:36740" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="37446:37683" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="38108:38301" placeholder="{...}" />
-                <marker date="1452892296119" expanded="true" signature="39032:39273" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="7376:7567" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="7952:8189" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="8811:9002" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="9437:9674" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="10595:10822" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="11479:11546" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="11479:11752" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="12311:12506" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="12927:13168" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="13745:13889" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="17583:17762" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="18572:18797" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="19210:19401" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="20112:20349" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="20774:20967" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="21703:21944" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="23972:24124" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="24322:24485" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="26004:26195" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="26575:26812" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="27854:28081" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="28738:28805" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="29574:29769" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="30185:30426" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="31003:31147" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="31146:31147" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="34837:35016" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="35821:36046" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="36458:36649" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="36537:36649" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="37355:37592" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="38017:38210" placeholder="{...}" />
+                <marker date="1452957940372" expanded="true" signature="38941:39182" placeholder="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ad.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/api/ad/ad.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8571428">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -127,7 +204,17 @@
         <entry file="file://$PROJECT_DIR$/server/config/socketio.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+              <caret line="22" column="55" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ad.socket.io.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.5238094">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -136,8 +223,8 @@
       <file leaf-file-name="socket.factory.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            <state vertical-scroll-proportion="-9.904762">
+              <caret line="48" column="35" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="35" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -145,11 +232,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ad.socket.io.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js">
+      <file leaf-file-name="ad.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/api/ad/ad.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.1904764">
+              <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/search/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -174,7 +281,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/app/AdminDashboard/AdminDashModule.js" />
         <option value="$PROJECT_DIR$/client/index2.html" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/app.config.css" />
         <option value="$PROJECT_DIR$/client/app/landpage/landpage.module.js" />
@@ -183,7 +289,6 @@
         <option value="$PROJECT_DIR$/client/bower_components/classie/classie.js" />
         <option value="$PROJECT_DIR$/client/app/index.html" />
         <option value="$PROJECT_DIR$/client/assets/js/agency.js" />
-        <option value="$PROJECT_DIR$/server/config/socketio.js" />
         <option value="$PROJECT_DIR$/client/app/landpage/services/landpage.service.js" />
         <option value="$PROJECT_DIR$/client/app/landpage/services/landpage.socket.service.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/controllers/adminDashboard.js" />
@@ -200,12 +305,10 @@
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/services/manage.directives.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/services/dashboard.animation.css" />
         <option value="$PROJECT_DIR$/client/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/client/assets/js/script.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/services/dashboard.animation.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/controllers/adminDashboard.controller.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html" />
         <option value="$PROJECT_DIR$/server/search/inde.js" />
-        <option value="$PROJECT_DIR$/routes.js" />
         <option value="$PROJECT_DIR$/server/search/index.js" />
         <option value="$PROJECT_DIR$/server/views/Errors/searchResultNotFound.html" />
         <option value="$PROJECT_DIR$/server/api/ad/index.js" />
@@ -213,17 +316,21 @@
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/services/ad.factory.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/editAndCreateForm.html" />
         <option value="$PROJECT_DIR$/client/app/app.module.js" />
-        <option value="$PROJECT_DIR$/client/index.html" />
-        <option value="$PROJECT_DIR$/server/api/ad/ad.socket.io.js" />
         <option value="$PROJECT_DIR$/client/app/landpage/views/navbar.html" />
         <option value="$PROJECT_DIR$/server/api/ad/ad.validators.js" />
         <option value="$PROJECT_DIR$/server/api/ad/ad.model.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.directives.js" />
-        <option value="$PROJECT_DIR$/server/api/ad/ad.controller.js" />
         <option value="$PROJECT_DIR$/server/config/MongoDataInjection.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.factory.js" />
-        <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html" />
+        <option value="$PROJECT_DIR$/routes.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/client/index.html" />
+        <option value="$PROJECT_DIR$/server/config/socketio.js" />
+        <option value="$PROJECT_DIR$/client/assets/js/script.js" />
+        <option value="$PROJECT_DIR$/server/api/ad/ad.socket.io.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js" />
+        <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html" />
+        <option value="$PROJECT_DIR$/server/api/ad/ad.controller.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js" />
       </list>
     </option>
@@ -564,7 +671,75 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminDashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminDashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -680,7 +855,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31056562" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31056562" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -814,37 +989,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
-          <line>23</line>
+          <line>28</line>
           <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
-          <line>27</line>
+          <line>32</line>
           <option name="timeStamp" value="124" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
-          <line>39</line>
+          <line>49</line>
           <option name="timeStamp" value="125" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
-          <line>40</line>
+          <line>50</line>
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
-          <line>41</line>
+          <line>51</line>
           <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js</url>
-          <line>6</line>
+          <line>30</line>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js</url>
-          <line>12</line>
+          <line>36</line>
           <option name="timeStamp" value="140" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -864,42 +1039,42 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
-          <line>28</line>
+          <line>38</line>
           <option name="timeStamp" value="153" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
-          <line>29</line>
+          <line>39</line>
           <option name="timeStamp" value="154" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
-          <line>31</line>
+          <line>41</line>
           <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
-          <line>45</line>
+          <line>55</line>
           <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
-          <line>44</line>
+          <line>54</line>
           <option name="timeStamp" value="158" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js</url>
-          <line>20</line>
+          <line>44</line>
           <option name="timeStamp" value="160" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js</url>
-          <line>21</line>
+          <line>45</line>
           <option name="timeStamp" value="161" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js</url>
-          <line>24</line>
+          <line>48</line>
           <option name="timeStamp" value="162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -992,8 +1167,38 @@
           <line>130</line>
           <option name="timeStamp" value="199" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js</url>
+          <line>10</line>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js</url>
+          <line>15</line>
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js</url>
+          <line>20</line>
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js</url>
+          <line>24</line>
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
+          <line>33</line>
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/config/socketio.js</url>
+          <line>34</line>
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="200" />
+      <option name="time" value="223" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -1005,37 +1210,13 @@
         <watch expression="req.body.maor" language="JavaScript" />
         <watch expression="req.ads" language="JavaScript" />
         <watch expression="req.params.body.searchparams" language="JavaScript" />
-        <watch expression="req.body.searchparams" language="JavaScript" />
         <watch expression="req.params" language="JavaScript" />
         <watch expression="req.query" language="JavaScript" />
+        <watch expression="req.body._id" language="JavaScript" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/assets/public/imgUploaded/beach-sunset-scenes-1024x640.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/img/header-bg-old.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/landpage/views/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.428572">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/index_old.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/js/agency.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42409638">
@@ -1144,13 +1325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/manage.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="32" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/views/Errors/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0">
@@ -1201,30 +1375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.269841">
-          <caret line="246" column="26" selection-start-line="246" selection-start-column="26" selection-end-line="246" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.0380955">
-          <caret line="106" column="78" selection-start-line="106" selection-start-column="78" selection-end-line="106" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.106451616">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/config/express.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63870966">
@@ -1239,24 +1389,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.5">
           <caret line="21" column="51" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/app.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26612905">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/ad/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1279,78 +1411,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/MongoDataInjection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/ad.factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/dashboard.animation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.106451616">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="146" column="32" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/search/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26612905">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37258065">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/ad/ad.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8571428">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/search/search.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41774192">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1363,10 +1427,189 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/app.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2657005">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/ad/ad.db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94212216">
+          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="250" column="4" selection-start-line="250" selection-start-column="4" selection-end-line="250" selection-end-column="4" />
+          <folding>
+            <marker date="1452902680042" expanded="true" signature="5021:5034" placeholder="..." />
+            <marker date="1452902680042" expanded="true" signature="5608:5621" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/search/search.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47287616">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/ad/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/search/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/manage.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="32" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.8792272">
+          <caret line="146" column="32" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29227054">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/ad.factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13285024">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/MongoDataInjection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/query.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="2022" column="0" selection-start-line="2022" selection-start-column="0" selection-end-line="2022" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/socketio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="55" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/release-items.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3431952">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5238094">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.904762">
+          <caret line="48" column="35" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/ad/ad.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1904764">
+          <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6216216">
-          <caret line="398" column="103" selection-start-line="398" selection-start-column="103" selection-end-line="398" selection-end-column="103" />
+        <state vertical-scroll-proportion="-24.019047">
+          <caret line="439" column="95" selection-start-line="439" selection-start-column="87" selection-end-line="439" selection-end-column="95" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#section#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
@@ -1392,73 +1635,47 @@
             <element signature="n#style#0;n#span#1;n#div#6;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1452892296119" expanded="true" signature="7376:7567" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="7952:8189" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="8811:9002" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="9437:9674" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="10595:10822" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="11479:11546" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="11479:11752" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="12311:12506" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="12927:13168" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="13745:13889" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="17583:17762" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="18572:18797" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="19210:19401" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="20112:20349" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="20774:20967" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="21703:21944" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="23950:24215" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="24413:24576" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="26095:26286" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="26666:26903" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="27945:28172" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="28829:28896" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="29665:29860" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="30276:30517" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="31094:31238" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="31237:31238" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="34928:35107" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="35912:36137" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="36549:36740" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="36628:36740" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="37446:37683" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="38108:38301" placeholder="{...}" />
-            <marker date="1452892296119" expanded="true" signature="39032:39273" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/socketio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/ad/ad.socket.io.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
+            <marker date="1452957940372" expanded="true" signature="7376:7567" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="7952:8189" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="8811:9002" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="9437:9674" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="10595:10822" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="11479:11546" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="11479:11752" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="12311:12506" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="12927:13168" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="13745:13889" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="17583:17762" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="18572:18797" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="19210:19401" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="20112:20349" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="20774:20967" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="21703:21944" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="23972:24124" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="24322:24485" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="26004:26195" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="26575:26812" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="27854:28081" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="28738:28805" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="29574:29769" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="30185:30426" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="31003:31147" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="31146:31147" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="34837:35016" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="35821:36046" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="36458:36649" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="36537:36649" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="37355:37592" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="38017:38210" placeholder="{...}" />
+            <marker date="1452957940372" expanded="true" signature="38941:39182" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5470738">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.23409669">
+          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
           <folding />
         </state>
       </provider>

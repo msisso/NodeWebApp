@@ -321,7 +321,7 @@
                                 <i class="fa fa-spinner fa-pulse" ng-show="changeSubmitButton"></i> Save
                             </button>
                             <button type="button" class="btn btn-primary"
-                                    ng-click="existingAd.edit = !existingAd.edit">Cancel</button>
+                                    ng-click="existingAd.edit = !existingAd.edit; showLoaderForId = ''">Cancel</button>
                         </form>
                         <table class="table table-hover table-condensed" ng-hide="existingAd.edit">
                             <thead>
@@ -343,8 +343,8 @@
                                 <td>{{ad.startDateTime}}</td>
                                 <td>{{ad.endDateTime}}</td>
                                 <td><button type="button" class="edit close" ng-click="editAd(ad)" uib-tooltip="Edit"><i
-                                        ng-class="{'glyphicon glyphicon-edit': !((!existingAd || existingAd._id !== ad._id) && showLoaderForId === ad._id)
-                                        , 'fa fa-spinner fa-spin': (!existingAd || existingAd._id !== ad._id) && showLoaderForId === ad._id && !existingAd.edit}"></i></button></td>
+                                        ng-class="{'glyphicon glyphicon-edit': (showLoaderForId !== ad._id)
+                                        , 'fa fa-spinner fa-spin': showLoaderForId === ad._id}"></i></button></td>
                                 <td><button type="button" class="delete close" ng-click="deleteAd(ad)" uib-tooltip="Delete"><i
                                         ng-class="{'glyphicon glyphicon-trash': showLoaderForDeleteId !== ad._id
                                         , 'fa fa-spinner fa-spin': showLoaderForDeleteId === ad._id}"></i></button></td>
@@ -557,7 +557,7 @@
                             </div>
                             <div style="height:45px"></div>
                             <button type="submit" class="btn btn-primary" ng-disabled="createForm.$invalid">
-                                <i class="fa fa-spinner fa-pulse" ng-show="changeSubmitButton"></i> Save
+                                <i class="fa fa-spinner fa-pulse" ng-show="changeCreateButton"></i> Save
                             </button>
 
                         </form>
