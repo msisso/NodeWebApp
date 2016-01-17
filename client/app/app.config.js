@@ -11,6 +11,11 @@ angular.module('FlightsApp')
                 templateUrl: 'app/landpage/views/landpage.html',
                 controller: 'LandpageController'
             })
+            .state('travelagency', {
+                url: '/travelagency',
+                templateUrl: 'app/travelagency/views/travelagency.html',
+                controller: 'travelagencyController'
+            })
             .state('dashboard', {
                 url: '/dashboard',
                 templateUrl: 'app/AdminDashboard/views/admin.dashboard.html',

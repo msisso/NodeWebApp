@@ -1,6 +1,6 @@
 
 var Ads = require('../api/ad/ad.model.js');
-
+var TravelAgency = require('../api/travelagency/travelagency.model.js');
 // Get list of ads
 exports.index = function(req, res) {
 
@@ -28,6 +28,15 @@ exports.index = function(req, res) {
     });
 
 
+
+};
+
+exports.get = function(req, res) {
+
+    TravelAgency.find(req.body.searchparams, function(err, stats) {
+        if (err) { return handleError(res, err); }
+        return res.status(200).json(stats);
+    })
 
 };
 

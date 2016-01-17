@@ -18,7 +18,8 @@ angular.module('FlightsApp', [
         'btford.socket-io',
         'duScroll',
         'landpage',
-        'AdminDashboard'
+        'AdminDashboard',
+        'travelagency',
     ])
     .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         $locationProvider.html5Mode(true);

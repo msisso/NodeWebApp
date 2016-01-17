@@ -1,0 +1,101 @@
+<div ng-include="'app/landpage/views/navbar.html'"></div>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">Find Our Oficces</div>
+      <a href="/" class="page-scroll btn btn-xl">Go Back</a>
+    </div>
+  </div>
+</header>
+
+
+<section d-sec id="search">
+  <div class="container" id="SearchBox">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Search</h2>
+      </div>
+          </div><!-- /.box-header -->
+          <form name="searchForm" ng-submit="Searchtrav()">
+
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="category" class="form-control" placeholder="Enter category" ng-model="searchCreteria.name">
+          </div><!-- /.form-group -->
+          <p>Selected: {{searchCreteria.name}}</p>
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" name="category" class="form-control" placeholder="Enter category" ng-model="searchCreteria.city">
+          </div><!-- /.form-group -->
+            <p>Selected: {{searchCreteria.city}}</p>
+
+            <div class="form-group">
+            <label>Open</label>
+              <input type="text" name="category" class="form-control" placeholder="Enter category" ng-model="searchCreteria.active">
+          </div>
+            <p>Selected: {{searchCreteria.active}}</p>
+            <div style="height:30px"></div>
+          <button type="submit" class="btn btn-primary" ng-disabled="searchForm.$pristine">
+            <i class="fa fa-spinner fa-pulse" ng-show="changeSearchButton"></i> Search
+          </button>
+        </form>
+
+      </div>
+    </div>
+<!-- Search Results -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="content-box-large" ng-show="findresult === 'foundresults' && Search">
+      <div class="panel-body">
+        <div id="search-results" scroll-if="findresult === 'foundresults'">
+          <table class="table table-hover table-condensed">
+            <thead>
+            <tr>
+              <th>name</th>
+              <th>city</th>
+              <th>address</th>
+              <th>travelagencyPhone</th>
+              <th>active</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="result in searchResults">
+              <td>{{result.name}}</td>
+              <td>{{result.city}}</td>
+              <td>{{result.address}}</td>
+              <td>{{result.travelagencyPhone}}</td>
+              <td>{{result.active}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="content-box-large" ng-show="findresult === 'notfoundresults'">
+      <div id="search-no-results">
+        <div id="">No results found!</div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+
+
+
+  </div>
+
+
+</section>
+
+
+<section d-sec id="Weather">
+</section>
+
+<section d-sec id="Map">
+</section>
+
+
+<div ng-include="'app/landpage/views/footer.html'"></div>

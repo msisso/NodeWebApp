@@ -15,7 +15,7 @@ function onUpdate(socket,data) {
 
 function onDbChanges(socket,data)
 {
-    require('../api/ad/ad.socket.io').SendDbChanges(v,data);
+    require('../api/ad/ad.socket.io').SendDbChanges(socket,data);
 }
 
 // When the user connects to admin dashboard perform this
