@@ -28,7 +28,7 @@ function GetValidViews(dayWeek, date, hours, minutes, seconds) {
         if (jQuery.inArray(dayWeek, value.when.daysShow) != (-1)) {
             //Date.parse calculate the number of milliseconds between the date string and midnight of January 1, 1970.
             if ((Date.parse(value.when.startDate) <= Date.parse(date)) && (Date.parse(date) <= Date.parse(value.when.endDate))) {
-                var temp = value.when.srartTime.split(':');
+                var temp = value.when.startTime.split(':');
                 var StartHour = temp[0];
                 var StartMinutes = temp[1];
                 var StartSeconds = temp[2];
@@ -246,9 +246,11 @@ function onModalOpen(id)
 {
     //alert("connecting");
     screenId = id;
-    //var socket = io.connect('http://localhost:8080');
+    //alert(id);
 
-    socket = io('http://localhost:8080', {'forceNew': true});
+    //var socket = io.connect('http://localhost:8080');
+    //socket = io.connect('http://localhost:8080');
+    socket = io('', {path: '/mysocket', 'forceNew': true});
     socket.on('connect', function(data) {
         //alert("test");
 

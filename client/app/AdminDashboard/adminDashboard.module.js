@@ -1,4 +1,6 @@
 
 angular.module('AdminDashboard', [
-    'dashboard.manage'
+    'dashboard.manage',
+    'dashboard.demo',
+    'dashboard.stats'
 ]);

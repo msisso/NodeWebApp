@@ -20,6 +20,16 @@ angular.module('FlightsApp')
                 url: '/manage',
                 templateUrl: 'app/AdminDashboard/modules/manage/views/manage.html',
                 controller: 'ManageController'
+            })
+            .state('dashboard.demo', {
+            url: '/demo',
+            templateUrl: 'app/AdminDashboard/modules/demo/views/demo.html',
+            controller: 'DemoController'
+            })
+            .state('dashboard.stats', {
+                url: '/stats',
+                templateUrl: 'app/AdminDashboard/modules/stats/views/stats.html',
+                controller: 'StatsController'
             });
         $urlRouterProvider.otherwise('/');
     })

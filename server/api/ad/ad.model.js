@@ -20,7 +20,7 @@ var AdSchema = new Schema({
     msgImage: [String],
     linkTemplate: String,
     templateName: {
-        type: String,
+        type: [String],
         enum: ['A', 'B', 'C'],
         required: true
     },

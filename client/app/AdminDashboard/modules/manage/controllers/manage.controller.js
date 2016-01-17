@@ -59,6 +59,7 @@ angular.module('dashboard.manage')
                     .then(function(res) {
                         console.log("enter after the search");
                         $scope.changeSearchButton = false;
+
                         if (!_.isEmpty(res)) {
                             $scope.findresult = 'foundresults';
                             $scope.searchResults = res.map(function(o) {
@@ -73,6 +74,10 @@ angular.module('dashboard.manage')
                                     endDateTime: moment(o.when.endDate + ' ' + o.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')
                                 };
                             });
+                            $scope.searchForm.$setPristine();
+                            $scope.searchCreteria.msgName = "";
+                            $scope.searchCreteria.screensId = "";
+                            $scope.searchCreteria.templateName = "";
                         }
                         else {
                             $scope.findresult = 'notfoundresults';

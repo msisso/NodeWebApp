@@ -1,0 +1,57 @@
+<div class="content-wrapper" >
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1 style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 500;">
+            Statistics
+        </h1>
+        <ol class="breadcrumb">
+            <li><a ui-sref="main"> <i class="glyphicon glyphicon-home"></i>Home</a></li>
+            <li><a ui-sref="dashboard"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+            <li class="active"><i class="glyphicon glyphicon-stats"></i> Stats</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box box-warning" id="SceenStatsBox">
+                    <div class="box-header with-border" ng-click="collapse.byScreen = !collapse.byScreen" style="cursor: pointer;">
+                        <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Used Screens Statistics</h3>
+                        <div class="box-tools pull-right">
+                            <button  class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': !collapse.byScreen, 'fa fa-plus': collapse.byScreen}"></i></button>
+                        </div>
+                    </div><!-- /.box-header -->
+                    <div ng-show="!collapse.byScreen" class="box-body slide-toggle" >
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div  d3-bars-chart bar-height="20" bar-padding="5" data="byScreen"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box box-warning" id="TemplateStatsBox">
+                    <div class="box-header with-border" ng-click="collapse.byTemplate = !collapse.byTemplate" style="cursor: pointer;">
+                        <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Used Templates Statistics</h3>
+                        <div class="box-tools pull-right">
+                            <button  class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': !collapse.byTemplate, 'fa fa-plus': collapse.byTemplate}"></i></button>
+                        </div>
+                    </div><!-- /.box-header -->
+                    <div ng-show="!collapse.byTemplate" class="box-body slide-toggle" >
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div  d3-bars-chart bar-height="20" bar-padding="5" data="byTemplate"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+
+

@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/msisso/NodeWebApp#readme",
   "dependencies": {
-    "async": "^1.5.0",
+    "async": "^1.5.2",
     "body-parser": "^1.14.2",
     "cookie-parser": "^1.4.0",
     "debug": "^2.2.0",

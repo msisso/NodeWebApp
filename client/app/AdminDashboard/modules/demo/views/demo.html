@@ -1,0 +1,35 @@
+<div class="content-wrapper" >
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1 style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 500;">
+      Demo Screen
+    </h1>
+    <ol class="breadcrumb">
+      <li><a ui-sref="main"> <i class="glyphicon glyphicon-home"></i>Home</a></li>
+      <li><a ui-sref="dashboard"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+      <li class="active"><i class="glyphicon glyphicon-eye-open"></i> Demo</li>
+    </ol>
+  </section>
+
+<section class="content">
+  <div class="box box-warning" id="DemoBox">
+    <div class="box-header with-border" ng-click="collapse.demo = !collapse.demo" style="cursor: pointer;">
+      <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Demo</h3>
+      <div class="box-tools pull-right">
+        <button  class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': !collapse.demo, 'fa fa-plus': collapse.demo}"></i></button>
+      </div>
+    </div><!-- /.box-header -->
+
+    <div ng-hide="collapse.demo" class="box-body slide-toggle" >
+      <div class="row">
+        <div class="col-md-4" ng-repeat="screen in screens">
+          <button style="width: 100%" class="btn btn-primary" ng-click="showScreen(screen.id)" >{{screen.name}}</button>
+        </div>
+      </div>
+      <div class="row" ng-show="screenSelected">
+        <div style="width:95%; padding-top:20px;padding-left: 70px;margin-bottom: -20px" class="FrameContainer"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>

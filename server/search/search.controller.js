@@ -1,19 +1,34 @@
-/**
- * Created by Maor on 1/8/2016.
- */
-
 
 var Ads = require('../api/ad/ad.model.js');
 
 // Get list of ads
 exports.index = function(req, res) {
-    console.log("maor" +req.body.searchparams);
-    console.log("maor" +req.query);
-    console.log("maor" +req.query.searchparams);
-    Ads.find(req.body.searchparams, function(err, stats) {
+
+    var query = Ads.find({});
+
+
+    if(typeof req.body.searchparams.msgName !== 'undefined'){
+        console.log("add to query msgName");
+        query.where({'msgName': new RegExp(req.body.searchparams.msgName, "i")});
+    }
+    if(typeof req.body.searchparams.templateName !== 'undefined'){
+        console.log("add to query templateName");
+
+        query.where('templateName').in(req.body.searchparams.templateName);
+    }
+    if(typeof req.body.searchparams.screensId  !== 'undefined'){
+        console.log("add to query screensId");
+
+        query.where('screensId').all(req.body.searchparams.screensId);
+    }
+
+    query.exec(function(err,ads){
         if (err) { return handleError(res, err); }
-        return res.status(200).json(stats);
+        return res.status(200).json(ads);
     });
+
+
+
 };
 
 function handleError(res, err) {
