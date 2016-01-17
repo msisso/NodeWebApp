@@ -7,21 +7,15 @@ angular.module('AdminDashboard')
         var myIoSocket  = io('', {
             path: '/mysocket'
         });
-        //console.log(ioSocket);
+
         var socket = socketFactory({
             ioSocket: myIoSocket
         });
-        //console.log(socket);
+
 
         return {
             socket: socket,
 
-            /**
-             * Register listeners to sync an array with updates on a model
-             * @param {String} modelName
-             * @param {Array} array
-             * @param {Function} callback
-             */
 
             syncUpdates: function(modelName, array, callback) {
                 //console.log(modelName);
@@ -48,7 +42,7 @@ angular.module('AdminDashboard')
                             _id: item._id,
                             msgName: item.msgName,
                             screensId: item.screensId.join(', '),
-                            templateName: item.templateName,
+                            templateName: item.templateName.join(', '),
                             advTimer: (item.advTimer/1000) + ' seconds',
                             startDateTime: moment(item.when.startDate + ' ' + item.when.startTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL'),
                             endDateTime: moment(item.when.endDate + ' ' + item.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')
@@ -60,7 +54,7 @@ angular.module('AdminDashboard')
                             _id: item._id,
                             msgName: item.msgName,
                             screensId: item.screensId.join(', '),
-                            templateName: item.templateName,
+                            templateName: item.templateName.join(', '),
                             advTimer: (item.advTimer/1000) + ' seconds',
                             startDateTime: moment(item.when.startDate + ' ' + item.when.startTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL'),
                             endDateTime: moment(item.when.endDate + ' ' + item.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')
@@ -81,11 +75,6 @@ angular.module('AdminDashboard')
                 });
             },
 
-            /**
-             * Removes listeners for a models updates on the socket
-             *
-             * @param modelName
-             */
             unsyncUpdates: function(modelName) {
                 socket.removeAllListeners(modelName + ':save');
                 socket.removeAllListeners(modelName + ':remove');

@@ -68,7 +68,7 @@ angular.module('dashboard.manage')
                                 return {
                                     msgName: o.msgName,
                                     screensId: o.screensId.join(', '),
-                                    linkTemplate: o.templateName,
+                                    linkTemplate: o.templateName.join(', '),
                                     duration: (o.advTimer/1000) + ' seconds',
                                     startDateTime: moment(o.when.startDate + ' ' + o.when.startTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL'),
                                     endDateTime: moment(o.when.endDate + ' ' + o.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')
@@ -104,7 +104,7 @@ angular.module('dashboard.manage')
                                 _id: value._id,
                                 msgName: value.msgName,
                                 screensId: value.screensId.join(', '),
-                                templateName: value.templateName,
+                                templateName: value.templateName.join(', '),
                                 advTimer: (value.advTimer/1000) + ' seconds',
                                 startDateTime: moment(value.when.startDate + ' ' + value.when.startTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL'),
                                 endDateTime: moment(value.when.endDate + ' ' + value.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')

@@ -9,7 +9,7 @@ angular.module('travelagency')
             factory.searchBytravel = function(criteria) {
                 var deferred = $q.defer();
                 console.log(criteria);
-                $http.post('/search/travel', {searchparams: criteria})
+                $http.post('/search/agency/travel', {searchparams: criteria})
                     .success(function(res) {
                         console.log("success" + res);
                         deferred.resolve(res);

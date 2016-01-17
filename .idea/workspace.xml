@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a28e06dd-1836-44d0-9897-320ce7ccf46f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" afterPath="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/landpage/views/landpage.html" afterPath="$PROJECT_DIR$/client/app/landpage/views/landpage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/css/agency.css" afterPath="$PROJECT_DIR$/client/assets/css/agency.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js" afterPath="$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/search/index.js" afterPath="$PROJECT_DIR$/server/search/index.js" />
     </list>
     <ignored path="NodeWebApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +27,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="landpage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manage.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ad.factory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/ad.factory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#39#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage.factory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.factory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landpage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/landpage/views/landpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.68625677">
+            <state vertical-scroll-proportion="-7.2285714">
               <caret line="257" column="24" selection-start-line="257" selection-start-column="24" selection-end-line="257" selection-end-column="24" />
               <folding>
                 <element signature="n#div#0;n#section#0;n#!!top" expanded="false" />
@@ -131,11 +164,91 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html">
+      <file leaf-file-name="manage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.78571427">
-              <caret line="54" column="44" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="44" />
+            <state vertical-scroll-proportion="-14.928572">
+              <caret line="24" column="43" selection-start-line="22" selection-start-column="12" selection-end-line="24" selection-end-column="43" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#5;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#6;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#5;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#6;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <marker date="1452977153451" expanded="true" signature="7149:7340" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="7725:7962" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="8584:8775" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="9210:9447" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="10368:10595" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="11252:11319" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="11252:11525" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="12084:12279" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="12700:12941" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="13518:13662" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="17356:17535" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="18345:18570" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="18983:19174" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="19885:20122" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="20547:20740" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="21476:21717" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="23745:23897" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="24095:24258" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="25777:25968" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="26348:26585" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="27627:27854" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="28511:28578" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="29347:29542" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="29958:30199" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="30776:30920" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="30919:30920" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="34610:34789" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="35594:35819" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="36231:36422" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="36310:36422" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="37128:37365" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="37790:37983" placeholder="{...}" />
+                <marker date="1452977153451" expanded="true" signature="38714:38955" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socket.factory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="70" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
+              <folding>
+                <element signature="e#0#39#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27250206">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -151,71 +264,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/landpage/views/footer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/landpage/views/navbar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.928572">
-              <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="agency.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/assets/css/agency.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8.506098">
-              <caret line="0" column="9919" selection-start-line="0" selection-start-column="9919" selection-end-line="0" selection-end-column="9919" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="socketio.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/config/socketio.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0634923">
-              <caret line="17" column="51" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/search/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="travelagency.factory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -240,7 +303,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/app/landpage/directives/landpage.directives.js" />
         <option value="$PROJECT_DIR$/server/views/Errors/404.html" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html.old" />
         <option value="$PROJECT_DIR$/client/assets/css/responsive.css" />
@@ -260,9 +322,7 @@
         <option value="$PROJECT_DIR$/server/config/MongoDataInjection.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.factory.js" />
         <option value="$PROJECT_DIR$/server/api/ad/ad.socket.io.js" />
-        <option value="$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js" />
         <option value="$PROJECT_DIR$/server/api/ad/ad.controller.js" />
-        <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/demo/demo.module.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html" />
         <option value="$PROJECT_DIR$/app.js" />
@@ -285,12 +345,15 @@
         <option value="$PROJECT_DIR$/client/app/app.module.js" />
         <option value="$PROJECT_DIR$/client/app/app.config.js" />
         <option value="$PROJECT_DIR$/server/search/search.controller.js" />
-        <option value="$PROJECT_DIR$/server/search/index.js" />
         <option value="$PROJECT_DIR$/server/config/socketio.js" />
         <option value="$PROJECT_DIR$/client/app/landpage/views/navbar.html" />
         <option value="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" />
         <option value="$PROJECT_DIR$/client/assets/css/agency.css" />
         <option value="$PROJECT_DIR$/client/app/landpage/views/landpage.html" />
+        <option value="$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js" />
+        <option value="$PROJECT_DIR$/server/search/index.js" />
+        <option value="$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js" />
+        <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js" />
       </list>
     </option>
   </component>
@@ -711,6 +774,190 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminDashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminDashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminDashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminDashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminDashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminDashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1223,13 +1470,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/views/Errors/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/controllers/adminDashboard.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12941177">
@@ -1286,21 +1526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29227054">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/ad.factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13285024">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/query.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -1327,24 +1552,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="7" selection-start-line="35" selection-start-column="4" selection-end-line="38" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.476191">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="79" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="11" selection-start-line="6" selection-start-column="26" selection-end-line="8" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1412,72 +1619,6 @@
         <state vertical-scroll-proportion="0.49187338">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="27" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.428572">
-          <caret line="24" column="43" selection-start-line="22" selection-start-column="12" selection-end-line="24" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#5;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#6;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#5;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#6;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1452977153451" expanded="true" signature="7149:7340" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="7725:7962" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="8584:8775" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="9210:9447" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="10368:10595" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="11252:11319" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="11252:11525" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="12084:12279" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="12700:12941" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="13518:13662" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="17356:17535" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="18345:18570" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="18983:19174" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="19885:20122" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="20547:20740" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="21476:21717" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="23745:23897" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="24095:24258" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="25777:25968" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="26348:26585" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="27627:27854" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="28511:28578" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="29347:29542" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="29958:30199" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="30776:30920" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="30919:30920" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="34610:34789" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="35594:35819" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="36231:36422" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="36310:36422" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="37128:37365" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="37790:37983" placeholder="{...}" />
-            <marker date="1452977153451" expanded="true" signature="38714:38955" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1619,26 +1760,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/search/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/config/socketio.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.0634923">
           <caret line="17" column="51" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -1693,7 +1818,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/landpage/views/landpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68625677">
+        <state vertical-scroll-proportion="-7.2285714">
           <caret line="257" column="24" selection-start-line="257" selection-start-column="24" selection-end-line="257" selection-end-column="24" />
           <folding>
             <element signature="n#div#0;n#section#0;n#!!top" expanded="false" />
@@ -1791,6 +1916,132 @@
             <element signature="n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.928572">
+          <caret line="24" column="43" selection-start-line="22" selection-start-column="12" selection-end-line="24" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#5;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#6;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#5;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#6;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1452977153451" expanded="true" signature="7149:7340" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="7725:7962" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="8584:8775" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="9210:9447" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="10368:10595" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="11252:11319" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="11252:11525" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="12084:12279" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="12700:12941" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="13518:13662" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="17356:17535" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="18345:18570" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="18983:19174" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="19885:20122" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="20547:20740" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="21476:21717" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="23745:23897" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="24095:24258" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="25777:25968" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="26348:26585" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="27627:27854" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="28511:28578" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="29347:29542" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="29958:30199" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="30776:30920" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="30919:30920" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="34610:34789" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="35594:35819" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="36231:36422" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="36310:36422" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="37128:37365" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="37790:37983" placeholder="{...}" />
+            <marker date="1452977153451" expanded="true" signature="38714:38955" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/services/manage.factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/search/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/socket.factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="70" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/services/ad.factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27250206">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
