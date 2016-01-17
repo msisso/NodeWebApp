@@ -3,7 +3,7 @@ var Ad = require('../ad/ad.model.js');
 
 // Get list of ads
 exports.index = function(req, res) {
-    console.log(req.query.by);
+   
     var groupByField = '$'.concat(req.query.by);
     Ad.aggregate([
         {
