@@ -8,7 +8,7 @@ angular.module('landpage')
                 {name: 'trips'},
                 {name: 'about'},
                 {name: 'team'},
-                {name: 'contact'}];
+                {name: 'views'}];
 
         $scope.toTheTop = function() {
                 $document.scrollTopAnimated(0, 1000);

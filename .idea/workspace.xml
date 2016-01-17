@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a28e06dd-1836-44d0-9897-320ce7ccf46f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/travelagency/controllers/map.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/travelagency/controllers/travelagency.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/travelagency/travelagency.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/travelagency/views/travelagency.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/api/travelagency/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/api/travelagency/travelagency.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/api/travelagency/travelagency.model.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.config.js" afterPath="$PROJECT_DIR$/client/app/app.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.module.js" afterPath="$PROJECT_DIR$/client/app/app.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" afterPath="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/landpage/views/landpage.html" afterPath="$PROJECT_DIR$/client/app/landpage/views/landpage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/landpage/views/navbar.html" afterPath="$PROJECT_DIR$/client/app/landpage/views/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/stats/stats.controller.js" afterPath="$PROJECT_DIR$/server/api/stats/stats.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config/socketio.js" afterPath="$PROJECT_DIR$/server/config/socketio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/search/index.js" afterPath="$PROJECT_DIR$/server/search/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/search/search.controller.js" afterPath="$PROJECT_DIR$/server/search/search.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/css/agency.css" afterPath="$PROJECT_DIR$/client/assets/css/agency.css" />
     </list>
     <ignored path="NodeWebApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,8 +29,8 @@
       <file leaf-file-name="landpage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/landpage/views/landpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4421338">
-              <caret line="265" column="39" selection-start-line="265" selection-start-column="39" selection-end-line="265" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.68625677">
+              <caret line="257" column="24" selection-start-line="257" selection-start-column="24" selection-end-line="257" selection-end-column="24" />
               <folding>
                 <element signature="n#div#0;n#section#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#section#0;n#!!top" expanded="false" />
@@ -145,6 +131,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="admin.dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.78571427">
+              <caret line="54" column="44" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landpage.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/landpage/views/footer.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -165,11 +171,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html">
+      <file leaf-file-name="agency.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/assets/css/agency.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.047619">
-              <caret line="54" column="44" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="44" />
+            <state vertical-scroll-proportion="8.506098">
+              <caret line="0" column="9919" selection-start-line="0" selection-start-column="9919" selection-end-line="0" selection-end-column="9919" />
               <folding />
             </state>
           </provider>
@@ -180,26 +186,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-6.0634923">
               <caret line="17" column="51" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/api/travelagency/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/search/search.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -255,12 +241,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/client/app/landpage/directives/landpage.directives.js" />
-        <option value="$PROJECT_DIR$/client/assets/css/agency.css" />
         <option value="$PROJECT_DIR$/server/views/Errors/404.html" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html.old" />
         <option value="$PROJECT_DIR$/client/assets/css/responsive.css" />
         <option value="$PROJECT_DIR$/client/assets/css/dashboard.css" />
-        <option value="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/services/manage.directives.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/services/dashboard.animation.css" />
         <option value="$PROJECT_DIR$/client/assets/css/style.css" />
@@ -304,6 +288,8 @@
         <option value="$PROJECT_DIR$/server/search/index.js" />
         <option value="$PROJECT_DIR$/server/config/socketio.js" />
         <option value="$PROJECT_DIR$/client/app/landpage/views/navbar.html" />
+        <option value="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" />
+        <option value="$PROJECT_DIR$/client/assets/css/agency.css" />
         <option value="$PROJECT_DIR$/client/app/landpage/views/landpage.html" />
       </list>
     </option>
@@ -491,10 +477,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="video" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -511,6 +493,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1237,13 +1223,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.452381">
-          <caret line="139" column="24" selection-start-line="139" selection-start-column="24" selection-end-line="139" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/views/Errors/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0">
@@ -1255,13 +1234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12941177">
           <caret line="6" column="30" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25882354">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1631,14 +1603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.047619">
-          <caret line="54" column="44" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/api/travelagency/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1687,10 +1651,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/landpage/views/navbar.html">
+    <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/views/admin.dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.928572">
-          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+        <state vertical-scroll-proportion="-0.78571427">
+          <caret line="54" column="44" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1703,10 +1667,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/landpage/views/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.928572">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/css/agency.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.506098">
+          <caret line="0" column="9919" selection-start-line="0" selection-start-column="9919" selection-end-line="0" selection-end-column="9919" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/landpage/views/landpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4421338">
-          <caret line="265" column="39" selection-start-line="265" selection-start-column="39" selection-end-line="265" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.68625677">
+          <caret line="257" column="24" selection-start-line="257" selection-start-column="24" selection-end-line="257" selection-end-column="24" />
           <folding>
             <element signature="n#div#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#section#0;n#!!top" expanded="false" />
