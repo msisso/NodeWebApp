@@ -29,16 +29,15 @@ exports.get = function(req, res) {
     var querytravel = TravelAgency.find({});
 
     if(typeof req.body.searchparams.name !== 'undefined'){
-        console.log("add to query name");
-        console.log(req.body.searchparams.name);
+
         querytravel.where({'name': new RegExp(req.body.searchparams.name, "i")});
     }
     if(typeof req.body.searchparams.active !== 'undefined'){
-        console.log("add to query active");
+
         querytravel.where({'active': new RegExp(req.body.searchparams.active, "i")});
     }
     if(typeof req.body.searchparams.city  !== 'undefined'){
-        console.log("add to query city");
+
         querytravel.where({'city': new RegExp(req.body.searchparams.city, "i")});    }
 
     querytravel.exec(function(err,stats){

@@ -11,7 +11,6 @@ exports.index = function(req, res) {
 };
 // Get list of travelagencys
 exports.agencies = function(req, res) {
-  console.log("get agencies");
   travelagency.find(function (err, travelagencys) {
     if(err) { return handleError(res, err); }
     return res.status(200).json(travelagencys);

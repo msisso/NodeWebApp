@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a28e06dd-1836-44d0-9897-320ce7ccf46f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/AdUpdate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/config/agencies.map.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/directives/coords.directive.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/TestUpdate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/index_old.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/controllers/stats.controller.js" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/controllers/stats.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/services/stats.service.js" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/services/stats.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/views/stats.html" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/views/stats.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/travelagency/controllers/travelagency.controller.js" afterPath="$PROJECT_DIR$/client/app/travelagency/controllers/travelagency.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js" afterPath="$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/travelagency/views/travelagency.html" afterPath="$PROJECT_DIR$/client/app/travelagency/views/travelagency.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/ad/ad.controller.js" afterPath="$PROJECT_DIR$/server/api/ad/ad.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/ad/index.js" afterPath="$PROJECT_DIR$/server/api/ad/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/travelagency/travelagency.model.js" afterPath="$PROJECT_DIR$/server/api/travelagency/travelagency.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config/MongoDataInjection.js" afterPath="$PROJECT_DIR$/server/config/MongoDataInjection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/travelagency/travelagency.controller.js" afterPath="$PROJECT_DIR$/server/api/travelagency/travelagency.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/search/search.controller.js" afterPath="$PROJECT_DIR$/server/search/search.controller.js" />
     </list>
     <ignored path="NodeWebApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,16 +46,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stats.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/api/stats/stats.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/api/travelagency/index.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="travelagency.controller.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="travelagency.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/api/travelagency/travelagency.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.33275262">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,16 +70,26 @@
         <entry file="file://$PROJECT_DIR$/server/search/search.controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MongoDataInjection.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="travelagency.factory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.0634923">
+              <caret line="60" column="19" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MongoDataInjection.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/config/MongoDataInjection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37324524">
+            <state vertical-scroll-proportion="0.0">
               <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
               <folding />
             </state>
@@ -114,8 +99,8 @@
       <file leaf-file-name="travelagency.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/travelagency/controllers/travelagency.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
+            <state vertical-scroll-proportion="-11.936508">
+              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -190,12 +175,10 @@
         <option value="$PROJECT_DIR$/client/assets/js/script.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/views/manage.html" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/manage/controllers/manage.controller.js" />
-        <option value="$PROJECT_DIR$/server/search/search.controller.js" />
         <option value="$PROJECT_DIR$/client/app/app.module.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/demo/controllers/demo.controller.js" />
         <option value="$PROJECT_DIR$/routes.js" />
         <option value="$PROJECT_DIR$/server/api/travelagency/index.js" />
-        <option value="$PROJECT_DIR$/server/api/travelagency/travelagency.controller.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/config/agencies.map.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/directives/coords.directive.js" />
         <option value="$PROJECT_DIR$/client/app/travelagency/config/travelagency.config.js" />
@@ -211,8 +194,10 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/server/api/travelagency/travelagency.model.js" />
         <option value="$PROJECT_DIR$/server/config/MongoDataInjection.js" />
-        <option value="$PROJECT_DIR$/client/app/travelagency/controllers/travelagency.controller.js" />
         <option value="$PROJECT_DIR$/client/app/travelagency/views/travelagency.html" />
+        <option value="$PROJECT_DIR$/server/search/search.controller.js" />
+        <option value="$PROJECT_DIR$/client/app/travelagency/controllers/travelagency.controller.js" />
+        <option value="$PROJECT_DIR$/server/api/travelagency/travelagency.controller.js" />
       </list>
     </option>
   </component>
@@ -465,6 +450,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelagency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1383,14 +1394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.5079365">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/stats.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1567,34 +1570,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/travelagency/travelagency.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/search/search.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/api/travelagency/travelagency.model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="12" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/travelagency/controllers/travelagency.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -1611,8 +1590,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/config/MongoDataInjection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37324524">
+        <state vertical-scroll-proportion="0.0">
           <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/search/search.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0634923">
+          <caret line="60" column="19" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/travelagency/controllers/travelagency.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.936508">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/travelagency/travelagency.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33275262">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>

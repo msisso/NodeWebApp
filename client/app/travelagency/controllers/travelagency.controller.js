@@ -25,10 +25,8 @@ angular.module('travelagency')
             $scope.AllInit = function()
             {
                 getAll.getAll().then(function(res){
-                    console.log("enter after the search" + res);
                     if (!_.isEmpty(res)) {
                         angular.forEach(res, function(value, key){
-                            console.log("into test: " + key + ": " + value);
                             $scope.allvalue[key] =
                             {
                                 name: value.agencyName,
@@ -47,17 +45,14 @@ angular.module('travelagency')
                 if (!_.isEmpty($scope.searchCreteria.active)) criteria.active = $scope.searchCreteria.active;
                 if (!_.isEmpty($scope.searchCreteria.name)) criteria.name = $scope.searchCreteria.name;
                 if (!_.isEmpty($scope.searchCreteria.city)) criteria.city = $scope.searchCreteria.city;
-                console.log(criteria);
                 if (!_.isEmpty(criteria)) {
                     $scope.changeSearchButton = true;
                     Searchtrav.searchBytravel(criteria)
                         .then(function (res) {
-                            console.log("enter after the search" + res);
                             $scope.changeSearchButton = false;
                             if (!_.isEmpty(res)) {
                                 $scope.findresult = 'foundresults';
                                 $scope.searchResults = res.map(function (value) {
-                                    console.log("o: " + value);
 
                                     return {
                                         name: value.agencyName,
@@ -70,7 +65,6 @@ angular.module('travelagency')
                             }
                             else {
                                 $scope.findresult = 'notfoundresults';
-                                console.log("o: " + $scope.findresult);
 
                             }
                         })
@@ -87,7 +81,6 @@ angular.module('travelagency')
                     angular.forEach(markers, function(value, key){
                         Coords.getCoordsByAddreess(value.address + ' ' + value.city + ' ' + value.country)
                             .then(function(res){
-                                console.log(res.results[0]);
                                 var temp = {
                                     coords: {
                                         latitude: res.results[0].geometry.location.lat,
@@ -95,7 +88,6 @@ angular.module('travelagency')
                                     },
                                     id: res.results[0].place_id
                                 };
-                                console.log(temp);
                                 $scope.markers.push(temp);
                             });
 
