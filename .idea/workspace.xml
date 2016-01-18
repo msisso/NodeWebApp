@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a28e06dd-1836-44d0-9897-320ce7ccf46f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/dist/angular-chart.js.tar.gz" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/config/agencies.map.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/directives/coords.directive.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/travelagency/config/travelagency.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/Chart.js/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/Chart.js/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/Chart.js/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/angular-chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/angular-chart.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/dist/angular-chart.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/dist/angular-chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/dist/angular-chart.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/dist/angular-chart.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/dist/angular-chart.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/dist/angular-chart.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/gulpfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/angular-chart.js/package.json" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/travelagency/controllers/map.controller.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/AdminDashboard/modules/demo/controllers/demo.controller.js" afterPath="$PROJECT_DIR$/client/app/AdminDashboard/modules/demo/controllers/demo.controller.js" />
@@ -119,10 +137,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="travelagency.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="travelagency.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/travelagency/views/travelagency.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.495702">
+            <state vertical-scroll-proportion="-3.1646342">
               <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
               <folding />
             </state>
@@ -149,11 +167,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="travelagency.factory.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="travelagency.factory.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="23" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.7412892">
+              <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -234,11 +252,11 @@
         <option value="$PROJECT_DIR$/server/config/MongoDataInjection.js" />
         <option value="$PROJECT_DIR$/client/app/AdminDashboard/modules/stats/controllers/stats.controller.js" />
         <option value="$PROJECT_DIR$/client/app/travelagency/config/travelagency.config.js" />
-        <option value="$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js" />
         <option value="$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js" />
         <option value="$PROJECT_DIR$/client/app/travelagency/controllers/travelagency.controller.js" />
         <option value="$PROJECT_DIR$/client/assets/css/style.css" />
         <option value="$PROJECT_DIR$/client/app/travelagency/views/travelagency.html" />
+        <option value="$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js" />
       </list>
     </option>
   </component>
@@ -2005,14 +2023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="23" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/landpage/controllers/landpage.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2039,8 +2049,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/travelagency/views/travelagency.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.495702">
+        <state vertical-scroll-proportion="-3.1646342">
           <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/travelagency/services/travelagency.factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7412892">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
           <folding />
         </state>
       </provider>

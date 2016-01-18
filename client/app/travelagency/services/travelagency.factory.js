@@ -8,14 +8,11 @@ angular.module('travelagency')
             var factory = {};
             factory.searchBytravel = function(criteria) {
                 var deferred = $q.defer();
-                console.log(criteria);
                 $http.post('/search/agency/travel', {searchparams: criteria})
                     .success(function(res) {
-                        console.log("success" + res);
                         deferred.resolve(res);
                     })
                     .error(function(err) {
-                        console.log(err);
                         deferred.reject(err);
                     });
                 return deferred.promise;
@@ -31,11 +28,9 @@ angular.module('travelagency')
                 var deferred = $q.defer();
                 $http.get('/api/travelagency')
                     .success(function(res) {
-                        console.log("success" + res);
                         deferred.resolve(res);
                     })
                     .error(function(err) {
-                        console.log(err);
                         deferred.reject(err);
                     });
                 return deferred.promise;
@@ -52,8 +47,7 @@ angular.module('travelagency')
         var deferred = $q.defer();
         $http.get('/api/travelagency/agencies')
             .success(function(res) {
-                console.log("agencies");
-                console.log(res);
+
                 deferred.resolve(res);
             })
             .error(function(err) {
@@ -70,7 +64,6 @@ angular.module('travelagency')
 
         factory.getCoordsByAddreess = function(field) {
             var deferred = $q.defer();
-            console.log('http://maps.google.com/maps/api/geocode/json?address=' + field);
             $http.get('http://maps.google.com/maps/api/geocode/json?address=' + field)
                 .success(function(res) {
 
@@ -82,8 +75,6 @@ angular.module('travelagency')
 
             return deferred.promise;
         };
-
-
-
+        
         return factory;
     }]);
