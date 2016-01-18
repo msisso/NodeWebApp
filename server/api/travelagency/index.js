@@ -6,6 +6,7 @@ var router = express.Router();
 
 
 router.get('/', controller.index);
+router.get('/agencies', controller.agencies);
 router.post('/', controller.index);
 router.get('/:id', controller.show);
 router.post('/', controller.create);

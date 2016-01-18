@@ -4,6 +4,7 @@
 
 
 var Adv = require('../api/ad/ad.model');
+var Agents = require('../api/travelagency/travelagency.model');
 
 Adv.find({}).remove(function() {
     Adv.create({
@@ -115,4 +116,35 @@ Adv.find({}).remove(function() {
                 endTime: "23:00:00"},
             screensId: [3]
         });
+});
+
+Agents.find({}).remove(function(){
+    Agents.create({
+        id: 0,
+        name: "Europe",
+        city: "Rishon LeZion",
+        address: "Dan 9",
+        country: "Israel",
+        travelagencyPhone: "03-5555150",
+        coords:{
+            latitude: 31.965139,
+            longitude: 34.782406
+        },
+        active: true
+
+    },{
+            id: 1,
+            name: "Asia",
+            city: "Beer Yaakov",
+            address: "Havered 7",
+            country: "Israel",
+            travelagencyPhone: "03-5555150",
+            coords:{
+                latitude: 32.029338,
+                longitude: 34.879579
+            },
+            active: true
+
+        }
+    );
 });

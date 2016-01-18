@@ -41,4 +41,7 @@ angular.module('dashboard.demo')
         console.log("demo destroy");
         onModalClose();
       });
+
+
+
     }]);

@@ -1,11 +1,11 @@
 angular.module('travelagency')
-    .controller('travelagencyController', ['$scope','$state','$document','Searchtrav','notify','getAll','rest',
-        function($scope,$state,$documnet,Searchtrav,notify,getAll,rest) {
+    .controller('travelagencyController', ['$scope','$state','$document','Searchtrav','getAll','rest','Agencies','Coords',
+        function($scope,$state,$document,Searchtrav,getAll,rest,Agencies,Coords) {
 
             $scope.sections = [
                 {name: 'search'}
                 , {name: 'Map'}
-                ,{name:'Weather' },
+
             ]
             $scope.toTheTop = function() {
                 $document.scrollTopAnimated(0, 1000);
@@ -76,7 +76,30 @@ angular.module('travelagency')
                         })
                 }
 
-            }
+            };
 
 
+
+            $scope.markers = [];
+            $scope.map = {center: {latitude: 32.321458, longitude: 34.853196}, zoom: 9};
+            Agencies.getAgencies()
+                .then(function(markers) {
+                    angular.forEach(markers, function(value, key){
+                        Coords.getCoordsByAddreess(value.address + ' ' + value.city + ' ' + value.country)
+                            .then(function(res){
+                                console.log(res.results[0]);
+                                var temp = {
+                                    coords: {
+                                        latitude: res.results[0].geometry.location.lat,
+                                        longitude: res.results[0].geometry.location.lng
+                                    },
+                                    id: res.results[0].place_id
+                                };
+                                console.log(temp);
+                                $scope.markers.push(temp);
+                            });
+
+                    });
+
+                });
         }]).value('duScrollOffset', 30).value('duScrollActiveClass', 'active');

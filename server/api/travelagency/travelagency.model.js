@@ -4,12 +4,13 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var travelagencySchema = new Schema({
+  id: Number,
   name:String,
   city:String,
   address:String,
+  country:String,
   travelagencyPhone:String,
-  lat:Number,
-  lon:Number,
+  coords: Schema.Types.Mixed,
   active: Boolean
 });
 

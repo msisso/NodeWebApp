@@ -12,7 +12,7 @@ angular.module('landpage')
 
         $scope.toTheTop = function() {
                 $document.scrollTopAnimated(0, 1000);
-        }
+        };
         $scope.toTheServices = function() {
                 $document.scrollToElementAnimated(services,68,1000);
         }

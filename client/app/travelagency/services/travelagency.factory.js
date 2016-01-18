@@ -43,4 +43,47 @@ angular.module('travelagency')
             return factory;
         }
     ])
-;
+    .factory('Agencies', ['$q', '$http',
+
+    function($q, $http) {
+    var factory = {};
+
+    factory.getAgencies = function() {
+        var deferred = $q.defer();
+        $http.get('/api/travelagency/agencies')
+            .success(function(res) {
+                console.log("agencies");
+                console.log(res);
+                deferred.resolve(res);
+            })
+            .error(function(err) {
+                deferred.reject(err);
+            });
+
+        return deferred.promise;
+    };
+
+    return factory;
+}])    .factory('Coords', ['$q', '$http',
+    function($q, $http) {
+        var factory = {};
+
+        factory.getCoordsByAddreess = function(field) {
+            var deferred = $q.defer();
+            console.log('http://maps.google.com/maps/api/geocode/json?address=' + field);
+            $http.get('http://maps.google.com/maps/api/geocode/json?address=' + field)
+                .success(function(res) {
+
+                    deferred.resolve(res);
+                })
+                .error(function(err) {
+                    deferred.reject(err);
+                });
+
+            return deferred.promise;
+        };
+
+
+
+        return factory;
+    }]);

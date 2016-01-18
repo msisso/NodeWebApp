@@ -2,7 +2,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1 style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 500;">
-           Manage
+            Manage
         </h1>
         <ol class="breadcrumb">
             <li><a ui-sref="main"> <i class="glyphicon glyphicon-home"></i>Home</a></li>
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-             </div>
+            </div>
         </div>
 
 
@@ -122,7 +122,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group has-feedback"
+                            <div id="messageName" class="form-group has-feedback"
                                  ng-class="{ 'has-error' : (updateForm.msgName.$invalid && !updateForm.msgName.$pristine)
                                   , 'has-success': (updateForm.msgName.$valid && !updateForm.msgName.$pristine)}">
                                 <label>Message Name</label>
@@ -139,30 +139,14 @@
                                 </span>
                             </div>
 
-                            <!--<div class="form-group has-feedback"
-                                 ng-class="{ 'has-error' : (updateForm.msgData.$invalid && !updateForm.msgData.$pristine)
-                                  , 'has-success': (updateForm.msgData.$valid && !updateForm.msgData.$pristine)}">
-                                <label>Message Data</label>
-                                <input name="msgData" type="text" ng-model="existingAd.msgData" class="form-control"
-                                       placeholder="Enter Message Data" ng-model='msgData' ng-minlength="1"
-                                       ng-maxlength="100">
-                                <span class="glyphicon form-control-feedback" ng-class="{
-                                    'glyphicon-ok':  (updateForm.msgData.$valid && !updateForm.msgData.$pristine),
-                                    'glyphicon-remove':  (updateForm.msgData.$invalid && !updateForm.msgData.$pristine)}">
 
-                                </span>
-                                <span style="color:red" ng-show="updateForm.msgData.$dirty && updateForm.msgData.$invalid">
-                                    <span ng-show="updateForm.msgData.$error.maxlength">Message Data can't be over of 100 characters.</span>
-                                </span>
-                            </div>-->
-
-                            <div class="form-group">
+                            <div id="messageData" class="form-group">
                                 <label>Message Data</label>
                                 <button class="btn-xs btn-primary" type="button" ng-click="addEditMsgDataInput()">add</button>
                                 <button class="btn-xs btn-primary" type="button" ng-click="removeEditMsgDataInput()">remove</button>
 
                                 <div  class="form-group has-feedback" ng-repeat="msgdata in existingAd.itrData"
-                                     ng-class="{ 'has-error' : (updateForm.{{msgdata.name}}.$invalid && !updateForm.{{msgdata.name}}.$pristine)
+                                      ng-class="{ 'has-error' : (updateForm.{{msgdata.name}}.$invalid && !updateForm.{{msgdata.name}}.$pristine)
                                   , 'has-success': (updateForm.{{msgdata.name}}.$valid && !updateForm.{{msgdata.name}}.$pristine)}">
 
 
@@ -183,7 +167,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group has-feedback"
+                            <div id="duration" class="form-group has-feedback"
                                  ng-class="{ 'has-error' : (updateForm.duration.$invalid && !updateForm.duration.$pristine)
                                   , 'has-success': (updateForm.duration.$valid && !updateForm.duration.$pristine)}">
                                 <label>Duration</label>
@@ -200,7 +184,7 @@
                                 </span>
                             </div>
 
-                            <div class="form-group"
+                            <div id="dateTimeRange" class="form-group"
                                  ng-class="{ 'has-error' : (!DateTimeIsValid && DateTimeIsChosen)
                                   , 'has-success': (DateTimeIsValid && DateTimeIsChosen)}">
                                 <div class="row">
@@ -252,7 +236,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group has-feedback"
+                            <div id="daysShow" class="form-group has-feedback"
                                  ng-class="{ 'has-error' : (updateForm.days.$invalid && !updateForm.days.$pristine)
                                   , 'has-success': (updateForm.days.$valid && !updateForm.days.$pristine)}">
                                 <label>Week Days</label>
@@ -273,7 +257,7 @@
                                 </span>
                             </div>
 
-                            <div class="form-group has-feedback"
+                            <div id="screens" class="form-group has-feedback"
                                  ng-class="{ 'has-error' : (updateForm.screens.$invalid && !updateForm.screens.$pristine)
                                   , 'has-success': (updateForm.screens.$valid && !updateForm.screens.$pristine)}">
                                 <label>Screens</label>
@@ -294,7 +278,7 @@
                                 </span>
                             </div>
 
-                            <div class="form-group has-feedback"
+                            <div id="templateName" class="form-group has-feedback"
                                  ng-class="{ 'has-error' : (updateForm.template.$invalid && !updateForm.template.$pristine)
                                 , 'has-success': (updateForm.template.$valid && !updateForm.template.$pristine)}">
                                 <label>Template</label>
@@ -313,7 +297,9 @@
                                     <span>Template Name is required.</span>
                                 </span>
                             </div>
+
                             <div style="height:45px"></div>
+
                             <button type="submit" class="btn btn-primary" ng-disabled="updateForm.$invalid">
                                 <i class="fa fa-spinner fa-pulse" ng-show="changeSubmitButton"></i> Save
                             </button>
@@ -354,7 +340,7 @@
 
         </div>
         <!-- SELECT2 EXAMPLE -->
-        <div class="box box-warning" >
+        <div class="box box-warning" id="CreateBox">
             <div class="box-header with-border" ng-click="Create = !Create" style="cursor: pointer;">
                 <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Create</h3>
                 <div class="box-tools pull-right">
@@ -373,7 +359,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group has-feedback"
+                            <div id="createMessageName" class="form-group has-feedback"
                                  ng-class="{ 'has-error' : (createForm.msgName.$invalid && !createForm.msgName.$pristine)
                                   , 'has-success': (createForm.msgName.$valid && !createForm.msgName.$pristine)}">
                                 <label>Message Name</label>
@@ -390,7 +376,7 @@
                                 </span>
                             </div>
 
-                            <div class="form-group" >
+                            <div id="createMessageData" class="form-group" >
                                 <label>Message Data</label>
                                 <button class="btn-xs btn-primary" type="button" ng-click="addCreateMsgDataInput()">add</button>
                                 <button class="btn-xs btn-primary" type="button" ng-click="removeCreateMsgDataInput()">remove</button>
@@ -414,11 +400,7 @@
                                 </div>
                             </div>
 
-
-
-
-
-                            <div class="form-group has-feedback"
+                            <div id="createDuration" class="form-group has-feedback"
                                  ng-class="{ 'has-error' : (createForm.duration.$invalid && !createForm.duration.$pristine)
                                   , 'has-success': (createForm.duration.$valid && !createForm.duration.$pristine)}">
                                 <label>Duration</label>
@@ -435,7 +417,7 @@
                                 </span>
                             </div>
 
-                            <div class="form-group"
+                            <div id="createDateTimeRange" class="form-group"
                                  ng-class="{ 'has-error' : (!DateTimeIsValid && DateTimeIsChosen)
                                   , 'has-success': (DateTimeIsValid && DateTimeIsChosen)}">
                                 <div class="row">
@@ -457,7 +439,7 @@
                                                 <datetimepicker data-ng-model="newAd.startDateTime"
                                                                 data-datetimepicker-config="{ dropdownSelector: '#start-dropdown-create' ,minuteStep: 2}"
                                                                 data-on-set-time="onTimeSet()"
-                                                                />
+                                                />
                                             </ul>
                                         </div>
                                         <span style="color:red" ng-show="(!DateTimeIsValid && DateTimeIsChosen)">
@@ -487,7 +469,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group has-feedback"
+                            <div id="createDaysShow" class="form-group has-feedback"
                                  ng-class="{ 'has-error' : (createForm.days.$invalid && !createForm.days.$pristine)
                                   , 'has-success': (createForm.days.$valid && !createForm.days.$pristine)}">
                                 <label>Week Days</label>
@@ -508,7 +490,7 @@
                                 </span>
                             </div>
 
-                            <div class="form-group has-feedback"
+                            <div id="createScreens" class="form-group has-feedback"
                                  ng-class="{ 'has-error' : (createForm.screens.$invalid && !createForm.screens.$pristine)
                                   , 'has-success': (createForm.screens.$valid && !createForm.screens.$pristine)}">
                                 <label>Screens</label>
@@ -530,8 +512,8 @@
                                 </span>
                             </div>
 
-                            <div class="form-group has-feedback"
-                                ng-class="{ 'has-error' : (createForm.template.$invalid && !createForm.template.$pristine)
+                            <div id="createTemplateName" class="form-group has-feedback"
+                                 ng-class="{ 'has-error' : (createForm.template.$invalid && !createForm.template.$pristine)
                                 , 'has-success': (createForm.template.$valid && !createForm.template.$pristine)}">
                                 <label>Template</label>
                                 <ui-select name="template" multiple limit="1" ng-model="newAd.templateName" theme="bootstrap" required=""
@@ -550,8 +532,7 @@
                                 </span>
                             </div>
 
-
-                            <div class="form-group has-feedback">
+                            <div id="createMessageImage" class="form-group has-feedback">
                                 <label>Message Images</label>
                                 <input type="file" ng-model="newAd.images" name="fileUploaded" nv-file-select="" uploader="uploader" multiple  /><br/>
                                 <table class="table">
@@ -594,6 +575,7 @@
 
                                 </div>
                             </div>
+
                             <div style="height:45px"></div>
                             <button type="submit" class="btn btn-primary" ng-disabled="createForm.$invalid">
                                 <i class="fa fa-spinner fa-pulse" ng-show="changeCreateButton"></i> Save

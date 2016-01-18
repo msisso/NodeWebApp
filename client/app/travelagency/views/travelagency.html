@@ -43,7 +43,7 @@
         </form>
 
       </div>
-    </div>
+
 <!-- Search Results -->
 <div class="row">
   <div class="col-md-12">
@@ -80,22 +80,24 @@
     </div>
   </div>
     </div>
-  </div>
 
-
-
-
-  </div>
-
-
-</section>
-
-
-<section d-sec id="Weather">
 </section>
 
 <section d-sec id="Map">
+
+  <div class="row">
+    <div class="col-md-12" style="height: 400px;">
+
+        <ui-gmap-google-map center="map.center" zoom="map.zoom">
+          <ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" idkey="marker.id"></ui-gmap-marker>
+        </ui-gmap-google-map>
+
+    </div>
+  </div>
+
+
 </section>
+
 
 
 <div ng-include="'app/landpage/views/footer.html'"></div>

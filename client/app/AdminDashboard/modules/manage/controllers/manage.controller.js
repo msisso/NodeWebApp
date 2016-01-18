@@ -26,7 +26,7 @@ angular.module('dashboard.manage')
                     endDate: moment(o.endDateTime).format('MM/DD/YYYY'),
                     daysShow: o.weekDays
                 },
-                msgImage: o.images
+                msgImage: o.msgImage
             };
         };
         var isValid = function(startDateTime, endDateTime) {
@@ -114,7 +114,7 @@ angular.module('dashboard.manage')
                     });
                 }
             });
-        }
+        };
 
         socket.syncUpdates('ad', $scope.adsToIterate, function(event, item, array) {
             $scope.adsToIterate = array;
@@ -143,11 +143,14 @@ angular.module('dashboard.manage')
             console.log(ad._id);
             $scope.updateForm.$setPristine();
 
+
             if (_.isEmpty($scope.existingAd) || $scope.existingAd._id !== ad._id) {
                 Adverts.one(ad._id).get().then(function(o) {
                     $scope.showLoaderForId = "";
                     //console.log("into test: " + o.when.startDate + ' ' + o.when.startTime + ' ' + o.when.endDate + ' ' + o.when.endTime);
                     $scope.existingAd = o;
+                    console.log("edit to image");
+                    console.log($scope.existingAd.msgImage);
                     //create array to itterate the data in input
                     $scope.existingAd.itrData = [];
                     angular.forEach($scope.existingAd.msgData, function(value, key){
@@ -185,7 +188,7 @@ angular.module('dashboard.manage')
         $scope.removeEditMsgDataInput = function()
         {
             $scope.existingAd.itrData.splice(-1,1);
-        }
+        };
 
         $scope.valid = true;
         $scope.ValidationError = [];
@@ -211,7 +214,7 @@ angular.module('dashboard.manage')
                 $scope.existingAd.screensId = tempUploadAd.screensId;
                 $scope.existingAd.templateName = tempUploadAd.templateName;
                 $scope.existingAd.linkTemplate = tempUploadAd.linkTemplate;
-
+                $scope.existingAd.msgImage = tempUploadAd.msgImage;
                 //$scope.existingAd = _.merge($scope.existingAd, preparePayload($scope.existingAd));
 
 
@@ -248,14 +251,17 @@ angular.module('dashboard.manage')
             }
         };
 
-
-        /*  --------------   Create Section  --------------- */
+        /*  ---------------------------------------------------------- */
+        /*  ---------------------------------------------------------- */
+        /*  -------------------   Create Section  -------------------- */
+        /*  ---------------------------------------------------------- */
+        /*  ---------------------------------------------------------- */
         $scope.newAd = {};
         $scope.$on('$destroy', function() {
             console.log("destroy");
             socket.unsyncUpdates('ad');
         });
-        /*  --------------   Image Upload  --------------- */
+                /*  --------   Image Upload  ------- */
         var uploader = $scope.uploader = new FileUploader({
             url: '/api/ad/upload'
 
@@ -279,14 +285,32 @@ angular.module('dashboard.manage')
             if (isValid($scope.newAd.startDateTime, $scope.newAd.endDateTime)) {
                 $scope.changeCreateButton = true;
                 $scope.newAd.images = [];
-                angular.forEach($scope.uploader.queue, function(value, key){
-                    $scope.newAd.images.push(value.file.name);
-                });
+
+                if($scope.uploader.queue.length !== 0){
+                    angular.forEach($scope.uploader.queue, function(value, key){
+                        $scope.newAd.msgImage.push(value.file.name);
+                    });
+                }
+
                 console.log("before post");
                 Adverts.post(preparePayload($scope.newAd))
                     .then(function(res) {
                         console.log("return from create on server");
-                        $scope.uploader.uploadAll();
+                        if($scope.uploader.queue.length !== 0){
+
+                            $scope.uploader.uploadAll();
+                        }else{
+                            notify('A new "' + $scope.newAd.msgName + '" ad has been successfully created. Please note that we have automatically added it to your ads inventory. If you would like the test your new ad, please navigate to our "Demo" page.');
+                            $scope.changeCreateButton = false;
+                            $scope.createForm.$setPristine();
+                            $scope.ads = Adverts.getList().$object;
+                            $scope.newAd = {};
+                            $scope.valid = true;
+                            $scope.ValidationError = [];
+                            $scope.DateTimeIsChosen = false;
+
+                        }
+
 
                         $scope.uploader.onCompleteAll = function() {
                             $timeout(function(){
@@ -325,7 +349,7 @@ angular.module('dashboard.manage')
         };
 
         $scope.newAd.itrData = [];
-        $scope.test = "maor";
+
         $scope.newAd.itrData.push({
             msgdata: "",
             name: makeid()
@@ -341,7 +365,9 @@ angular.module('dashboard.manage')
         $scope.removeCreateMsgDataInput = function()
         {
             $scope.newAd.itrData.splice(-1,1);
-        }
+        };
+
+        //function to make random name for msg data inputs
         function makeid()
         {
             var text = "";
@@ -372,14 +398,9 @@ angular.module('dashboard.manage')
             else{
                 $scope.DateTimeIsChosen = false;
             }
-        }
+        };
 
 
-        //console.log('existingAd.edit: ' + $scope.existingAd.edit);
-        //console.log('existingAd: ' + $scope.existingAd);
-        //console.log('existingAd._id: ' + $scope.existingAd._id);
-        //console.log('showLoaderForId: ' + $scope.showLoaderForId);
-        //console.log('existingAd.delete: ' + $scope.existingAd.delete);
 
 
     }]);
