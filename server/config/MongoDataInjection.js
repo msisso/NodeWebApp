@@ -120,30 +120,20 @@ Adv.find({}).remove(function() {
 
 Agents.find({}).remove(function(){
     Agents.create({
-        id: 0,
-        name: "Europe",
+        agencyName: "Europe",
         city: "Rishon LeZion",
         address: "Dan 9",
         country: "Israel",
         travelagencyPhone: "03-5555150",
-        coords:{
-            latitude: 31.965139,
-            longitude: 34.782406
-        },
         active: true
 
     },{
-            id: 1,
-            name: "Asia",
-            city: "Beer Yaakov",
-            address: "Havered 7",
-            country: "Israel",
-            travelagencyPhone: "03-5555150",
-            coords:{
-                latitude: 32.029338,
-                longitude: 34.879579
-            },
-            active: true
+        agencyName: "Asia",
+        city: "Beer Yaakov",
+        address: "Havered 7",
+        country: "Israel",
+        travelagencyPhone: "03-5555150",
+        active: true
 
         }
     );

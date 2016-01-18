@@ -1,15 +1,14 @@
 'use strict';
 
 angular.module('dashboard.stats')
-  .controller('StatsController', ['$scope', '$state', '$stateParams', 'Stats','uiGmapGoogleMapApi','Coords',
-    function($scope, $state, $stateParams, Stats, uiGmapGoogleMapApi,Coords) {
+  .controller('StatsController', ['$scope', '$state', '$stateParams', 'Stats','uiGmapGoogleMapApi',
+    function($scope, $state, $stateParams, Stats, uiGmapGoogleMapApi) {
 
       $scope.collapse = {
           byScreen: false,
           byTemplate: false,
           byTemplateCanvas: false,
           byScreenCanvas: false,
-          ourAgencies: false
       };
 
       $scope.$watch('$viewContentLoaded', function() {
@@ -59,28 +58,6 @@ angular.module('dashboard.stats')
           });
 
 
-          $scope.markers = [];
-          $scope.map = {center: {latitude: 32.321458, longitude: 34.853196}, zoom: 9};
-          Stats.getClients()
-              .then(function(markers) {
-                  angular.forEach(markers, function(value, key){
-                      Coords.getCoordsByAddreess(value.address + ' ' + value.city + ' ' + value.country)
-                          .then(function(res){
-                              console.log(res.results[0]);
-                              var temp = {
-                                  coords: {
-                                      latitude: res.results[0].geometry.location.lat,
-                                      longitude: res.results[0].geometry.location.lng
-                                  },
-                                  id: res.results[0].place_id
-                              };
-                              console.log(temp);
-                              $scope.markers.push(temp);
-                          });
-
-                  });
-
-              });
 
 
       });

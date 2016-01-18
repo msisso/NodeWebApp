@@ -75,6 +75,6 @@ angular.module('travelagency')
 
             return deferred.promise;
         };
-        
+
         return factory;
     }]);

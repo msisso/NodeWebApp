@@ -50,32 +50,7 @@
         </div>
 
     </section>
-    <section class="content">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="box box-warning" id="OurAgencies">
-                    <div class="box-header with-border" ng-click="collapse.ourAgencies = !collapse.ourAgencies" style="cursor: pointer;">
-                        <h3 class="box-title" style="font-family: 'Source Sans Pro',sans-serif;text-transform: initial; font-weight: 200;">Used Screens Statistics</h3>
-                        <div class="box-tools pull-right">
-                            <button  class="btn btn-box-tool" ><i ng-class="{'fa fa-minus': !collapse.ourAgencies, 'fa fa-plus': collapse.ourAgencies}"></i></button>
-                        </div>
-                    </div><!-- /.box-header -->
-                    <div ng-show="!collapse.ourAgencies" class="box-body slide-toggle" >
-                        <div class="row">
-                            <div style="height:400px" class="col-md-12">
 
-                                <ui-gmap-google-map center="map.center" zoom="map.zoom">
-                                    <ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" idkey="marker.id"></ui-gmap-marker>
-                                </ui-gmap-google-map>
-                                <!--<div style="height:45px"></div>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
     <section class="content">
         <div class="row">
             <div class="col-md-6">

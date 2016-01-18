@@ -21,11 +21,5 @@ server.listen(8080, 'localhost', function() {
     var port = server.address().port
     console.log('Express server listening on %d, in %s mode', port, host);
 });
-/*
-var server = app.listen(8080, 'localhost' ,function () {
-    var host = server.address().address
-    var port = server.address().port
-    console.log("Server listening at http://%s:%s", host, port)
-})*/
 
 

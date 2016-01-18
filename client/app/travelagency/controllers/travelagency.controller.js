@@ -31,7 +31,7 @@ angular.module('travelagency')
                             console.log("into test: " + key + ": " + value);
                             $scope.allvalue[key] =
                             {
-                                name: value.name,
+                                name: value.agencyName,
                                 city: value.city,
                                 address: value.address,
                                 travelagencyPhone: value.travelagencyPhone,
@@ -60,7 +60,7 @@ angular.module('travelagency')
                                     console.log("o: " + value);
 
                                     return {
-                                        name: value.name,
+                                        name: value.agencyName,
                                         city: value.city,
                                         address: value.address,
                                         travelagencyPhone: value.travelagencyPhone,
