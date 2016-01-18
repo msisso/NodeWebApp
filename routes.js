@@ -1,18 +1,14 @@
 
 
 module.exports = function(app) {
-    /*app.param('id', function(request, response, next, id) {
 
-        //console.log('detected: ', id)
-        request.id = id;
-        next();
-    });*/
 
     app.use('/api/ad', require('./server/api/ad'));
     //app.use('/screen=:id', require('./server/api/ad'));
     //app.use('/ad/updatesFromServer', require('./server/api/ad'));
     //app.use('TestUpdate', require('./server/api/ad'));
     app.use('/api/stats', require('./server/api/stats'));
+
     app.use('/search', require('./server/search'));
 
 

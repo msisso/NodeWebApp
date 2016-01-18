@@ -17,6 +17,7 @@ angular.module('FlightsApp', [
         'cgNotify',
         'btford.socket-io',
         'duScroll',
+        'angularFileUpload',
         'landpage',
         'AdminDashboard',
         'travelagency',

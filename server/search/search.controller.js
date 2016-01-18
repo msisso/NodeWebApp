@@ -6,19 +6,13 @@ exports.index = function(req, res) {
 
     var query = Ads.find({});
 
-
     if(typeof req.body.searchparams.msgName !== 'undefined'){
-        console.log("add to query msgName");
         query.where({'msgName': new RegExp(req.body.searchparams.msgName, "i")});
     }
     if(typeof req.body.searchparams.templateName !== 'undefined'){
-        console.log("add to query templateName");
-
         query.where('templateName').in(req.body.searchparams.templateName);
     }
     if(typeof req.body.searchparams.screensId  !== 'undefined'){
-        console.log("add to query screensId");
-
         query.where('screensId').all(req.body.searchparams.screensId);
     }
 

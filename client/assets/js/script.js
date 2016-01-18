@@ -4,9 +4,9 @@ var index = 0; //variable to move on Valids array
 var dataIndex = 0; //variable to move on msgData array
 var imgIndex = 0; //variable to move on msgImage array
 var advNumber = 0; //show which advertise is now on the screen
-//var SumTimeout = 0; //sum of all the advertise showing time on the screen
+
 var myInterval = 0; //the return interval of setInterval function
-//Array that contains all the adv objects
+
 var advertises = [];
 var socket;
 var screenId=-1;
@@ -208,65 +208,58 @@ function changeImg() {
 function onModalClose()
 {
 
-
-
     if(timer1 != 0)
     {
-        //alert("timer1 " + timer1);
         clearTimeout(timer1);
         timer1 = 0;
     }
     if(timer2 != 0)
     {
-        //alert("timer2 " +timer2);
         clearTimeout(timer2);
         timer2 = 0;
     }
     if(timer3 != 0)
     {
-        //alert("timer3 " +timer3);
+
         clearTimeout(timer3);
         timer3 = 0;
     }
     if(myInterval !=0)
     {
-        //alert("myInterval " +myInterval);
+
         clearTimeout(myInterval);
         myInterval = 0;
 
     }
 
 
-    //$('.FrameContainer').empty();
-    socket.disconnect();
-    //alert("advertise disconnect");
+    if(typeof socket !== 'undefined'){
+        socket.disconnect();
+    }
+
 }
 
 function onModalOpen(id)
 {
-    //alert("connecting");
     screenId = id;
-    //alert(id);
 
-    //var socket = io.connect('http://localhost:8080');
-    //socket = io.connect('http://localhost:8080');
     socket = io('', {path: '/mysocket', 'forceNew': true});
     socket.on('connect', function(data) {
-        //alert("test");
+
 
         socket.emit('register', screenId);
     });
     socket.on('updateMe', function(data) {
-        //alert("update: " + data[0].msgName);
+
         advertises = data;
         checkDateAndTimeValidation(function () {
             startToAdvertise();
         });
     });
     socket.on('register', function(data) {
-        //alert("register: " + data[0].msgName);
+
         advertises = data;
-        //start the advertising on the screen
+
         checkDateAndTimeValidation(function () {
             startToAdvertise();
         });
@@ -277,32 +270,14 @@ function onModalOpen(id)
     });
     socket.on('disconnect', function(data)
     {
-        //socket.emit('disconnect', 'please close the screen connection');
-        //alert("disconnected");
+
     });
-    //alert(socket.id);
+
 
 }
 function CheckAgainFromServer() {
-    /*advertises = [];
-     $.get('/ad/updatesFromServer' + '/' + location.pathname.split('=')[1], function (data, status) {
-     advertises = data;
-     checkDateAndTimeValidation(function () {
-     startToAdvertise();
-     });
-     });*/
-    //alert("check on server again");
+
     socket.emit('updateMe', screenId);
 }
-/*$(document).ready(function () {
- var d = $.get('/ad/updatesFromServer' + '/' + location.pathname.split('=')[1], function (data, status) {
- advertises = data;
- });
 
- $.when(d).done(function(){
- checkDateAndTimeValidation(function () {
- startToAdvertise();
- });
- });
- });*/
 

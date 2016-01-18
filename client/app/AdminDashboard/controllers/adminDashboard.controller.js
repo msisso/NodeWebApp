@@ -1,19 +1,13 @@
-/**
- * Created by Maor on 1/5/2016.
- */
-
-
-
 angular.module('AdminDashboard')
-    .controller('DashboardController', ['$scope',
-            function($scope) {
+    .controller('DashboardController', ['$scope','$location',
+            function($scope,$location) {
                 $scope.parent = {
                     items:[
                         {name: 'services'},
                         {name: 'trips'},
                         {name: 'about'},
                         {name: 'team'},
-                        {name: 'contact'}],
+                        {name: 'views'}],
                     open: false
                 }
                 $scope.manageSection = false;
@@ -60,5 +54,6 @@ angular.module('AdminDashboard')
 
                     }
                 }
+
 
             }]);
