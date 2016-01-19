@@ -91,6 +91,7 @@ function startToAdvertise() {
     if(Valids.length != 0)
     {
         var timeout = parseInt(Valids[index].advTimer);
+
         $('.flexslider').attr("data-msgName", Valids[index].msgName);
         var msgLength = Valids[index].msgData.length;
         if(msgLength === 0)
@@ -148,7 +149,6 @@ function runNoValidTemplate() {
         if (c >= q.length) clearInterval(i);
     }, 100);
     timer3 = setTimeout(CheckAgainFromServer,7000);
-    //alert(timer3);
 }
 //fade in the message on the screen letter by letter
 function InnerChamgeMsg() {
@@ -189,6 +189,7 @@ function changeImg() {
     var image = $('.flexslider .slide1');
     image.fadeOut(1000, function () {
         if (Valids[index].msgImage.length != 0) {
+
             image.css("background-image", "url('assets/public/imgUploaded/" + Valids[index].msgImage[imgIndex] + "')");
             image.fadeIn(1000);
             imgIndex++;
@@ -231,6 +232,12 @@ function onModalClose()
         myInterval = 0;
 
     }
+    index = 0;
+
+
+    index = 0; //variable to move on Valids array
+    dataIndex = 0; //variable to move on msgData array
+    imgIndex = 0; //variable to move on msgImage array
 
 
     if(typeof socket !== 'undefined'){
@@ -242,7 +249,6 @@ function onModalClose()
 function onModalOpen(id)
 {
     screenId = id;
-
     socket = io('', {path: '/mysocket', 'forceNew': true});
     socket.on('connect', function(data) {
 

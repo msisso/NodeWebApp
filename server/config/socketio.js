@@ -39,11 +39,7 @@ module.exports = function (socketio) {
         socket.on('register', function (data) {
             console.log("on connect the id is: " + data );
             socket.join(data);
-            /*var client = {
-                SocketId: screen.id,
-                ScreenId: data
-            }
-            clients.push(client);*/
+
             onConnect(socket,data);
         });
         // Call onDisconnect.

@@ -7,12 +7,10 @@ var db = require('./ad.db.js');
 
 exports.dashboardRegister = function(socket){
     ads.schema.post('save', function(doc) {
-        console.log("post save");
         onSave(socket, doc);
     });
 
     ads.schema.post('remove', function(doc) {
-        console.log("post remove");
         onRemove(socket, doc);
     });
 }

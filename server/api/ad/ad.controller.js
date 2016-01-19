@@ -1,6 +1,5 @@
-
+var fs = require('fs');
 var Ad = require('./ad.model.js');
-
 var app = require('../../../app');
 
 
@@ -13,6 +12,27 @@ exports.index = function(req, res) {
             return handleError(res, err);
         }
         res.status(201).json(ads);
+    });
+};
+
+exports.stats = function(req, res) {
+
+    var groupByField = '$'.concat(req.query.by);
+    Ad.aggregate([
+        {
+            $unwind: groupByField
+        },
+        {
+            $group: {
+                _id: groupByField,
+                items: {
+                    $push: '$$ROOT'
+                }
+            }
+        }
+    ], function(err, stats) {
+        if (err) { return handleError(res, err); }
+        return res.status(200).json(stats);
     });
 };
 
@@ -35,16 +55,6 @@ exports.create = function(req, res) {
     Ad.create(req.body, function(err, ad) {
 
         if(err) {
-            /*console.log(err.errors.msgName.message);
-            console.log(String(err.errors.msgName));
-            console.log(err.errors.msgName.kind);
-            console.log(err.errors.msgName.path);
-            console.log(err.errors.msgName.value);
-            console.log(err.name);
-            console.log(err.message);*/
-            //var error = err.name ;//+ ': ' + err.errors.(err.name).message;
-            console.log(err);
-            console.log(err.errors);
             if(typeof err.errors != 'undefined'){
                 return handleError(res, err.errors);
             }
@@ -73,7 +83,6 @@ exports.update = function(req, res) {
     updated.msgImage = req.body.msgImage;
     Ad.findOneAndUpdate(query, updated, options, function(err,ad) {
         if(err){
-            console.log(err);
             return handleError(res, err);
         }
         else{

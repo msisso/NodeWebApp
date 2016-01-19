@@ -2,11 +2,12 @@
 angular.module('dashboard.manage')
   .controller('ManageController', ['$scope','$state','$document','$timeout','Search','Adverts','getAllAdverts','notify','socket','FileUploader',
     function($scope,$state,$documnet,$timeout,Search,Adverts,getAllAdverts,notify,socket,FileUploader) {
+        //start io connection with server
+        socket.socket.emit('dashboard');
 
 
+        //function to prepare the advert as db model on server
         var preparePayload = function(o) {
-            console.log("o.images");
-            console.log(o.images);
             var data = [];
             angular.forEach(o.itrData, function(value, key){
                 data.push(value.msgdata);
@@ -29,11 +30,13 @@ angular.module('dashboard.manage')
                 msgImage: o.msgImage
             };
         };
+
+        //check if the date range is valid
         var isValid = function(startDateTime, endDateTime) {
             return (moment(endDateTime).isAfter(startDateTime));
         };
-        //$scope.ads = Adverts.getList().$object;
-        socket.socket.emit('dashboard');
+
+
 
 
         // set the default states for box view
@@ -284,7 +287,7 @@ angular.module('dashboard.manage')
             console.log("before valid " + form);
             if (isValid($scope.newAd.startDateTime, $scope.newAd.endDateTime)) {
                 $scope.changeCreateButton = true;
-                $scope.newAd.images = [];
+                $scope.newAd.msgImage = [];
 
                 if($scope.uploader.queue.length !== 0){
                     angular.forEach($scope.uploader.queue, function(value, key){
@@ -299,6 +302,20 @@ angular.module('dashboard.manage')
                         if($scope.uploader.queue.length !== 0){
 
                             $scope.uploader.uploadAll();
+
+                            $scope.uploader.onCompleteAll = function() {
+                                $timeout(function(){
+                                    notify('A new "' + $scope.newAd.msgName + '" ad has been successfully created. Please note that we have automatically added it to your ads inventory. If you would like the test your new ad, please navigate to our "Demo" page.');
+                                    $scope.changeCreateButton = false;
+                                    $scope.createForm.$setPristine();
+                                    $scope.ads = Adverts.getList().$object;
+                                    $scope.newAd = {};
+                                    $scope.valid = true;
+                                    $scope.ValidationError = [];
+                                    $scope.DateTimeIsChosen = false;
+                                    $scope.uploader.clearQueue();
+                                }, 2000);
+                            };
                         }else{
                             notify('A new "' + $scope.newAd.msgName + '" ad has been successfully created. Please note that we have automatically added it to your ads inventory. If you would like the test your new ad, please navigate to our "Demo" page.');
                             $scope.changeCreateButton = false;
@@ -312,19 +329,7 @@ angular.module('dashboard.manage')
                         }
 
 
-                        $scope.uploader.onCompleteAll = function() {
-                            $timeout(function(){
-                                notify('A new "' + $scope.newAd.msgName + '" ad has been successfully created. Please note that we have automatically added it to your ads inventory. If you would like the test your new ad, please navigate to our "Demo" page.');
-                                $scope.changeCreateButton = false;
-                                $scope.createForm.$setPristine();
-                                $scope.ads = Adverts.getList().$object;
-                                $scope.newAd = {};
-                                $scope.valid = true;
-                                $scope.ValidationError = [];
-                                $scope.DateTimeIsChosen = false;
-                                $scope.uploader.clearQueue();
-                            }, 2000);
-                        };
+
 
                     }, function(res) {
 

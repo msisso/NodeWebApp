@@ -120,21 +120,26 @@ Adv.find({}).remove(function() {
 
 Agents.find({}).remove(function(){
     Agents.create({
-        agencyName: "Europe",
-        city: "Rishon LeZion",
-        address: "Dan 9",
-        country: "Israel",
-        travelagencyPhone: "03-5555150",
-        active: true
+            agencyName: "Asia",
+            city: "Beer Yaakov",
+            address: "Havered 7",
+            country: "Israel",
+            travelagencyPhone: "03-5555150",
 
-    },{
-        agencyName: "Asia",
-        city: "Beer Yaakov",
-        address: "Havered 7",
-        country: "Israel",
-        travelagencyPhone: "03-5555150",
-        active: true
-
+        },
+        {
+            agencyName: "Rinat's",
+            city: "hadera",
+            address: "bialik 15",
+            country: "Israel",
+            travelagencyPhone: "03-5555150",
+        },
+        {
+            agencyName: "Maor's",
+            city: "rishon lezion",
+            address: "Dan 9",
+            country: "Israel",
+            travelagencyPhone: "08-99955150",
         }
     );
 });

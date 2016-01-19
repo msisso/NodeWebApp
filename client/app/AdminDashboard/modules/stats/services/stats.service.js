@@ -5,7 +5,7 @@ angular.module('dashboard.stats')
 
       factory.getStatsByField = function(field) {
         var deferred = $q.defer();
-        $http.get('/api/stats', {params: {by: field}})
+        $http.get('/api/ad/stats', {params: {by: field}})
           .success(function(res) {
               deferred.resolve(res);
           })

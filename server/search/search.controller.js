@@ -28,13 +28,13 @@ exports.index = function(req, res) {
 exports.get = function(req, res) {
     var querytravel = TravelAgency.find({});
 
-    if(typeof req.body.searchparams.name !== 'undefined'){
+    if(typeof req.body.searchparams.agencyName !== 'undefined'){
 
-        querytravel.where({'name': new RegExp(req.body.searchparams.name, "i")});
+        querytravel.where({'agencyName': new RegExp(req.body.searchparams.agencyName, "i")});
     }
-    if(typeof req.body.searchparams.active !== 'undefined'){
+    if(typeof req.body.searchparams.travelagencyPhone !== 'undefined'){
 
-        querytravel.where({'active': new RegExp(req.body.searchparams.active, "i")});
+        querytravel.where({'travelagencyPhone': new RegExp(req.body.searchparams.travelagencyPhone, "i")});
     }
     if(typeof req.body.searchparams.city  !== 'undefined'){
 
@@ -45,8 +45,8 @@ exports.get = function(req, res) {
         return res.status(200).json(stats);
     });
 
-
 };
+
 
 
 function handleError(res, err) {
