@@ -29,7 +29,6 @@ angular.module('dashboard.demo')
       $scope.showScreen = function(screenId) {
 
         if($scope.screenSelected){
-            console.log("screen selected");
             onModalClose();
         }
 
@@ -38,7 +37,6 @@ angular.module('dashboard.demo')
       };
 
       $scope.$on("$destroy", function(){
-        console.log("demo destroy");
         onModalClose();
       });
 

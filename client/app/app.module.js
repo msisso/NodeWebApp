@@ -12,7 +12,6 @@ angular.module('FlightsApp', [
         'chart.js',
         'ngAnimate',
         'restangular',
-        'uiGmapgoogle-maps',
         'ui.bootstrap',
         'ui.bootstrap.datetimepicker',
         'cgNotify',

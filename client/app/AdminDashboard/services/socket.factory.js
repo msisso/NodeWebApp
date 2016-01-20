@@ -18,9 +18,7 @@ angular.module('AdminDashboard')
 
 
             syncUpdates: function(modelName, array, callback) {
-                //console.log(modelName);
-                //console.log(array);
-                //console.log(callback);
+
                 callback = callback || angular.noop;
 
                 /**
@@ -30,10 +28,7 @@ angular.module('AdminDashboard')
                     var oldItem = _.find(array, {_id: item._id});
                     var index = array.indexOf(oldItem);
                     var event = 'created';
-                    console.log(item);
-                    console.log("index: " + index);
-                    console.log("oldItem: " + oldItem);
-                    console.log(array);
+
                     // replace oldItem if it exists
                     // otherwise just add item to the collection
                     if (oldItem) {
@@ -48,7 +43,7 @@ angular.module('AdminDashboard')
                             endDateTime: moment(item.when.endDate + ' ' + item.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')
                         });
                         event = 'updated';
-                        console.log(event);
+
                     } else {
                         array.push({
                             _id: item._id,
@@ -59,7 +54,8 @@ angular.module('AdminDashboard')
                             startDateTime: moment(item.when.startDate + ' ' + item.when.startTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL'),
                             endDateTime: moment(item.when.endDate + ' ' + item.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')
                         });
-                        console.log("create");
+                        event = 'created';
+
                     }
 
                     callback(event, item, array);

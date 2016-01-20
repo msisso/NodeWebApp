@@ -56,19 +56,15 @@ angular.module('dashboard.manage')
             if (!_.isEmpty($scope.searchCreteria.msgName)) criteria.msgName = $scope.searchCreteria.msgName;
             if (!_.isEmpty($scope.searchCreteria.screensId)) criteria.screensId = $scope.searchCreteria.screensId;
             if (!_.isEmpty($scope.searchCreteria.templateName)) criteria.templateName = $scope.searchCreteria.templateName;
-            console.log(criteria);
             if (!_.isEmpty(criteria)) {
                 $scope.changeSearchButton = true;
                     Search.searchByCriteria(criteria)
                     .then(function(res) {
-                        console.log("enter after the search");
                         $scope.changeSearchButton = false;
 
                         if (!_.isEmpty(res)) {
                             $scope.findresult = 'foundresults';
                             $scope.searchResults = res.map(function(o) {
-                                console.log("o: " + o);
-
                                 return {
                                     msgName: o.msgName,
                                     screensId: o.screensId.join(', '),
@@ -98,11 +94,10 @@ angular.module('dashboard.manage')
         $scope.AllAdvertsInit = function()
         {
             getAllAdverts.getAllAdverts().then(function(res){
-                //console.log("enter after the search" + res);
+
                 if (!_.isEmpty(res)) {
-                    //console.log(res);
                         angular.forEach(res, function(value, key){
-                            //console.log("into test: " + key + ": " + value.when.startDate + ' ' + value.when.startTime + ' ' + value.when.endDate + ' ' + value.when.endTime);
+
                             $scope.adsToIterate[key] =
                             {
                                 _id: value._id,
@@ -113,7 +108,6 @@ angular.module('dashboard.manage')
                                 startDateTime: moment(value.when.startDate + ' ' + value.when.startTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL'),
                                 endDateTime: moment(value.when.endDate + ' ' + value.when.endTime, 'MM/DD/YYYY HH:mm:ss').format('LLLL')
                             };
-                            //console.log($scope.adsToIterate[key]);
                     });
                 }
             });
@@ -121,7 +115,6 @@ angular.module('dashboard.manage')
 
         socket.syncUpdates('ad', $scope.adsToIterate, function(event, item, array) {
             $scope.adsToIterate = array;
-            console.log(array);
         });
         /**
          *
@@ -139,25 +132,20 @@ angular.module('dashboard.manage')
          *
          * @param ad
          */
-        //$scope.spinner = false;
-
         $scope.editAd = function(ad) {
             $scope.showLoaderForId = ad._id;
-            console.log(ad._id);
             $scope.updateForm.$setPristine();
 
 
             if (_.isEmpty($scope.existingAd) || $scope.existingAd._id !== ad._id) {
                 Adverts.one(ad._id).get().then(function(o) {
                     $scope.showLoaderForId = "";
-                    //console.log("into test: " + o.when.startDate + ' ' + o.when.startTime + ' ' + o.when.endDate + ' ' + o.when.endTime);
+
                     $scope.existingAd = o;
-                    console.log("edit to image");
-                    console.log($scope.existingAd.msgImage);
                     //create array to itterate the data in input
                     $scope.existingAd.itrData = [];
                     angular.forEach($scope.existingAd.msgData, function(value, key){
-                        console.log(value);
+
                         $scope.existingAd.itrData.push({
                             msgdata: value,
                             name: makeid()
@@ -221,11 +209,8 @@ angular.module('dashboard.manage')
                 //$scope.existingAd = _.merge($scope.existingAd, preparePayload($scope.existingAd));
 
 
-                console.log("put");
-                console.log($scope.existingAd);
                 $scope.existingAd.put()
                     .then(function(res) {
-                        console.log(res);
                         $scope.existingAd.edit = !$scope.existingAd.edit;
                         notify('"' + $scope.existingAd.msgName + '" ad has been successfully updated. If you would like the test your changes, please navigate to our "Demo" page.');
 
@@ -261,7 +246,6 @@ angular.module('dashboard.manage')
         /*  ---------------------------------------------------------- */
         $scope.newAd = {};
         $scope.$on('$destroy', function() {
-            console.log("destroy");
             socket.unsyncUpdates('ad');
         });
                 /*  --------   Image Upload  ------- */
@@ -282,9 +266,8 @@ angular.module('dashboard.manage')
 
 
 
-        //console.info('uploader', uploader);
+
         $scope.create = function(form) {
-            console.log("before valid " + form);
             if (isValid($scope.newAd.startDateTime, $scope.newAd.endDateTime)) {
                 $scope.changeCreateButton = true;
                 $scope.newAd.msgImage = [];
@@ -295,10 +278,8 @@ angular.module('dashboard.manage')
                     });
                 }
 
-                console.log("before post");
                 Adverts.post(preparePayload($scope.newAd))
                     .then(function(res) {
-                        console.log("return from create on server");
                         if($scope.uploader.queue.length !== 0){
 
                             $scope.uploader.uploadAll();
@@ -391,11 +372,9 @@ angular.module('dashboard.manage')
             {
                 $scope.DateTimeIsChosen = true;
                 if(!isValid($scope.newAd.startDateTime,$scope.newAd.endDateTime)){
-                    console.log("enter not validation " + isValid($scope.newAd.startDateTime,$scope.newAd.endDateTime));
                     $scope.DateTimeIsValid = false;
                 }
                 else{
-                    console.log("enter not validation " + isValid($scope.newAd.startDateTime,$scope.newAd.endDateTime));
                     $scope.DateTimeIsValid = true;
                 }
 

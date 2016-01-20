@@ -1,81 +1,3 @@
-/*
-angular.module('travelagency')
-    .controller('travelagencyController', ['$scope','$state','$document','Searchtrav','rest','Agencies','Coords',
-        function($scope,$state,$document,Searchtrav,rest,Agencies,Coords) {
-
-            $scope.sections = [
-                {name: 'search'}
-                , {name: 'Map'}
-
-            ]
-            $scope.toTheTop = function() {
-                $document.scrollTopAnimated(0, 1000);
-            }
-            $scope.Search = true;
-            $scope.searchCreteria = {};
-            $scope.searchCreteria.agencyName = '';
-            $scope.searchCreteria.city = '';
-            $scope.searchCreteria.travelagencyPhone = '';
-
-
-            $scope.Searchtrav = function() {
-                var criteria = {};
-                if (!_.isEmpty($scope.searchCreteria.travelagencyPhone)) criteria.travelagencyPhone = $scope.searchCreteria.travelagencyPhone;
-                if (!_.isEmpty($scope.searchCreteria.agencyName)) criteria.agencyName = $scope.searchCreteria.agencyName;
-                if (!_.isEmpty($scope.searchCreteria.city)) criteria.city = $scope.searchCreteria.city;
-                if (!_.isEmpty(criteria)) {
-                    $scope.changeSearchButton = true;
-                    Searchtrav.searchBytravel(criteria)
-                        .then(function (res) {
-                            $scope.changeSearchButton = false;
-                            if (!_.isEmpty(res)) {
-                                $scope.findresult = 'foundresults';
-                                $scope.searchResults = res.map(function (value) {
-
-                                    return {
-                                        agencyName: value.agencyName,
-                                        country: value.country,
-                                        city: value.city,
-                                        address: value.address,
-                                        travelagencyPhone: value.travelagencyPhone,
-                                    };
-                                });
-                            }
-                            else {
-                                $scope.findresult = 'notfoundresults';
-
-                            }
-                        })
-                }
-
-            };
-
-
-
-            $scope.markers = [];
-            $scope.map = {center: {latitude: 32.321458, longitude: 34.853196}, zoom: 9};
-            Agencies.getAgencies()
-                .then(function(markers) {
-                    angular.forEach(markers, function(value, key){
-                        Coords.getCoordsByAddreess(value.address + ' ' + value.city + ' ' + value.country)
-                            .then(function(res){
-                                var temp = {
-                                    coords: {
-                                        latitude: res.results[0].geometry.location.lat,
-                                        longitude: res.results[0].geometry.location.lng
-                                    },
-                                    id: res.results[0].place_id
-                                };
-                                $scope.markers.push(temp);
-                            });
-
-                    });
-
-                });
-        }]).value('duScrollOffset', 30).value('duScrollActiveClass', 'active');
-*/
-
-
 angular.module('travelagency')
     .controller('travelagencyController', ['$scope','$state','$document','Searchtrav','rest','Agencies','Coords',
         function($scope,$state,$document,Searchtrav,rest,Agencies,Coords) {
@@ -90,7 +12,7 @@ angular.module('travelagency')
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             }
             // Create map
-            $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            $scope.map = new google.maps.Map(document.getElementById("googlemap"), mapOptions);
             var agencyMarkers = [];
 
             // Clear markers
@@ -122,8 +44,8 @@ angular.module('travelagency')
             $scope.searchCreteria.city = '';
             $scope.searchCreteria.travelagencyPhone = '';
 
-            var Alltravelagenct = {};
-            Agencies.getAgencies(Alltravelagenct)
+
+            Agencies.getAgencies()
                 .then(function (res) {
                     $scope.alltravel = res.map(function (value) {
 
@@ -132,7 +54,7 @@ angular.module('travelagency')
                             country: value.country,
                             city: value.city,
                             address: value.address,
-                            travelagencyPhone: value.travelagencyPhone,
+                            travelagencyPhone: value.travelagencyPhone
 
                         };
                         return json_city;
@@ -164,7 +86,7 @@ angular.module('travelagency')
                                         country: value.country,
                                         city: value.city,
                                         address: value.address,
-                                        travelagencyPhone: value.travelagencyPhone,
+                                        travelagencyPhone: value.travelagencyPhone
                                     };
                                     return json_city;
                                 });

@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('dashboard.stats')
-  .controller('StatsController', ['$scope', '$state', '$stateParams', 'Stats','uiGmapGoogleMapApi',
-    function($scope, $state, $stateParams, Stats, uiGmapGoogleMapApi) {
+  .controller('StatsController', ['$scope', '$state', '$stateParams', 'Stats',
+    function($scope, $state, $stateParams, Stats) {
 
       $scope.collapse = {
           byScreen: false,
